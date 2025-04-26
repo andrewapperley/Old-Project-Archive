@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<conversation>
+	<dialog text="Hello, my name is Spaz. I run real fast!!!"/>
+	<dialog text="I"/>
+    <dialog text="Speak re-"/>
+    <dialog text="-ally really slowwwww"/>
+	<dialog text="Watch me run real fast!"/>
+</conversation>

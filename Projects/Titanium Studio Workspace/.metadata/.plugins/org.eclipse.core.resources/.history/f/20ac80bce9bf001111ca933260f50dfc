@@ -1,0 +1,24 @@
+var screen = Ti.UI.createView({
+	
+	backgroundColor: 'red',
+	height: '90%',
+	top:0,
+	index:4
+	
+	
+});
+
+var loadlist = Titanium.UI.createTableView({
+	top:100,
+	backgroundColor:'transparent', //Set BG transparent  
+    rowBackgroundColor:'transparent',
+    data:poemarray,
+	editable:true,
+	height:315,
+	
+});
+
+
+
+screen.add(text);
+exports.screen = screen;

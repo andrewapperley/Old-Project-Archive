@@ -1,0 +1,73 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+
+var CUSTOM_FONT = '';
+var themeChoiceString = '';
+var themes = require('themeLoad');
+var dbModel = require('dbModel');
+dbModel.loadTheme();
+var refresh = function(){
+    if (themes.themeArray && !Titanium.App.Properties.hasProperty('activeTheme') && !Titanium.App.Properties.hasProperty('font')) {
+    
+            Titanium.App.Properties.setString('activeTheme', themes.themeArray[0].title);
+            Titanium.App.Properties.setString('font', themes.themeArray[0].font);
+            CUSTOM_FONT = Titanium.App.Properties.getString('font');
+            themeChoiceString = Titanium.App.Properties.getString('activeTheme');
+    } else {
+        CUSTOM_FONT = Titanium.App.Properties.getString('font');
+        themeChoiceString = Titanium.App.Properties.getString('activeTheme');
+    }
+}
+refresh();
+// if(!Titanium.App.Properties.hasProperty('activeTheme') && !Titanium.App.Properties.hasProperty('font')){themeChoiceString = 'Core'; CUSTOM_FONT = 'Cantata One'; }
+// else{themeChoiceString = Titanium.App.Properties.getString('activeTheme'); CUSTOM_FONT = Titanium.App.Properties.getString('font');}
+
+var assets = require('Themes/'+themeChoiceString+'/assetConstants');
+var logger = require('logger');
+var animations = require('animations');
+var activeWindow = [];
+var close = require('closeButton');
+var tabbedBar = require('tabbedBar');
+var twitterbook = require('es.appio.twitterbook');
+var writing = require('writingScreen');
+
+
+init = function(){
+    writing.window.open();
+    writing.window.animate(animations.fadeIn);
+    e = tabbedBar.buttonArray[2];
+    if(!Titanium.App.Properties.hasProperty('firstTime')) Ti.UI.createAlertDialog({title:'Welcome',message:'Thanks for downloading Poetry Slam! If you need help getting started press the info button on the top right-hand side of your screen for instructions on how to use the app. Otherwise, happy writing!'}).show();
+    Titanium.App.Properties.setString('firstTime','yes');
+    if(!Titanium.App.Properties.hasProperty('boots')){Titanium.App.Properties.setString('boots',1);}else{
+      var boots = Titanium.App.Properties.getString('boots');
+
+       if(boots == 5 && !Titanium.App.Properties.hasProperty('rated')) {
+        var ratingD = Ti.UI.createAlertDialog({title:'Rating',message:'Would you like to rate Poetry Slam?', buttonNames:['Yes','No'] });
+            ratingD.addEventListener('click', function(e){ if(e.index == 0){
+              Titanium.App.Properties.setString('rated','yes');
+              Ti.Platform.openURL('itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=540918767'); 
+               }else{
+                   Titanium.App.Properties.setString('boots',1); 
+                  }
+                });
+                ratingD.show();
+             
+            }else{
+           boots++;
+        Titanium.App.Properties.setString('boots',boots);
+        }
+    }
+    tabbedBar.tabHighlight(e);
+
+}
+
+for(var i = 0; i < tabbedBar.buttonArray.length; i++)
+{
+	
+	writing.window.add(tabbedBar.buttonArray[i]);
+	
+}
+//app starts
+init();

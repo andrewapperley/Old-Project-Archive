@@ -1,0 +1,23 @@
+var button = Ti.UI.createButton({
+	
+	backgroundImage: assets.assetsArray[0].CloseButton,
+	width:18,
+	height:19,
+	right:10,
+	top:10
+	
+});
+
+button.addEventListener('click', function(){
+	
+	e = tabbedBar.buttonArray[2];
+	
+	tabbedBar.tabHighlight(e);
+	
+	
+	tabbedBar.removeFunction();
+	
+});
+
+exports.button = button;
+

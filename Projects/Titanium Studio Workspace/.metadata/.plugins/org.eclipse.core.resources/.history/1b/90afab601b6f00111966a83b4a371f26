@@ -1,0 +1,344 @@
+/**
+ * @author Andrew Apperley
+ */
+Titanium.UI.setBackgroundColor('#e3e3db');
+
+
+var animationfadein = Titanium.UI.createAnimation();
+	animationfadein.duration= 1000;
+	animationfadein.opacity=1;
+var eventText;
+var adminEventText;
+var textArea;
+var loginReq = Titanium.Network.createHTTPClient();
+var eventReq = Titanium.Network.createHTTPClient();
+var adminEventReq = Titanium.Network.createHTTPClient();
+
+var theEvents = Titanium.UI.createTextArea({editable:false, top:0, width:300, textAlign:"center", backgroundColor:'none', font:{fontFamily:'Day Roman', fontSize:12}});
+var eventScroll = Titanium.UI.createScrollView({top:200, height:225, width:300})
+var memberEventTitle = Titanium.UI.createLabel({font:{fontFamily:'Day Roman', fontSize:20}});
+var adminEventTitle = Titanium.UI.createLabel({font:{fontFamily:'Day Roman', fontSize:20}});
+
+var logo = Titanium.UI.createView({
+	
+	backgroundImage:'images/logo.png',
+	width:53,
+	height:72,
+	top:12,
+	
+	
+});
+
+var title = Titanium.UI.createLabel({
+	text:"THE VINTAGE CONSERVATORY",
+	height:54,
+	top:94,
+	left:39, 
+	color:'#7c6b63',
+	font:{fontFamily:'SF Movie Poster',fontSize:54}
+});
+//////////////
+//NAV
+//////////////////
+var booking_nav = Titanium.UI.createLabel({
+	text:"BOOKING",
+	height:50,
+	top:149,
+	left:10, 
+	color:'#7c6b63',
+	font:{fontFamily:'SF Movie Poster',fontSize:50}
+});
+
+var benefits_nav = Titanium.UI.createLabel({
+	text:"BENEFITS",
+	height:50,
+	top:149,
+	left:90, 
+	color:'#7c6b63',
+	font:{fontFamily:'SF Movie Poster',fontSize:50}
+	
+});
+
+var catering_nav = Titanium.UI.createLabel({
+	
+	text:"CATERING",
+	height:50,
+	top:149,
+	left:170, 
+	color:'#7c6b63',
+	font:{fontFamily:'SF Movie Poster',fontSize:50}
+});
+
+var events_nav = Titanium.UI.createLabel({
+	text:"EVENTS",
+	height:50,
+	top:149,
+	left:255, 
+	color:'#7c6b63',
+	font:{fontFamily:'SF Movie Poster',fontSize:50}
+	
+});
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+Ti.include("loginScreen.js");
+
+///////////////
+///booking
+///////////////
+
+
+var booking = Titanium.UI.createWindow({
+	
+	
+});
+
+var banner_booking = Titanium.UI.createView({
+	
+	backgroundImage:'images/booking.jpg',
+		width:320,
+		height:141,
+		top:0
+	
+});
+
+booking_nav.addEventListener('click',function(e)
+{
+	Ti.include("bookingScreen.js");
+	booking.open();
+	booking.opacity = .8;
+	booking_nav.color = 'white';
+	benefits.close();
+	catering.close();
+	events.close();
+	benefits_nav.color = '#7c6b63'; catering_nav.color = '#7c6b63'; events_nav.color = '#7c6b63';
+	booking.add(booking_nav);
+	booking.add(logo);
+booking.add(title);
+booking.add(benefits_nav);
+booking.add(catering_nav);
+booking.add(events_nav);
+booking.add(footer);
+booking.animate(animationfadein);
+});
+
+
+
+///////////////
+///benefits
+///////////////
+
+var benefits = Titanium.UI.createWindow({
+	
+		
+});
+
+var banner_benefits = Titanium.UI.createView({
+	
+	backgroundImage:'images/benefits.jpg',
+		width:320,
+		height:141,
+		top:0
+	
+});
+
+benefits_nav.addEventListener('click',function(e)
+{
+	
+	benefits.open();
+	benefits.opacity = .8;
+	benefits_nav.color = 'white';
+	booking_nav.color = '#7c6b63'; catering_nav.color = '#7c6b63'; events_nav.color = '#7c6b63';
+	booking.close();
+	catering.close();
+	events.close();
+	benefits.add(benefitsScroll);
+	benefitsScroll.add(benefitsText);
+	benefits.add(banner_benefits);
+	benefits.add(booking_nav);
+	benefits.add(benefits_nav);
+	benefits.add(catering_nav);
+	benefits.add(events_nav);
+	benefits.add(logo);
+	benefits.add(title);
+	benefits.add(footer);
+	benefits.animate(animationfadein);
+});
+
+
+///////////////
+///catering
+///////////////
+
+var catering = Titanium.UI.createWindow({
+	
+		
+});
+
+var banner_catering = Titanium.UI.createView({
+	
+	backgroundImage:'images/catering.jpg',
+		width:320,
+		height:141,
+		top:0
+	
+});
+
+
+catering_nav.addEventListener('click',function(e)
+{
+	
+	catering.open();
+	catering.opacity = .8;
+	catering_nav.color = 'white';
+	benefits.close();
+	booking.close();
+	events.close();
+	benefits_nav.color = '#7c6b63'; booking_nav.color = '#7c6b63'; events_nav.color = '#7c6b63';
+	catering.add(banner_catering);
+	catering.add(booking_nav);
+catering.add(benefits_nav);
+catering.add(catering_nav);
+catering.add(events_nav);
+catering.add(logo);
+catering.add(title);
+catering.add(footer);
+catering.animate(animationfadein);
+});
+
+
+///////////////
+///events
+///////////////
+
+var events = Titanium.UI.createWindow({
+	
+	
+		
+});
+
+var banner_events = Titanium.UI.createView({
+	
+	backgroundImage:'images/events.jpg',
+		width:320,
+		height:141,
+		top:0
+	
+});
+
+
+events_nav.addEventListener('click',function(e)
+{
+	
+	Ti.include("eventList.js");
+	eventScroll.add(theEvents);
+	events.add(eventScroll);
+		events.open();
+		events.opacity = .8;
+	events_nav.color = 'white';
+	benefits.close();
+	catering.close();
+	booking.close();
+	benefits_nav.color = '#7c6b63'; catering_nav.color = '#7c6b63'; booking_nav.color = '#7c6b63';
+		events.add(banner_events);
+		events.add(booking_nav);
+events.add(benefits_nav);
+events.add(catering_nav);
+events.add(events_nav);
+events.add(logo);
+events.add(title);
+events.add(footer);
+adminEventReq.open('GET', "http://client.andrewapperley.ca/app_events_admin.php");
+adminEventReq.send();
+
+
+events.animate(animationfadein);
+
+});
+
+var footer = Titanium.UI.createLabel({
+	text:"Copyright © 2012 The Vintage CONSERVATORY",
+	height:30,
+	bottom:2,
+	left:50, 
+	color:'#a3a3a3',
+	font:{fontFamily:'SF Movie Poster',fontSize:28}
+});
+
+
+//LOGIN ADDS
+login.add(logo);
+login.add(title);
+login.add(banner_signin);
+login.add(memberID);
+login.add(password);
+login.add(signIn);
+login.add(footer);
+
+
+//BOOKING ADDS
+booking.add(banner_booking);
+booking.add(logo);
+booking.add(title);
+booking.add(booking_nav);
+booking.add(benefits_nav);
+booking.add(catering_nav);
+booking.add(events_nav);
+booking_nav.color = 'white';
+booking.add(footer);
+//BENEFITS ADDS
+var benefitsScroll = Titanium.UI.createScrollView({
+	width:300,
+	top:200,
+	height:220
+})
+var benefitsText = Titanium.UI.createTextArea({
+	value: "Available at no cost to members to book privately, this dining room seats up to 20 for a seated dinner or can serve as one of the most unique board rooms anywhere. As a Private Dining Room, Members can reserve this room privately to do their own tastings for their own guests.  Members simply contact us for their reservation, consult on their catering needs, and we will be ready for you. As a Meeting Room, we are equipped with a built in automated presentation system, 56inch LCD screen, conference call and video conference capability. The concept for the gallery is comfort and availability.  A large space where members can relax, watch the news on another 56inch LCD screen, open a bottle from their collection, meet other members, and admire art from local artists and photographers that we will rotate monthly. It's in this space where we will host our regular Member Tastings, Member Industry Networking Events, and some Charity Events to benefit causes close to us and our Membership. This room is ALWAYS available to Members, even if the Private Dining Room is being used. The Gallery is also equipped with Wi-Fi Internet, an Office Station, and all glassware and accessories needed to enjoy your collections.",
+	font:{fontFamily:'Day Roman', fontSize:12, fontWeight:'bold'},
+	top:0,
+	width:300,
+	editable:false,
+	backgroundColor:'none',
+	color:'#51504e',
+});
+benefits.add(benefitsScroll);
+benefitsScroll.add(benefitsText);
+
+
+
+//CATERING ADDS
+var cateringText = Titanium.UI.createTextArea({
+	value: "Members are always able to bring light food such as Cheese, Breads, Charcuterie,ect. but for larger needs we have partnered with a Private Chef working for us to bring you anything from basic lunches and platters, to the best in Fine Dining forelegant customized dinners.",
+	font:{fontFamily:'Day Roman', fontSize:13, fontWeight:'bold'},
+	top:220,
+	height:130,
+	width:300,
+	editable:false,
+	backgroundColor:'none',
+	color:'#51504e',
+});
+var menuLink = Titanium.UI.createLabel({
+	
+	text: "SEE MENUS",
+	height:50,
+	bottom:45,
+	left:113, 
+	color:'#7c6b63',
+	font:{fontFamily:'SF Movie Poster',fontSize:50,fontWeight:'bold'}
+});
+catering.add(menuLink);
+catering.add(cateringText);
+
+menuLink.addEventListener('click',function(e)
+{
+	alert("Menus coming at a later date");
+});
+
+
+
+
+
+
+booking.open();

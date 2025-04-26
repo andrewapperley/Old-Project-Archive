@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<conversation>
+	<dialog text="Hello, my name is Harold. I think this game is going to be awesome!"/>
+	<dialog text="This is some random text to fill in the conversation, I don't really know what to say."/>
+	<dialog text="Alright have a good day, bye!"/>
+    <quest id="18456783524681" />
+    <item id="345586543" />
+</conversation>

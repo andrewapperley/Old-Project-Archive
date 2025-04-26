@@ -1,0 +1,118 @@
+var window = Ti.UI.createWindow();
+var screen = Ti.UI.createView({
+
+	backgroundImage : assets.assetsArray[0].StartingScreenBG,
+	height : '100%',
+	index : 9,
+	opacity : 1
+
+});
+
+var themesView = Ti.UI.createView({
+
+	backgroundImage : assets.assetsArray[0].LoadingScreenBG,
+	height : assets.assetsArray[0].LoadingScreenBG_height,
+	width : assets.assetsArray[0].LoadingScreenBG_width,
+	top : assets.assetsArray[0].LoadingScreenBG_top
+
+});
+
+var writingScreenStart = Ti.UI.createButton({
+
+	backgroundImage : assets.assetsArray[0].StartingScreenPoemButton,
+	backgroundSelectedImage : assets.assetsArray[0].StartingScreenPoemPressedButton,
+	width : assets.assetsArray[0].StartingScreenBG_width,
+	height : assets.assetsArray[0].StartingScreenBG_height,
+	top : assets.assetsArray[0].StartingScreenBG_top
+
+});
+
+var loadingScreenStart = Ti.UI.createButton({
+
+	backgroundImage : assets.assetsArray[0].StartingScreenLoadButton,
+	backgroundSelectedImage : assets.assetsArray[0].StartingScreenLoadPressedButton,
+	width : assets.assetsArray[0].StartingScreenLoadButton_width,
+	height : assets.assetsArray[0].StartingScreenLoadButton_height,
+	top : assets.assetsArray[0].StartingScreenLoadButton_top
+
+});
+
+var switchThemeButton = Ti.UI.createButton({
+
+	backgroundImage : assets.assetsArray[0].StartingScreenSwitchThemeButton,
+	backgroundSelectedImage : assets.assetsArray[0].StartingScreenSwitchThemePressedButton,
+	width : assets.assetsArray[0].StartingScreenSwitchThemeButton_width,
+	height : assets.assetsArray[0].StartingScreenSwitchThemeButton_height,
+	top : assets.assetsArray[0].StartingScreenSwitchThemeButton_top
+
+});
+
+writingScreenStart.addEventListener('singletap', function() {
+	window.close();
+	writing.window.open();
+	writing.window.animate(animations.fadeIn);
+	e = tabbedBar.buttonArray[2];
+
+	tabbedBar.tabHighlight(e);
+
+	tabbedBar.removeFunction();
+
+});
+
+loadingScreenStart.addEventListener('singletap', function() {
+	window.close();
+	writing.window.open();
+	writing.window.animate(animations.fadeIn);
+	e = tabbedBar.buttonArray[3];
+
+	tabbedBar.tabHighlight(e);
+
+	tabbedBar.removeFunction();
+
+	writing.loading.screen.open();
+	writing.loading.addChildren();
+	dbModel.loadingF();
+	writing.loading.screen.animate(animations.fadeInOnePX);
+	activeWindow.push(writing.loading.screen);
+	tabbedBar.activeTab = 3;
+	tabbedBar.previousTab = 3;
+});
+
+switchThemeButton.addEventListener('singletap', function() {
+
+	screen.add(themesView);
+	themesView.add(close.button);
+	close.button.addEventListener('singletap', function() {
+		close.button.removeEventListener('singletap', function() {});
+		screen.remove(themesView);
+
+	});
+	themesView.add(themes.themeList);
+	dbModel.loadTheme();
+
+});
+
+themes.themeList.addEventListener('click', function(data) {
+
+	if (themes.themeArray) {
+
+		Titanium.App.Properties.setString('activeTheme', themes.themeArray[data.index].title);
+		Titanium.App.Properties.setString('font', themes.themeArray[data.index].font);
+		Ti.UI.createAlertDialog({
+			title : 'Switch Themes',
+			message : 'To switch themes you must terminate Poetry Slam and relaunch. Double tap your phones home button, hold the Poetry Slam icon and close the app. When you reload Poetry Slam the new theme will appear.'
+		}).show();
+
+	};
+
+	screen.remove(themesView);
+});
+
+screen.add(writingScreenStart);
+screen.add(loadingScreenStart);
+screen.add(switchThemeButton);
+dbModel.loadTheme();
+window.open();
+window.add(screen);
+
+exports.screen = screen;

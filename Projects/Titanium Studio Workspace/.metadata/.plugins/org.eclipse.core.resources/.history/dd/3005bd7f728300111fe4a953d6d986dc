@@ -1,0 +1,287 @@
+/**
+ * @author Andrew Apperley
+ */
+
+var overlayLayer = Ti.UI.createWindow({
+	backgroundColor:"black",
+	opacity:.7,
+	top:0
+	
+});
+
+//overlayLayer.open();
+
+
+var datePicker = Ti.UI.createPicker({
+  type:Ti.UI.PICKER_TYPE_DATE_AND_TIME,
+  minDate:new Date(2012,0,1),
+  maxDate:new Date(2018,11,31),
+  value:new Date(),
+  minuteInterval:15,
+  bottom:0
+});
+
+var peoplePicker = Ti.UI.createPicker({
+  type: Ti.UI.PICKER_TYPE_PLAIN,
+  bottom:0
+});
+
+var data = [];
+data[0]=Ti.UI.createPickerRow({title:'0'});
+data[1]=Ti.UI.createPickerRow({title:'1'});
+data[2]=Ti.UI.createPickerRow({title:'2'});
+data[3]=Ti.UI.createPickerRow({title:'3'});
+data[4]=Ti.UI.createPickerRow({title:'4'});
+data[5]=Ti.UI.createPickerRow({title:'5'});
+data[6]=Ti.UI.createPickerRow({title:'6'});
+data[7]=Ti.UI.createPickerRow({title:'7'});
+data[8]=Ti.UI.createPickerRow({title:'8'});
+data[9]=Ti.UI.createPickerRow({title:'9'});
+data[10]=Ti.UI.createPickerRow({title:'10'});
+
+peoplePicker.add(data);
+peoplePicker.selectionIndicator = true;
+
+
+peoplePicker.setSelectedRow(0, 0, false);
+
+var timePicker = Ti.UI.createPicker({
+	type:Ti.UI.PICKER_TYPE_TIME,
+	minuteInterval:15,
+	bottom:0		
+}); 
+
+
+var overlayDone = Ti.UI.createButton({
+	font:{fontFamily:'Day Roman', fontSize:17},
+	title:"Back",
+	width:50,
+	height:30,
+	top:20,
+	right:5
+	
+});
+
+overlayLayer.add(overlayDone);
+
+
+var startEvent = Ti.UI.createLabel({
+	font:{fontFamily:'Day Roman', fontSize:17},
+	editable:false,
+	text:"Event start time",
+	top:206,
+	left:20,
+	width:280,
+	height:20
+	
+});
+
+booking.add(startEvent);
+
+var endEvent = Ti.UI.createLabel({
+	font:{fontFamily:'Day Roman', fontSize:17},
+	editable:false,
+	text:"Event end time",
+	top:246,
+	left:20,
+	width:280,
+	height:20
+	
+});
+
+booking.add(endEvent);
+
+var numPeople = Ti.UI.createLabel({
+	font:{fontFamily:'Day Roman', fontSize:17},
+	editable:false,
+	text:"Number of people",
+	top:286,
+	left:20,
+	width:280,
+	height:20
+	
+});
+
+booking.add(numPeople);
+
+var cateringText = Ti.UI.createLabel({
+	font:{fontFamily:'Day Roman', fontSize:17},
+	editable:false,
+	text:"Catering?",
+	top:326,
+	left:20,
+	width:170,
+	height:30
+	
+});
+
+booking.add(cateringText);
+
+var cateringSwitch = Ti.UI.createSwitch({
+	
+	top:326,
+	right:20,
+	value:false
+});
+
+booking.add(cateringSwitch);
+
+var pubPrivateText = Ti.UI.createLabel({
+	font:{fontFamily:'Day Roman', fontSize:17},
+	editable:false,
+	text:"Private?",
+	top:366,
+	left:20,
+	width:170,
+	height:30
+	
+});
+
+booking.add(pubPrivateText);
+
+var pubPrivate = Ti.UI.createSwitch({
+	top:366,
+	right:20,
+	value:false
+});
+
+booking.add(pubPrivate);
+
+var bookEventButton = Ti.UI.createButton({
+	
+	top:395,
+	left:108,
+	width:100,
+	height:30,
+	backgroundImage:'images/event-in-Button.png',
+   	backgroundSelectedImage:'images/event-in-Button_dark.png'
+});
+
+booking.add(bookEventButton);
+////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+///////EVENT LISTENERS///////////////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+
+
+
+
+
+datePicker.addEventListener('change',function(e){
+  
+  //startTime = e.value.toLocaleString();
+  
+  var realMonth = e.value.getMonth()+1;
+  startTime = e.value.getFullYear()+"/"+realMonth+"/"+e.value.getDate();
+  
+  startDate = e.value.getFullYear()+"/"+realMonth+"/"+e.value.getDate()+" "+e.value.getHours()+":"+e.value.getMinutes();
+  
+  startEvent.text = startDate;
+  
+  if(endTime != ""){endEvent.text = startTime+" "+endTime;}
+  
+});
+
+timePicker.addEventListener('change',function(e){
+  
+    //endTime = e.value.toLocaleString();
+  endTime = e.value.getHours()+":"+e.value.getMinutes();
+  
+  endEvent.text = startTime+" "+e.value.getHours()+":"+e.value.getMinutes();
+  
+  
+});
+
+overlayDone.addEventListener('click',function(e){
+  overlayLayer.close();
+});
+
+startEvent.addEventListener('click',function(e){
+ overlayLayer.open();
+ if(timePicker){overlayLayer.remove(timePicker);}
+ overlayLayer.add(datePicker);
+ if(peoplePicker){overlayLayer.remove(peoplePicker);}
+
+});
+
+endEvent.addEventListener('click',function(e){
+  overlayLayer.open();
+  overlayLayer.add(timePicker);
+  if(datePicker){overlayLayer.remove(datePicker);}
+  if(peoplePicker){overlayLayer.remove(peoplePicker);}
+});
+
+numPeople.addEventListener('click',function(e){
+ overlayLayer.open();
+ if(timePicker){overlayLayer.remove(timePicker);}
+ if(datePicker){overlayLayer.remove(datePicker);}
+ overlayLayer.add(peoplePicker);
+ 
+
+
+});
+
+cateringSwitch.addEventListener('change',function(e){
+ 
+ cateringText = e.value;
+ 
+ if(cateringText == false){cateringText = "0";}else if(cateringText == true){cateringText = "1";}else {cateringText = "0";}
+ 
+ //alert(cateringText+" "+startEvent.text+" "+endEvent.text+" "+numPeopleVar+" "+eventType);
+ 
+});
+
+peoplePicker.addEventListener('change',function(e){
+ 
+ numPeopleVar = e.rowIndex.toString();
+
+ numPeople.text = "Number of people: ";
+ numPeople.text += numPeopleVar;
+});
+
+pubPrivate.addEventListener('change',function(e){
+  
+  eventType = e.value;
+  if(eventType == false){eventType = "Open";}else if(eventType == true){eventType = "Private";}else {eventType = "Open";}
+  
+});
+bookEventButton.addEventListener('click', function(){
+	 if (startEvent.text != '' && endEvent.text != '' && cateringText != '' && numPeopleVar != '' && eventType != '' )
+	{
+		bookReq.open('POST', "http://client.andrewapperley.ca/app_booking.php");
+		var params = {
+			startEvent: startEvent.text,
+			endEvent: endEvent.text,
+			catering: cateringText,
+			numPeople: numPeople.text,
+			eventType: eventType,
+			FULL_NAME: FULL_NAME,
+			FIRST_NAME: SESSION_FIRST,
+			LAST_NAME: SESSION_LAST,
+			EMAIL: SESSION_EMAIL,
+			MEMBERID: SESSION_MEMBERID
+
+			
+		};
+		bookReq.send(params);
+		
+	}
+	else
+	{
+		alert("Something went wrong, please check that you filled in all fields");
+	}
+	
+});
+
+
+bookReq.onload = function()
+{
+	var json = this.responseText;
+	var response = JSON.parse(json);
+	alert(response.message);
+};
+
+
+

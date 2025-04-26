@@ -1,0 +1,115 @@
+npm http GET https://registry.npmjs.org/titanium
+npm http 200 https://registry.npmjs.org/titanium
+npm http GET https://registry.npmjs.org/titanium/-/titanium-3.0.5.tgz
+npm http 200 https://registry.npmjs.org/titanium/-/titanium-3.0.5.tgz
+npm http GET https://registry.npmjs.org/async
+npm http GET https://registry.npmjs.org/request
+npm http GET https://registry.npmjs.org/node-appc
+npm http GET https://registry.npmjs.org/sprintf
+npm http GET https://registry.npmjs.org/temp/0.4.0
+npm http GET https://registry.npmjs.org/semver
+npm http GET https://registry.npmjs.org/prompt
+npm http GET https://registry.npmjs.org/winston
+npm http GET https://registry.npmjs.org/revalidator
+npm http GET https://registry.npmjs.org/colors
+npm http GET https://registry.npmjs.org/longjohn
+npm http GET https://registry.npmjs.org/wrench
+npm http 200 https://registry.npmjs.org/sprintf
+npm http GET https://registry.npmjs.org/sprintf/-/sprintf-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/semver
+npm http GET https://registry.npmjs.org/semver/-/semver-1.1.0.tgz
+npm http 200 https://registry.npmjs.org/temp/0.4.0
+npm http GET https://registry.npmjs.org/temp/-/temp-0.4.0.tgz
+npm http 200 https://registry.npmjs.org/node-appc
+npm http GET https://registry.npmjs.org/node-appc/-/node-appc-0.1.6.tgz
+npm http 200 https://registry.npmjs.org/request
+npm http 200 https://registry.npmjs.org/async
+npm http 200 https://registry.npmjs.org/revalidator
+npm http 200 https://registry.npmjs.org/prompt
+npm http GET https://registry.npmjs.org/async/-/async-0.1.22.tgz
+npm http GET https://registry.npmjs.org/request/-/request-2.9.203.tgz
+npm http GET https://registry.npmjs.org/revalidator/-/revalidator-0.1.2.tgz
+npm http GET https://registry.npmjs.org/prompt/-/prompt-0.2.7.tgz
+npm http 200 https://registry.npmjs.org/sprintf/-/sprintf-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/colors
+npm http 200 https://registry.npmjs.org/longjohn
+npm http 200 https://registry.npmjs.org/wrench
+npm http 200 https://registry.npmjs.org/semver/-/semver-1.1.0.tgz
+npm http 200 https://registry.npmjs.org/temp/-/temp-0.4.0.tgz
+npm http 200 https://registry.npmjs.org/node-appc/-/node-appc-0.1.6.tgz
+npm http 200 https://registry.npmjs.org/async/-/async-0.1.22.tgz
+npm http 200 https://registry.npmjs.org/winston
+npm http GET https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+npm http 200 https://registry.npmjs.org/revalidator/-/revalidator-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/request/-/request-2.9.203.tgz
+npm http 200 https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+npm http 200 https://registry.npmjs.org/prompt/-/prompt-0.2.7.tgz
+npm http GET https://registry.npmjs.org/read
+npm http GET https://registry.npmjs.org/utile
+npm http GET https://registry.npmjs.org/pkginfo
+npm http GET https://registry.npmjs.org/cycle
+npm http GET https://registry.npmjs.org/eyes
+npm http GET https://registry.npmjs.org/pkginfo
+npm http GET https://registry.npmjs.org/stack-trace
+npm http GET https://registry.npmjs.org/xmldom/0.1.11
+npm http GET https://registry.npmjs.org/node-uuid
+npm http GET https://registry.npmjs.org/uglify-js
+npm http 200 https://registry.npmjs.org/read
+npm http GET https://registry.npmjs.org/read/-/read-1.0.4.tgz
+npm http 200 https://registry.npmjs.org/cycle
+npm http GET https://registry.npmjs.org/cycle/-/cycle-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/utile
+npm http GET https://registry.npmjs.org/utile/-/utile-0.1.5.tgz
+npm http 200 https://registry.npmjs.org/pkginfo
+npm http 200 https://registry.npmjs.org/pkginfo
+npm http 200 https://registry.npmjs.org/stack-trace
+npm http GET https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.6.tgz
+npm http 200 https://registry.npmjs.org/xmldom/0.1.11
+npm http GET https://registry.npmjs.org/xmldom/-/xmldom-0.1.11.tgz
+npm http 200 https://registry.npmjs.org/read/-/read-1.0.4.tgz
+npm http 200 https://registry.npmjs.org/eyes
+npm http 200 https://registry.npmjs.org/node-uuid
+npm http GET https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/uglify-js
+npm http 200 https://registry.npmjs.org/utile/-/utile-0.1.5.tgz
+npm http 200 https://registry.npmjs.org/xmldom/-/xmldom-0.1.11.tgz
+npm http 200 https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.6.tgz
+npm http 200 https://registry.npmjs.org/cycle/-/cycle-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz
+npm WARN package.json cycle@1.0.0 No README.md file found!
+npm http GET https://registry.npmjs.org/mute-stream
+npm http GET https://registry.npmjs.org/deep-equal
+npm http GET https://registry.npmjs.org/i
+npm http GET https://registry.npmjs.org/ncp
+npm http GET https://registry.npmjs.org/rimraf
+npm http GET https://registry.npmjs.org/mkdirp
+npm http 200 https://registry.npmjs.org/deep-equal
+npm http 200 https://registry.npmjs.org/mute-stream
+npm http GET https://registry.npmjs.org/deep-equal/-/deep-equal-0.0.0.tgz
+npm http GET https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/ncp
+npm http GET https://registry.npmjs.org/ncp/-/ncp-0.2.6.tgz
+npm http 200 https://registry.npmjs.org/i
+npm http GET https://registry.npmjs.org/i/-/i-0.3.1.tgz
+npm http 200 https://registry.npmjs.org/rimraf
+npm http GET https://registry.npmjs.org/rimraf/-/rimraf-1.0.9.tgz
+npm http 200 https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/i/-/i-0.3.1.tgz
+npm http 200 https://registry.npmjs.org/ncp/-/ncp-0.2.6.tgz
+npm http 200 https://registry.npmjs.org/rimraf/-/rimraf-1.0.9.tgz
+npm http 200 https://registry.npmjs.org/mkdirp
+npm http 200 https://registry.npmjs.org/deep-equal/-/deep-equal-0.0.0.tgz
+/usr/local/bin/titanium -> /usr/local/lib/node_modules/titanium/bin/titanium
+titanium@3.0.5 /usr/local/lib/node_modules/titanium
+├── sprintf@0.1.1
+├── longjohn@0.0.3
+├── temp@0.4.0
+├── revalidator@0.1.2
+├── async@0.1.22
+├── colors@0.6.0-1
+├── wrench@1.3.9
+├── semver@1.1.0
+├── request@2.9.203
+├── winston@0.6.2 (cycle@1.0.0, eyes@0.1.8, stack-trace@0.0.6, pkginfo@0.2.3)
+├── prompt@0.2.7 (pkginfo@0.2.3, read@1.0.4, utile@0.1.5)
+└── node-appc@0.1.6 (node-uuid@1.3.3, uglify-js@1.3.3, xmldom@0.1.11)

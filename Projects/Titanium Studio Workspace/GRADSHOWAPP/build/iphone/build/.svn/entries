@@ -1,0 +1,71 @@
+10
+
+dir
+154
+svn+ssh://andrewsvn@99.242.23.178/home/svn/2012/Humber%20Grad%20Show/trunk/GRADSHOWAPP/build/iphone/build
+svn+ssh://andrewsvn@99.242.23.178/home/svn/2012
+
+
+
+2012-04-13T02:26:24.688055Z
+39
+stevesvn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+280a938b-c3aa-42e6-b726-0caf55916a12
+
+Humber Grad Show.build
+dir
+
+build.log
+file
+
+
+
+
+2012-07-14T21:51:32.000000Z
+4d11feb021774dc2107e7260ac270d45
+2012-04-13T02:26:24.688055Z
+39
+stevesvn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2031
+
+Debug-iphonesimulator
+dir
+
+Debug-iphoneos
+dir
+

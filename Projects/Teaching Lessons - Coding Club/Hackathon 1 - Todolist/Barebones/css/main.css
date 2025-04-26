@@ -1,0 +1,56 @@
+* {
+    transition: all 400ms;
+}
+
+#container {
+    max-width: 568px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#container ul {
+    margin-left: 0px;
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#container ul li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#container ul li.task p.task-text {
+    width: 60%;
+    float: left;
+}
+
+#container ul li.task p.finish-task-btn {
+    float: right;
+    font-size: 30px;
+    color: #ccc;
+}
+
+#container ul li.task p.finish-task-btn:hover {
+    cursor: pointer;
+    color: #000000;
+}
+
+#container ul li.task button {
+    float: right;
+}
+
+#container div.add-new-task {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#container div.add-new-task input {
+    width: 80%;
+    float: left;
+}
+
+#container div.add-new-task button {
+    float: right;
+}

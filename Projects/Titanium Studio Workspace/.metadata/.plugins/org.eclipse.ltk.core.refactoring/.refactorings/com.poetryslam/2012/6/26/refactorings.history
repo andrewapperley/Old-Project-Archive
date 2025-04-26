@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;com.poetryslam/Resources/poemsDB.sqlite&apos; to &apos;poemDB.sqlite&apos;" description="Rename resource &apos;poemsDB.sqlite&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/poemsDB.sqlite" name="poemDB.sqlite" stamp="1340575136036" updateReferences="true"/>
+</session>

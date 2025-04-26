@@ -1,0 +1,59 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+		var facebook_Button = Titanium.UI.createButton({
+		backgroundImage:assets.assetsArray[0].FacebookButton,
+			width:90,
+			height:90,
+			top:101,
+			left:39
+		});
+       var data = {
+    link : "http://www.appcelerator.com",
+    name : "Appcelerator Titanium Mobile",
+    message :  writing.PoemTextArea.value + "\n\n- created with Poetry Slam",
+    caption : "Poetry Slam",
+    picture : "http://sphotos-a.ak.fbcdn.net/hphotos-ak-prn1/527459_304164753025440_149964309_n.png",
+    description : "Poetry Slam is the iPhone app that allows you to create poems and then post them to your social network sharing your creations with friends. App Link: http://itunes.apple.com/us/app/poetry-slam/id540918767?ls=1&mt=8"
+};
+		 Titanium.Facebook.appid = '318082941615627';
+         Titanium.Facebook.permissions = ['publish_stream'];
+// 
+         facebook_Button.addEventListener('click', function(e) {
+//        
+    
+         Titanium.Facebook.permissions = ['publish_stream'];
+         Titanium.Facebook.authorize();
+         
+          Titanium.Facebook.dialog("feed", data, function(e) {
+            if(e.success && e.result) {
+                alert("Success! New Post ID: " + e.result);
+            } else {
+                if(e.error) {
+                    alert(e.error);
+                } else {
+                    alert("User canceled dialog.");
+                }
+            }
+        });
+// 
+        // Titanium.Facebook.requestWithGraphPath('me/feed', {message: writing.PoemTextArea.value + "\n\n- created with Poetry Slam"}, "POST", function(e) {
+        // if (e.success) {
+        		 // Ti.UI.createAlertDialog({title:'Status Update',message:'Success! Your poem has been posted to your status!'}).show();
+// 
+        // } else {
+        // if (e.error) {
+         // Ti.UI.createAlertDialog({title:'General Error',message:'An error has occured, please check you that you are signed into Facebook and that you have a poem written'}).show();
+        		// } 
+        // else if(Titanium.Facebook.loggedIn)
+        // {
+        	 // Ti.UI.createAlertDialog({title:'Facebook Server Error',message:'An error occurred communicating with the Facebook servers, try again later'}).show();
+        // }		
+       	    // }
+       // });
+// 
+      });
+     
+     
+exports.facebook_Button = facebook_Button;

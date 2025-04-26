@@ -1,0 +1,270 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+var screen = Titanium.UI.createWindow({
+            height:480 - tabbedBar.buttonArray[0].width - 2,
+            width:320,
+            top:0,
+            backgroundImage:assets.assetsArray[0].Black1pixel,
+            touchEnabled:true,
+            opacity: 0,
+            index:4,
+            backgroundRepeat: true
+});
+
+var content = Ti.UI.createView({
+	
+	backgroundImage: assets.assetsArray[0].SavingScreenBG,
+	height: assets.assetsArray[0].SavingScreenBG_height,
+	width:assets.assetsArray[0].SavingScreenBG_width,
+	top: assets.assetsArray[0].SavingScreenBG_top,
+	left:assets.assetsArray[0].SavingScreenBG_left
+	
+});
+var checkTemp;
+var confirmDialog = Ti.UI.createView({
+		
+	backgroundImage: assets.assetsArray[0].SavingScreenConfirmScreen,
+	height: assets.assetsArray[0].SavingScreenConfirmScreen_height,
+	width:assets.assetsArray[0].SavingScreenConfirmScreen_width,
+	top: assets.assetsArray[0].SavingScreenConfirmScreen_top,
+	left:assets.assetsArray[0].SavingScreenConfirmScreen_left,
+	opacity:0
+		
+	});
+
+var nameField = Ti.UI.createTextField({
+	width:'80%',
+	top:assets.assetsArray[0].SavingScreenNameFieldBG_top,
+	left:assets.assetsArray[0].SavingScreenNameFieldBG_left,
+	autocorrect:false,
+	backgroundColor:'none',
+	backgroundImage:assets.assetsArray[0].SavingScreenNameFieldBG,
+	returnKeyType: Titanium.UI.RETURNKEY_DONE,
+	font:{fontFamily: CUSTOM_FONT}
+});
+
+var saveButton = Ti.UI.createButton({
+	width:assets.assetsArray[0].SavingScreenSaveButton_width,
+	height:assets.assetsArray[0].SavingScreenSaveButton_height,
+	bottom:assets.assetsArray[0].SavingScreenSaveButton_bottom,
+	left:assets.assetsArray[0].SavingScreenSaveButton_left,
+	index:0,
+	enabled : false,
+	opacity: .4,
+	backgroundImage:assets.assetsArray[0].SavingScreenSaveButton,
+	backgroundSelectedImage:assets.assetsArray[0].SavingScreenSavePressedButton
+});
+
+
+
+var cancelButton = Ti.UI.createButton({
+	width:assets.assetsArray[0].SavingScreenCancelButton_width,
+	height:assets.assetsArray[0].SavingScreenCancelButton_height,
+	bottom:assets.assetsArray[0].SavingScreenCancelButton_bottom,
+	right:assets.assetsArray[0].SavingScreenCancelButton_right,
+	backgroundImage:assets.assetsArray[0].SavingScreenCancelButton,
+	backgroundSelectedImage:assets.assetsArray[0].SavingScreenCancelPressedButton
+});
+
+exports.nameCheck = function(){
+	
+	
+	nameField.value = '';
+	if(nameField.value == '')
+	{
+		saveButton.opacity = .4;
+		saveButton.enabled = false;
+		saveButton.index = 0;
+		saveButton.backgroundImage = assets.assetsArray[0].SavingScreenSaveButton;
+		saveButton.backgroundSelectedImage = assets.assetsArray[0].SavingScreenSavePressedButton;
+	}
+
+}
+
+nameField.addEventListener('return', function(){
+	
+	dbModel.poemsDB = Ti.Database.open('version1');
+
+if(saveButton.index == 0 && nameField.value != '' && saveButton.enabled == true)
+{
+
+	checkTemp = dbModel.poemsDB.execute('INSERT INTO poems (poem_title,poem_content) VALUES (?,?)',nameField.value,writing.PoemTextArea.value);
+	checkTemp = null;
+	dbModel.poemsDB.close();
+	saveConfirmf();
+	
+}
+else if(saveButton.index == 1 && nameField.value != '')
+{
+
+checkTemp = dbModel.poemsDB.execute(" UPDATE poems SET poem_content = ? WHERE poem_title = ?", writing.PoemTextArea.value ,nameField.value);
+									
+	checkTemp = null;
+	dbModel.poemsDB.close();
+	saveConfirmf();
+}
+else{nameField.focus();}
+});
+
+nameField.addEventListener('change', function(){
+	
+	dbModel.poemsDB = Ti.Database.open('version1');
+checkTemp = dbModel.poemsDB.execute('SELECT poem_title FROM poems');
+
+
+//check even if database is empty ie. new user
+if(!checkTemp.isValidRow() && nameField.value != '')
+{
+		saveButton.index = 0;
+		saveButton.backgroundImage = assets.assetsArray[0].SavingScreenSaveButton;
+		saveButton.backgroundSelectedImage = assets.assetsArray[0].SavingScreenSavePressedButton;
+		saveButton.opacity = 1;
+		saveButton.enabled = true;
+}
+
+//continous check while typing
+while(checkTemp.isValidRow())
+{
+	if(checkTemp.fieldByName('poem_title').toString() == nameField.value  && nameField.value !== '')
+	{
+		saveButton.index = 1;
+		saveButton.backgroundImage = assets.assetsArray[0].SavingScreenOverwriteButton;
+		saveButton.backgroundSelectedImage = assets.assetsArray[0].SavingScreenOverwritePressedButton;
+		saveButton.opacity = 1;
+		saveButton.enabled = true;
+		
+		
+		break;
+	}
+	else if(checkTemp.fieldByName('poem_title').toString() !== nameField.value && nameField.value !== '')
+	{
+		
+		saveButton.index = 0;
+		saveButton.backgroundImage = assets.assetsArray[0].SavingScreenSaveButton;
+		saveButton.backgroundSelectedImage = assets.assetsArray[0].SavingScreenSavePressedButton;
+		saveButton.opacity = 1;
+		saveButton.enabled = true;
+		
+		
+		
+	}
+	if(nameField.value == '')
+	{
+		saveButton.opacity = .4;
+		saveButton.enabled = false;
+		
+		
+	}
+	checkTemp.next();
+	
+}
+dbModel.poemsDB.close();
+});
+
+
+saveButton.addEventListener('singletap', function(){
+dbModel.poemsDB = Ti.Database.open('version1');
+
+if(saveButton.index == 0 && nameField.value != null)
+{
+
+checkTemp = dbModel.poemsDB.execute('INSERT INTO poems (poem_title,poem_content) VALUES (?,?)',nameField.value,writing.PoemTextArea.value);
+	checkTemp = null;
+	dbModel.poemsDB.close();
+	saveConfirmf();
+}
+
+else
+{
+
+checkTemp = dbModel.poemsDB.execute(" UPDATE poems SET poem_content = ? WHERE poem_title = ?", writing.PoemTextArea.value ,nameField.value);
+									
+	checkTemp = null;
+	dbModel.poemsDB.close();
+	saveConfirmf();
+}
+});
+
+
+
+cancelButton.addEventListener('singletap', function(){
+	checkTemp = null;
+	dbModel.poemsDB.close();
+	tabbedBar.removeFunction();
+ 	e = tabbedBar.buttonArray[2];
+	tabbedBar.tabHighlight(e);
+	tabbedBar.activeTab = 2;
+	tabbedBar.previousTab = 2;
+	
+});
+
+var saveConfirmf = function(){
+	
+
+	screen.add(confirmDialog);
+	confirmDialog.animate({opacity:1,delay:400,duration:400}, function(){
+		
+	tabbedBar.removeFunction();
+	e = tabbedBar.buttonArray[2];
+	tabbedBar.tabHighlight(e);
+	tabbedBar.activeTab = 2;
+	tabbedBar.previousTab = 2;
+	confirmDialog.opacity = 0;
+		
+	});
+
+
+}
+
+change = function(){
+    //content
+     content.updateLayout({
+        backgroundImage: assets.assetsArray[0].SavingScreenBG,
+        height: assets.assetsArray[0].SavingScreenBG_height,
+        width:assets.assetsArray[0].SavingScreenBG_width,
+        top: assets.assetsArray[0].SavingScreenBG_top,
+        left:assets.assetsArray[0].SavingScreenBG_left
+    });
+    confirmDialog.updateLayout({
+        backgroundImage: assets.assetsArray[0].SavingScreenConfirmScreen,
+        height: assets.assetsArray[0].SavingScreenConfirmScreen_height,
+        width:assets.assetsArray[0].SavingScreenConfirmScreen_width,
+        top: assets.assetsArray[0].SavingScreenConfirmScreen_top,
+        left:assets.assetsArray[0].SavingScreenConfirmScreen_left
+    });
+     nameField.updateLayout({
+        top:assets.assetsArray[0].SavingScreenNameFieldBG_top,
+        left:assets.assetsArray[0].SavingScreenNameFieldBG_left,
+        backgroundImage:assets.assetsArray[0].SavingScreenNameFieldBG,
+        font:{fontFamily: CUSTOM_FONT}
+    });
+     saveButton.updateLayout({
+        width:assets.assetsArray[0].SavingScreenSaveButton_width,
+        height:assets.assetsArray[0].SavingScreenSaveButton_height,
+        bottom:assets.assetsArray[0].SavingScreenSaveButton_bottom,
+        left:assets.assetsArray[0].SavingScreenSaveButton_left,
+        backgroundImage:assets.assetsArray[0].SavingScreenSaveButton,
+        backgroundSelectedImage:assets.assetsArray[0].SavingScreenSavePressedButton
+    });
+     cancelButton.updateLayout({
+        width:assets.assetsArray[0].SavingScreenCancelButton_width,
+        height:assets.assetsArray[0].SavingScreenCancelButton_height,
+        bottom:assets.assetsArray[0].SavingScreenCancelButton_bottom,
+        right:assets.assetsArray[0].SavingScreenCancelButton_right,
+        backgroundImage:assets.assetsArray[0].SavingScreenCancelButton,
+        backgroundSelectedImage:assets.assetsArray[0].SavingScreenCancelPressedButton
+    });   
+}
+exports.change = change;
+exports.addChildren = function(){
+	
+
+screen.add(content);
+content.add(nameField);
+content.add(saveButton);
+content.add(cancelButton);
+}
+exports.screen = screen;
+exports.nameField = nameField;

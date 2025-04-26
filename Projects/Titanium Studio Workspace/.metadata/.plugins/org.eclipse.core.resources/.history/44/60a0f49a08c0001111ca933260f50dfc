@@ -1,0 +1,140 @@
+var activeTab = 2;
+var previousTab = 2;
+var buttonImageArray = [
+
+'images/icon_buttons/post_rest.png',
+'images/icon_buttons/save_rest.png',
+'images/icon_buttons/write_active.png',
+'images/icon_buttons/load_rest.png',
+'images/icon_buttons/clear_rest.png',
+
+];
+
+var buttonActiveImageArray = [
+
+'images/icon_buttons/post_active.png',
+'images/icon_buttons/save_active.png',
+'images/icon_buttons/write_active.png',
+'images/icon_buttons/load_active.png',
+'images/icon_buttons/clear_active.png',
+
+];
+
+
+var buttonArray = [];
+
+for(var i = 0; i < buttonImageArray.length; i++)
+{
+
+var button = Ti.UI.createButton({
+	
+	backgroundImage:buttonImageArray[i],
+	backgroundSelectedImage:buttonActiveImageArray[i],
+	bottom: 0,
+	left:65*i,
+	width: 62,
+	height:45,
+	index: i
+	
+});
+
+
+
+button.addEventListener('click', function(e) {
+	
+switch (e.source.index)
+{
+case 0:
+	tabHighlight(e);
+	
+	removeFunction();
+	
+	writing.window.add(writing.sharing.screen);
+	writing.sharing.screen.opacity = 0;
+	writing.sharing.screen.animate(animations.fadeIn);
+	activeWindow.push(writing.sharing.screen);
+  break;
+case 1:
+ 	tabHighlight(e);
+ 	
+ 	removeFunction();
+ 	
+ 	writing.window.add(writing.saving.screen);
+ 	writing.saving.screen.opacity = 0;
+ 	writing.saving.screen.animate(animations.fadeIn);
+ 	activeWindow.push(writing.saving.screen);
+  break;
+case 2:
+	tabHighlight(e);
+	
+ 	removeFunction();
+  break;
+case 3:
+	tabHighlight(e);
+	
+	removeFunction();
+	
+	writing.window.add(writing.loading.screen);
+	dbModel.loadingF();
+	writing.loading.screen.opacity = 0;
+	writing.loading.screen.animate(animations.fadeIn);
+	activeWindow.push(writing.loading.screen);
+  break;
+case 4:
+ 	tabHighlight(e);
+ 	
+	removeFunction();
+	
+	writing.window.add(writing.deleting.screen);
+	writing.deleting.screen.opacity = 0;
+	writing.deleting.screen.animate(animations.fadeIn);
+	activeWindow.push(writing.deleting.screen);
+	
+  break;
+}
+
+
+	
+});
+
+buttonArray.push(button);
+
+
+
+
+}
+
+
+//Remove Function
+
+exports.removeFunction = function()
+{
+	if(activeWindow.length == 1)
+	{
+		activeWindow[0].animate(animations.fadeOut);
+		writing.window.remove(activeWindow[0].toString());
+		activeWindow[0] = null;
+		activeWindow = null;
+		activeWindow = [];
+	}
+	
+	
+}
+
+//Active Tab Function
+tabHighlight = function(e)
+{
+	previousTab = activeTab;
+	activeTab = e.source.index;
+		
+	if(activeTab != previousTab)
+	{
+		
+		buttonArray[activeTab].backgroundImage = buttonActiveImageArray[activeTab];
+		buttonArray[previousTab].backgroundImage = buttonImageArray[previousTab];
+	}
+	
+}
+
+
+exports.buttonArray = buttonArray;

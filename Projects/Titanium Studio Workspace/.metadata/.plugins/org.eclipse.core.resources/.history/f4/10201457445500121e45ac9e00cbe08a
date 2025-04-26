@@ -1,0 +1,260 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+var arrays = require('Arrays');
+var sharing = require('sharingScreen');
+var saving = require('savingScreen');
+var loading = require('loadingScreen');
+var deleting = require('deletingScreen');
+var info = require('infoScreen');
+var first = Array();//beginning array of words for a split
+var second = Array();//end array of words for a split
+var words = Array();
+var insertIndex = 0;
+var addition;
+var newWord;
+var switchThemeButton;
+var window = Ti.UI.createWindow({
+	backgroundImage: assets.assetsArray[0].WritingScreenBG,
+	top:0,
+	index:3,
+	opacity:0
+});
+
+//switch themes
+var switchThemeButton = Ti.UI.createButton({
+
+    backgroundImage : assets.assetsArray[0].ThemeSwitchButton,
+    width : assets.assetsArray[0].ThemeSwitchButtonWidth,
+    height : assets.assetsArray[0].ThemeSwitchButtonHeight,
+    top : assets.assetsArray[0].ThemeSwitchButtonPos,
+    left : assets.assetsArray[0].ThemeSwitchButtonPos
+
+});
+window.add(switchThemeButton);
+var themesViewBackground = Ti.UI.createWindow({
+    height:480 - tabbedBar.buttonArray[0].width - 2,
+    width:320,
+    top:0,
+    backgroundImage:assets.assetsArray[0].Black1pixel,
+    touchEnabled:true,
+    opacity: 0,
+    backgroundRepeat: true
+    
+});
+
+var themesView = Ti.UI.createView({
+    backgroundImage : assets.assetsArray[0].LoadingScreenBG,
+    height : assets.assetsArray[0].LoadingScreenBG_height,
+    width : assets.assetsArray[0].LoadingScreenBG_width,
+    top : assets.assetsArray[0].LoadingScreenBG_top, 
+});
+
+switchThemeButton.addEventListener('singletap', function() {
+
+    themesViewBackground.open();
+    themesViewBackground.animate(animations.fadeInOnePX);
+    themesViewBackground.add(themesView);
+    themesView.add(themes.themeList);
+    themesView.add(close.button);
+    dbModel.loadTheme();
+    activeWindow.push(writing.loading.screen);
+});
+
+var textAreaBackground = Ti.UI.createView({
+	
+	backgroundImage:assets.assetsArray[0].WritingScreenTextArea,
+	width:303,
+	height:179,
+	left:8,
+	top:64
+	
+	
+});
+var textScroll = Ti.UI.createScrollView({
+	
+		width:295,
+		top:11,
+		left:6,
+		contentHeight: 'auto',
+		showVerticalScrollIndicator: true,
+      	layout: 'vertical'
+});
+textScroll.height = textScroll.contentHeight-1;
+
+var PoemTextArea = Ti.UI.createTextArea({
+		width:295,
+		height:163,
+		top:0,
+		left:0,
+		backgroundColor:'none',
+		color: '#000',
+		editable:true,
+		value:"",
+		scrollable:true,
+		font:{fontFamily:CUSTOM_FONT,size:12},
+		returnKeyType: Titanium.UI.RETURNKEY_DONE
+		
+	});
+
+
+PoemTextArea.addEventListener('selected', function(e){
+	
+	
+	insertIndex = e.range.location;
+	
+});
+
+PoemTextArea.addEventListener('change', function(e){
+	
+	words = (PoemTextArea.value).split( '' );
+    insertIndex = words.length;
+});
+
+
+
+
+window.add(textAreaBackground);
+textAreaBackground.add(textScroll);
+textScroll.add(PoemTextArea);
+
+var buttonsArray = [];
+
+
+for(var i = 0; i < assets.buttonPropertyArray.length; i++)
+{
+
+var button = Ti.UI.createButton({
+	
+	backgroundImage:assets.buttonPropertyArray[i].rest,
+	backgroundSelectedImage:assets.buttonPropertyArray[i].active,
+	width: assets.buttonPropertyArray[i].width,
+	height: assets.buttonPropertyArray[i].height,
+	top:assets.buttonPropertyArray[i].y,
+	left:assets.buttonPropertyArray[i].x,
+	index: i
+});
+eval('button.addEventListener("singletap", function(e) { eval( assets.buttonPropertyArray['+i+'].cEvent );});');
+
+buttonsArray.push(button);
+
+
+window.add(buttonsArray[i]);
+
+
+}
+
+addFunction = function(addition){
+			 
+			 blank = [];
+			 newWord = '';
+			 newWord = addition;
+			 n = newWord.split( '' );
+	 		 words = (PoemTextArea.value).split( '' ); 
+	 		 first = words.slice(0 , insertIndex );
+			 second = words.slice(insertIndex, words.length );
+			 words = blank.concat(first,newWord,second);
+			 PoemTextArea.value = words.join( '' );
+			 insertIndex += n.length;
+			 addition ='';
+			 words = (PoemTextArea.value).split( '' );
+			 textScroll.scrollToBottom();
+}
+
+
+eraseFunction = function(){
+	
+ if(insertIndex <= 0)
+	 {
+		 	insertIndex = 0; 
+	 }
+	 
+ else{
+ 			 insertIndex = words.length;
+			 blank = [];
+	 		 words = (PoemTextArea.value).split( ' ' ); 
+	 		 first = words.slice(0 , insertIndex-1 );
+			 second = words.slice(insertIndex, words.length );
+			 words = blank.concat(first,second);
+			 PoemTextArea.value = words.join( ' ' );
+			 insertIndex -= 1;
+		
+	}
+	
+	
+	
+}
+
+
+
+update = function(){
+    //Updates the state of the app
+    sharing.change();
+    change();
+    deleting.change();
+    loading.change();
+    loading.deleteAllConfirm.change();
+    info.change();
+    saving.change();
+    tabbedBar.change();
+    tabbedBar.tabHighlight(tabbedBar.buttonArray[2]);
+
+    
+}
+
+change = function(){
+    
+
+    //update buttons
+    for(var i = 0; i < buttonsArray.length; i++)
+        {
+            buttonsArray[i].updateLayout({
+                backgroundImage:assets.buttonPropertyArray[i].rest,
+                backgroundSelectedImage:assets.buttonPropertyArray[i].active,
+                width: assets.buttonPropertyArray[i].width,
+                height: assets.buttonPropertyArray[i].height,
+                top:assets.buttonPropertyArray[i].y,
+                left:assets.buttonPropertyArray[i].x 
+            });
+        }
+    //update window
+    window.updateLayout({
+        backgroundImage: assets.assetsArray[0].WritingScreenBG
+    });
+    //change textArea
+    textAreaBackground.updateLayout({
+       backgroundImage:assets.assetsArray[0].WritingScreenTextArea 
+    });
+    //text area
+    PoemTextArea.updateLayout({
+       font:{fontFamily:CUSTOM_FONT,size:12} 
+    });
+    switchThemeButton.updateLayout({
+        backgroundImage : assets.assetsArray[0].ThemeSwitchButton,
+        width : assets.assetsArray[0].ThemeSwitchButtonWidth,
+        height : assets.assetsArray[0].ThemeSwitchButtonHeight,
+        top : assets.assetsArray[0].ThemeSwitchButtonPos,
+        left : assets.assetsArray[0].ThemeSwitchButtonPos 
+    });
+    themesView.updateLayout({
+        backgroundImage : assets.assetsArray[0].LoadingScreenBG,
+        height : assets.assetsArray[0].LoadingScreenBG_height,
+        width : assets.assetsArray[0].LoadingScreenBG_width,
+        top : assets.assetsArray[0].LoadingScreenBG_top,
+    });
+
+}
+exports.themesViewBackground = themesViewBackground;
+exports.themesView = themesView;
+exports.update = update;
+exports.change = change;
+exports.insertIndex = insertIndex;
+exports.PoemTextArea = PoemTextArea;
+exports.sharing = sharing;
+exports.saving = saving;
+exports.loading = loading;
+exports.deleting = deleting;
+exports.info = info;
+exports.window = window;
+

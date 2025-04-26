@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.android.simulator.launchConfigurationType">
+<booleanAttribute key="ATTR_CLEAN_BEFORE_LAUNCH" value="false"/>
+<stringAttribute key="ATTR_LOG_LEVEL" value="Info"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value=""/>
+<stringAttribute key="abi" value="armeabi"/>
+<stringAttribute key="screen_type" value="WVGA800"/>
+<stringAttribute key="sdk_version" value="Google APIs Android 2.3.3"/>
+</launchConfiguration>

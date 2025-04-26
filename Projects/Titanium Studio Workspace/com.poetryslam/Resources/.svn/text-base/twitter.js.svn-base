@@ -1,0 +1,23 @@
+var twitter_Button	= Ti.UI.createButton({
+	backgroundImage:assets.assetsArray[0].TwitterButtonBG,
+	top: assets.assetsArray[0].TwitterButtonBG_top,
+	left: assets.assetsArray[0].TwitterButtonBG_left,
+	height: assets.assetsArray[0].TwitterButtonBG_height,
+	width:assets.assetsArray[0].TwitterButtonBG_width
+});
+
+twitter_Button.addEventListener('click',function(e){
+	
+	if(writing.PoemTextArea.value.length >= 128)
+	{
+		//put pop up here to tell them that it will be shortened
+		 Ti.UI.createAlertDialog({title:'Poem Too Long Error',message:'Your poem would be cut off, please shorten it to post to Twitter'}).show();
+	}
+	else{
+		
+	module.tweet({
+		message: 	writing.PoemTextArea.value.substring(0,127)+" -@_PoetrySlam"
+	});
+	
+	}
+});

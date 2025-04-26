@@ -1,0 +1,82 @@
+var arrays = require('Arrays');
+var sharing = require('sharingScreen');
+var saving = require('savingScreen');
+var loading = require('loadingScreen');
+var deleting = require('deletingScreen');
+var info = require('infoScreen');
+var words = Array();
+
+var window = Ti.UI.createWindow({
+	backgroundImage: assets.assetsArray[0].WritingScreenBG,
+	top:0,
+	index:3,
+	opacity:0
+});
+
+
+var textAreaBackground = Ti.UI.createView({
+	
+	backgroundImage:assets.assetsArray[0].WritingScreenTextArea,
+	width:303,
+	height:179,
+	left:8,
+	top:64
+	
+	
+});
+
+
+
+var PoemTextArea = Ti.UI.createTextArea({
+		width:295,
+		height:163,
+		top:11,
+		left:6,
+		backgroundColor:'none',
+		color: '#000',
+		editable:true,
+		value:"",
+		font:{fontFamily:CUSTOM_FONT},
+		returnKeyType: Titanium.UI.RETURNKEY_DONE
+		
+		
+	});
+
+
+
+
+window.add(textAreaBackground);
+textAreaBackground.add(PoemTextArea);
+
+var buttonsArray = [];
+
+
+for(var i = 0; i < assets.buttonPropertyArray.length; i++)
+{
+
+var button = Ti.UI.createButton({
+	
+	backgroundImage:assets.buttonPropertyArray[i].rest,
+	backgroundSelectedImage:assets.buttonPropertyArray[i].active,
+	width: assets.buttonPropertyArray[i].width,
+	height: assets.buttonPropertyArray[i].height,
+	top:assets.buttonPropertyArray[i].y,
+	left:assets.buttonPropertyArray[i].x,
+	index: i
+});
+eval('button.addEventListener("singletap", function(e) { eval( assets.buttonPropertyArray['+i+'].cEvent );});');
+
+buttonsArray.push(button);
+
+
+window.add(buttonsArray[i]);
+
+
+}
+
+exports.PoemTextArea = PoemTextArea;
+exports.sharing = sharing;
+exports.saving = saving;
+exports.loading = loading;
+exports.deleting = deleting;
+exports.window = window;

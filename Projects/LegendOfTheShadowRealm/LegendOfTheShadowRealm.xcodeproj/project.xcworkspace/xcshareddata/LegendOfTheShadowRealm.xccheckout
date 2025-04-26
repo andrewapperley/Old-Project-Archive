@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>474B2F66-E2C5-423D-9339-61801A0A227E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LegendOfTheShadowRealm</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A021ACC2-0C6E-4186-8438-74A71C7BA90C</key>
+		<string>svn+ssh://andrewapperley.ca/home/148292/data/svn/rpgGame/rpgGame</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/LegendOfTheShadowRealm/LegendOfTheShadowRealm.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A021ACC2-0C6E-4186-8438-74A71C7BA90C</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>A021ACC2-0C6E-4186-8438-74A71C7BA90C</key>
+		<string>svn+ssh://andrewapperley.ca/home/148292/data/svn/rpgGame</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn+ssh://andrewapperley.ca/home/148292/data/svn/rpgGame/rpgGame/trunk/LegendOfTheShadowRealm/LegendOfTheShadowRealm.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A021ACC2-0C6E-4186-8438-74A71C7BA90C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A021ACC2-0C6E-4186-8438-74A71C7BA90C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rpgGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

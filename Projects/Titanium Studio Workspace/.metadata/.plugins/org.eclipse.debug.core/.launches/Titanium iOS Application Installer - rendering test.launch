@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.installer.launchConfigurationType">
+<stringAttribute key="ATTR_PROJECT_NAME" value="rendering test"/>
+<stringAttribute key="appid" value="ca.andrewapperley.testinggame"/>
+<stringAttribute key="certificate" value="Andrew Apperley (98UL8MBG2F)"/>
+<stringAttribute key="debug_config" value="::1352170473653:5.103.143.235,192.168.0.25"/>
+<stringAttribute key="debug_hosts" value="5.103.143.235,192.168.0.25"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/rendering test"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
+<stringAttribute key="sdk_version" value="6.0"/>
+<stringAttribute key="uuid" value="0F119994-0BD2-45E6-BD03-C195D2293074"/>
+</launchConfiguration>

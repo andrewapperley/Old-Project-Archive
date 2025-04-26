@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F583C6E1715C005008FDC13 /* AFFVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F583C6D1715C005008FDC13 /* AFFVector.m */; };
+		0F583C761717158A008FDC13 /* UIView+AFFUIVew_pos_size.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F583C751717158A008FDC13 /* UIView+AFFUIVew_pos_size.m */; };
+		0F583C7917171DE6008FDC13 /* UIView+AFFUIVew_pos_size.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F583C751717158A008FDC13 /* UIView+AFFUIVew_pos_size.m */; };
+		0FBCF3D1179F6C9500ABA9FF /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0FBCF3D0179F6C9500ABA9FF /* test.xml */; };
+		0FD9898A171386550026BF95 /* AFFPDFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD98989171386550026BF95 /* AFFPDFUtil.m */; };
+		768537C71716428100F1EF81 /* AFFEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 768537B01716428100F1EF81 /* AFFEventAPI.m */; };
+		768537CD1716428100F1EF81 /* AFFEventSystemHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 768537C21716428100F1EF81 /* AFFEventSystemHandler.m */; };
+		768537D71716498400F1EF81 /* AFFEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 768537D11716484E00F1EF81 /* AFFEventHandler.m */; };
+		768A3F8F171C5E9F003ED566 /* AFFSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768A3F8E171C5E9F003ED566 /* AFFSwipeViewController.m */; };
+		768A3F9B171C7E46003ED566 /* AFFGesturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768A3F9A171C7E46003ED566 /* AFFGesturedViewController.m */; };
+		7691286A170FA40300D2CFCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76912869170FA40300D2CFCA /* Foundation.framework */; };
+		7691286F170FA40300D2CFCA /* AFFramework.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7691286E170FA40300D2CFCA /* AFFramework.h */; };
+		76912871170FA40300D2CFCA /* AFFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 76912870170FA40300D2CFCA /* AFFramework.m */; };
+		7691295817121B3E00D2CFCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7691295717121B3E00D2CFCA /* UIKit.framework */; };
+		7691295917121B3E00D2CFCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76912869170FA40300D2CFCA /* Foundation.framework */; };
+		7691295B17121B3E00D2CFCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7691295A17121B3E00D2CFCA /* CoreGraphics.framework */; };
+		7691296117121B3E00D2CFCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7691295F17121B3E00D2CFCA /* InfoPlist.strings */; };
+		7691296317121B3E00D2CFCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691296217121B3E00D2CFCA /* main.m */; };
+		7691296717121B3E00D2CFCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691296617121B3E00D2CFCA /* AppDelegate.m */; };
+		7691296917121B3E00D2CFCA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7691296817121B3E00D2CFCA /* Default.png */; };
+		7691296B17121B3E00D2CFCA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7691296A17121B3E00D2CFCA /* Default@2x.png */; };
+		7691296D17121B3E00D2CFCA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7691296C17121B3E00D2CFCA /* Default-568h@2x.png */; };
+		7691297017121B3E00D2CFCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691296F17121B3E00D2CFCA /* ViewController.m */; };
+		7691297D17121BC500D2CFCA /* TestButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691297C17121BC500D2CFCA /* TestButton.m */; };
+		7691297E17121FE600D2CFCA /* libAFFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76912866170FA40300D2CFCA /* libAFFramework.a */; };
+		7691299F17122DA100D2CFCA /* AFFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691298F17122DA100D2CFCA /* AFFImageCache.m */; };
+		769129A117122DA100D2CFCA /* AFFSelectorQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691299517122DA100D2CFCA /* AFFSelectorQueue.m */; };
+		769129A217122DA100D2CFCA /* AFFString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691299817122DA100D2CFCA /* AFFString.m */; };
+		769129A317122DA100D2CFCA /* AFFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691299B17122DA100D2CFCA /* AFFVideoPlayer.m */; };
+		769129A417122DA100D2CFCA /* AFFXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691299E17122DA100D2CFCA /* AFFXMLParser.m */; };
+		769129AB17122E8500D2CFCA /* AFFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 769129AA17122E8500D2CFCA /* AFFImage.m */; };
+		76976C70179AF37200786BD7 /* UIImage+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76976C6F179AF37200786BD7 /* UIImage+UIView.m */; };
+		76A307CF1719B15600A4A480 /* AFFEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 768537AD1716428100F1EF81 /* AFFEvent.m */; };
+		76A307D41719D01400A4A480 /* AFFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A307D31719D01400A4A480 /* AFFView.m */; };
+		76A307D81719D03400A4A480 /* AFFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A307D71719D03400A4A480 /* AFFViewController.m */; };
+		76A307DC171A5D1C00A4A480 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A307DB171A5D1C00A4A480 /* TestView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76912864170FA40300D2CFCA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				7691286F170FA40300D2CFCA /* AFFramework.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F583C6C1715C005008FDC13 /* AFFVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFVector.h; sourceTree = "<group>"; };
+		0F583C6D1715C005008FDC13 /* AFFVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFVector.m; sourceTree = "<group>"; };
+		0F583C741717158A008FDC13 /* UIView+AFFUIVew_pos_size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AFFUIVew_pos_size.h"; sourceTree = "<group>"; };
+		0F583C751717158A008FDC13 /* UIView+AFFUIVew_pos_size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AFFUIVew_pos_size.m"; sourceTree = "<group>"; };
+		0FBCF2A5179F3CC200ABA9FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		0FBCF2A8179F3CC300ABA9FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0FBCF2A9179F3CC300ABA9FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0FBCF2AA179F3CC300ABA9FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0FBCF2AD179F3CC300ABA9FF /* sdfsdf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sdfsdf-Info.plist"; sourceTree = "<group>"; };
+		0FBCF2AF179F3CC300ABA9FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0FBCF2B1179F3CC300ABA9FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0FBCF2B3179F3CC300ABA9FF /* sdfsdf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sdfsdf-Prefix.pch"; sourceTree = "<group>"; };
+		0FBCF2B5179F3CC300ABA9FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0FBCF2B7179F3CC300ABA9FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0FBCF2B8179F3CC300ABA9FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0FBCF2BB179F3CC300ABA9FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0FBCF3D0179F6C9500ABA9FF /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
+		0FD98988171386550026BF95 /* AFFPDFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFPDFUtil.h; sourceTree = "<group>"; };
+		0FD98989171386550026BF95 /* AFFPDFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFPDFUtil.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		768537AD1716428100F1EF81 /* AFFEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		768537AF1716428100F1EF81 /* AFFEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFEventAPI.h; sourceTree = "<group>"; };
+		768537B01716428100F1EF81 /* AFFEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFEventAPI.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		768537B81716428100F1EF81 /* AFFEventCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFEventCenter.h; sourceTree = "<group>"; };
+		768537C11716428100F1EF81 /* AFFEventSystemHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFEventSystemHandler.h; sourceTree = "<group>"; };
+		768537C21716428100F1EF81 /* AFFEventSystemHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFEventSystemHandler.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		768537D01716484E00F1EF81 /* AFFEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFEventHandler.h; sourceTree = "<group>"; };
+		768537D11716484E00F1EF81 /* AFFEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFEventHandler.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		768A3F8D171C5E9F003ED566 /* AFFSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFSwipeViewController.h; path = AFFSwipeViewController/AFFSwipeViewController.h; sourceTree = "<group>"; };
+		768A3F8E171C5E9F003ED566 /* AFFSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AFFSwipeViewController.m; path = AFFSwipeViewController/AFFSwipeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		768A3F99171C7E46003ED566 /* AFFGesturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFGesturedViewController.h; path = AFFGesturedViewController/AFFGesturedViewController.h; sourceTree = "<group>"; };
+		768A3F9A171C7E46003ED566 /* AFFGesturedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AFFGesturedViewController.m; path = AFFGesturedViewController/AFFGesturedViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		76912866170FA40300D2CFCA /* libAFFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76912869170FA40300D2CFCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7691286D170FA40300D2CFCA /* AFFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFFramework-Prefix.pch"; sourceTree = "<group>"; };
+		7691286E170FA40300D2CFCA /* AFFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFFramework.h; sourceTree = "<group>"; };
+		76912870170FA40300D2CFCA /* AFFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFFramework.m; sourceTree = "<group>"; };
+		7691295617121B3E00D2CFCA /* TestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7691295717121B3E00D2CFCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7691295A17121B3E00D2CFCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7691295E17121B3E00D2CFCA /* TestHarness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestHarness-Info.plist"; sourceTree = "<group>"; };
+		7691296017121B3E00D2CFCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7691296217121B3E00D2CFCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7691296417121B3E00D2CFCA /* TestHarness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestHarness-Prefix.pch"; sourceTree = "<group>"; };
+		7691296517121B3E00D2CFCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7691296617121B3E00D2CFCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7691296817121B3E00D2CFCA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7691296A17121B3E00D2CFCA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7691296C17121B3E00D2CFCA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7691296E17121B3E00D2CFCA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7691296F17121B3E00D2CFCA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7691297B17121BC500D2CFCA /* TestButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestButton.h; path = TestButton/TestButton.h; sourceTree = "<group>"; };
+		7691297C17121BC500D2CFCA /* TestButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestButton.m; path = TestButton/TestButton.m; sourceTree = "<group>"; };
+		769129861712282100D2CFCA /* AFFCleanup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AFFCleanup.h; path = AFFCleanup/AFFCleanup.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7691298A17122AB900D2CFCA /* AFFMiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFMiscMacros.h; path = AFFMiscMacros/AFFMiscMacros.h; sourceTree = "<group>"; };
+		7691298E17122DA100D2CFCA /* AFFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFImageCache.h; sourceTree = "<group>"; };
+		7691298F17122DA100D2CFCA /* AFFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFImageCache.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7691299417122DA100D2CFCA /* AFFSelectorQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFSelectorQueue.h; sourceTree = "<group>"; };
+		7691299517122DA100D2CFCA /* AFFSelectorQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFSelectorQueue.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7691299717122DA100D2CFCA /* AFFString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFString.h; sourceTree = "<group>"; };
+		7691299817122DA100D2CFCA /* AFFString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFString.m; sourceTree = "<group>"; };
+		7691299A17122DA100D2CFCA /* AFFVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFVideoPlayer.h; sourceTree = "<group>"; };
+		7691299B17122DA100D2CFCA /* AFFVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFVideoPlayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7691299D17122DA100D2CFCA /* AFFXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFXMLParser.h; sourceTree = "<group>"; };
+		7691299E17122DA100D2CFCA /* AFFXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFXMLParser.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		769129A917122E8500D2CFCA /* AFFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFImage.h; sourceTree = "<group>"; };
+		769129AA17122E8500D2CFCA /* AFFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFFImage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		76976C6E179AF37200786BD7 /* UIImage+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+UIView.h"; path = "UIImage+UIView/UIImage+UIView.h"; sourceTree = "<group>"; };
+		76976C6F179AF37200786BD7 /* UIImage+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+UIView.m"; path = "UIImage+UIView/UIImage+UIView.m"; sourceTree = "<group>"; };
+		76976C7C179B64AC00786BD7 /* ARCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ARCHelper.h; path = ARCHelper/ARCHelper.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		76A307D01719B1D200A4A480 /* AFFEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFEvent.h; sourceTree = "<group>"; };
+		76A307D21719D01400A4A480 /* AFFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFView.h; path = AFFView/AFFView.h; sourceTree = "<group>"; };
+		76A307D31719D01400A4A480 /* AFFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFFView.m; path = AFFView/AFFView.m; sourceTree = "<group>"; };
+		76A307D61719D03400A4A480 /* AFFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFFViewController.h; path = AFFViewController/AFFViewController.h; sourceTree = "<group>"; };
+		76A307D71719D03400A4A480 /* AFFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AFFViewController.m; path = AFFViewController/AFFViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		76A307DA171A5D1C00A4A480 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestView.h; path = TestView/TestView.h; sourceTree = "<group>"; };
+		76A307DB171A5D1C00A4A480 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestView.m; path = TestView/TestView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76912863170FA40300D2CFCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7691286A170FA40300D2CFCA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7691295317121B3E00D2CFCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7691297E17121FE600D2CFCA /* libAFFramework.a in Frameworks */,
+				7691295817121B3E00D2CFCA /* UIKit.framework in Frameworks */,
+				7691295917121B3E00D2CFCA /* Foundation.framework in Frameworks */,
+				7691295B17121B3E00D2CFCA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F583C6B1715BFD7008FDC13 /* AFFVector */ = {
+			isa = PBXGroup;
+			children = (
+				0F583C6C1715C005008FDC13 /* AFFVector.h */,
+				0F583C6D1715C005008FDC13 /* AFFVector.m */,
+			);
+			path = AFFVector;
+			sourceTree = "<group>";
+		};
+		0F583C6F17170FB3008FDC13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				768A3F98171C7E28003ED566 /* AFFGesturedViewController */,
+				768A3F8C171C5E7E003ED566 /* AFFSwipeViewController */,
+				76A307D51719D01E00A4A480 /* AFFViewController */,
+				76A307D11719CFEE00A4A480 /* AFFView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0F583C7017170FB3008FDC13 /* UIView+pos+size */ = {
+			isa = PBXGroup;
+			children = (
+				0F583C741717158A008FDC13 /* UIView+AFFUIVew_pos_size.h */,
+				0F583C751717158A008FDC13 /* UIView+AFFUIVew_pos_size.m */,
+			);
+			name = "UIView+pos+size";
+			path = "../Views/UIView+pos+size";
+			sourceTree = "<group>";
+		};
+		0FBCF2A7179F3CC200ABA9FF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCF2A8179F3CC300ABA9FF /* AppKit.framework */,
+				0FBCF2A9179F3CC300ABA9FF /* CoreData.framework */,
+				0FBCF2AA179F3CC300ABA9FF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0FBCF2AB179F3CC300ABA9FF /* sdfsdf */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCF2B7179F3CC300ABA9FF /* AppDelegate.h */,
+				0FBCF2B8179F3CC300ABA9FF /* AppDelegate.m */,
+				0FBCF2BA179F3CC300ABA9FF /* MainMenu.xib */,
+				0FBCF2AC179F3CC300ABA9FF /* Supporting Files */,
+			);
+			path = sdfsdf;
+			sourceTree = "<group>";
+		};
+		0FBCF2AC179F3CC300ABA9FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCF2AD179F3CC300ABA9FF /* sdfsdf-Info.plist */,
+				0FBCF2AE179F3CC300ABA9FF /* InfoPlist.strings */,
+				0FBCF2B1179F3CC300ABA9FF /* main.m */,
+				0FBCF2B3179F3CC300ABA9FF /* sdfsdf-Prefix.pch */,
+				0FBCF2B4179F3CC300ABA9FF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FD989871713861C0026BF95 /* AFFPDFUtil */ = {
+			isa = PBXGroup;
+			children = (
+				0FD98988171386550026BF95 /* AFFPDFUtil.h */,
+				0FD98989171386550026BF95 /* AFFPDFUtil.m */,
+			);
+			path = AFFPDFUtil;
+			sourceTree = "<group>";
+		};
+		768537AB1716428100F1EF81 /* AFFEvent */ = {
+			isa = PBXGroup;
+			children = (
+				76A307D01719B1D200A4A480 /* AFFEvent.h */,
+				768537AD1716428100F1EF81 /* AFFEvent.m */,
+			);
+			path = AFFEvent;
+			sourceTree = "<group>";
+		};
+		768537AE1716428100F1EF81 /* AFFEventAPI */ = {
+			isa = PBXGroup;
+			children = (
+				768537AF1716428100F1EF81 /* AFFEventAPI.h */,
+				768537B01716428100F1EF81 /* AFFEventAPI.m */,
+			);
+			path = AFFEventAPI;
+			sourceTree = "<group>";
+		};
+		768537B71716428100F1EF81 /* AFFEventCenter */ = {
+			isa = PBXGroup;
+			children = (
+				768537B81716428100F1EF81 /* AFFEventCenter.h */,
+			);
+			path = AFFEventCenter;
+			sourceTree = "<group>";
+		};
+		768537BA1716428100F1EF81 /* AFFEventHandler */ = {
+			isa = PBXGroup;
+			children = (
+				768537D01716484E00F1EF81 /* AFFEventHandler.h */,
+				768537D11716484E00F1EF81 /* AFFEventHandler.m */,
+			);
+			path = AFFEventHandler;
+			sourceTree = "<group>";
+		};
+		768537C01716428100F1EF81 /* AFFEventSystemHandler */ = {
+			isa = PBXGroup;
+			children = (
+				768537C11716428100F1EF81 /* AFFEventSystemHandler.h */,
+				768537C21716428100F1EF81 /* AFFEventSystemHandler.m */,
+			);
+			path = AFFEventSystemHandler;
+			sourceTree = "<group>";
+		};
+		768A3F8C171C5E7E003ED566 /* AFFSwipeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				768A3F8D171C5E9F003ED566 /* AFFSwipeViewController.h */,
+				768A3F8E171C5E9F003ED566 /* AFFSwipeViewController.m */,
+			);
+			name = AFFSwipeViewController;
+			sourceTree = "<group>";
+		};
+		768A3F98171C7E28003ED566 /* AFFGesturedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				768A3F99171C7E46003ED566 /* AFFGesturedViewController.h */,
+				768A3F9A171C7E46003ED566 /* AFFGesturedViewController.m */,
+			);
+			name = AFFGesturedViewController;
+			sourceTree = "<group>";
+		};
+		7691285D170FA40300D2CFCA = {
+			isa = PBXGroup;
+			children = (
+				7691286B170FA40300D2CFCA /* AFFramework */,
+				7691295C17121B3E00D2CFCA /* TestHarness */,
+				0FBCF2AB179F3CC300ABA9FF /* sdfsdf */,
+				76912868170FA40300D2CFCA /* Frameworks */,
+				76912867170FA40300D2CFCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76912867170FA40300D2CFCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76912866170FA40300D2CFCA /* libAFFramework.a */,
+				7691295617121B3E00D2CFCA /* TestHarness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76912868170FA40300D2CFCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76912869170FA40300D2CFCA /* Foundation.framework */,
+				7691295717121B3E00D2CFCA /* UIKit.framework */,
+				7691295A17121B3E00D2CFCA /* CoreGraphics.framework */,
+				0FBCF2A5179F3CC200ABA9FF /* Cocoa.framework */,
+				0FBCF2A7179F3CC200ABA9FF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7691286B170FA40300D2CFCA /* AFFramework */ = {
+			isa = PBXGroup;
+			children = (
+				7691286E170FA40300D2CFCA /* AFFramework.h */,
+				76912870170FA40300D2CFCA /* AFFramework.m */,
+				76912878170FA47300D2CFCA /* Events */,
+				7691286C170FA40300D2CFCA /* Supporting Files */,
+				76912879170FA47300D2CFCA /* Utilities */,
+				0F583C6F17170FB3008FDC13 /* Views */,
+			);
+			path = AFFramework;
+			sourceTree = "<group>";
+		};
+		7691286C170FA40300D2CFCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7691286D170FA40300D2CFCA /* AFFramework-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76912878170FA47300D2CFCA /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				76976C7B179B647400786BD7 /* ARCHelper */,
+				768537AB1716428100F1EF81 /* AFFEvent */,
+				768537AE1716428100F1EF81 /* AFFEventAPI */,
+				768537B71716428100F1EF81 /* AFFEventCenter */,
+				768537BA1716428100F1EF81 /* AFFEventHandler */,
+				768537C01716428100F1EF81 /* AFFEventSystemHandler */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		76912879170FA47300D2CFCA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				769129851712280000D2CFCA /* AFFCleanup */,
+				769129A817122E8500D2CFCA /* AFFImage */,
+				7691298D17122DA100D2CFCA /* AFFImageCache */,
+				7691298917122A9C00D2CFCA /* AFFMiscMacros */,
+				0FD989871713861C0026BF95 /* AFFPDFUtil */,
+				7691299317122DA100D2CFCA /* AFFSelectorQueue */,
+				7691299617122DA100D2CFCA /* AFFString */,
+				0F583C6B1715BFD7008FDC13 /* AFFVector */,
+				7691299917122DA100D2CFCA /* AFFVideoPlayer */,
+				7691299C17122DA100D2CFCA /* AFFXMLParser */,
+				76976C6D179AF32600786BD7 /* UIImage+UIView */,
+				0F583C7017170FB3008FDC13 /* UIView+pos+size */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7691295C17121B3E00D2CFCA /* TestHarness */ = {
+			isa = PBXGroup;
+			children = (
+				0FBCF3D0179F6C9500ABA9FF /* test.xml */,
+				76A307D9171A5CFC00A4A480 /* TestView */,
+				7691297A17121BB100D2CFCA /* TestButton */,
+				7691296517121B3E00D2CFCA /* AppDelegate.h */,
+				7691296617121B3E00D2CFCA /* AppDelegate.m */,
+				7691295D17121B3E00D2CFCA /* Supporting Files */,
+				7691296E17121B3E00D2CFCA /* ViewController.h */,
+				7691296F17121B3E00D2CFCA /* ViewController.m */,
+			);
+			path = TestHarness;
+			sourceTree = "<group>";
+		};
+		7691295D17121B3E00D2CFCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7691295E17121B3E00D2CFCA /* TestHarness-Info.plist */,
+				7691295F17121B3E00D2CFCA /* InfoPlist.strings */,
+				7691296217121B3E00D2CFCA /* main.m */,
+				7691296417121B3E00D2CFCA /* TestHarness-Prefix.pch */,
+				7691296817121B3E00D2CFCA /* Default.png */,
+				7691296A17121B3E00D2CFCA /* Default@2x.png */,
+				7691296C17121B3E00D2CFCA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7691297A17121BB100D2CFCA /* TestButton */ = {
+			isa = PBXGroup;
+			children = (
+				7691297B17121BC500D2CFCA /* TestButton.h */,
+				7691297C17121BC500D2CFCA /* TestButton.m */,
+			);
+			name = TestButton;
+			sourceTree = "<group>";
+		};
+		769129851712280000D2CFCA /* AFFCleanup */ = {
+			isa = PBXGroup;
+			children = (
+				769129861712282100D2CFCA /* AFFCleanup.h */,
+			);
+			name = AFFCleanup;
+			sourceTree = "<group>";
+		};
+		7691298917122A9C00D2CFCA /* AFFMiscMacros */ = {
+			isa = PBXGroup;
+			children = (
+				7691298A17122AB900D2CFCA /* AFFMiscMacros.h */,
+			);
+			name = AFFMiscMacros;
+			sourceTree = "<group>";
+		};
+		7691298D17122DA100D2CFCA /* AFFImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				7691298E17122DA100D2CFCA /* AFFImageCache.h */,
+				7691298F17122DA100D2CFCA /* AFFImageCache.m */,
+			);
+			path = AFFImageCache;
+			sourceTree = "<group>";
+		};
+		7691299317122DA100D2CFCA /* AFFSelectorQueue */ = {
+			isa = PBXGroup;
+			children = (
+				7691299417122DA100D2CFCA /* AFFSelectorQueue.h */,
+				7691299517122DA100D2CFCA /* AFFSelectorQueue.m */,
+			);
+			path = AFFSelectorQueue;
+			sourceTree = "<group>";
+		};
+		7691299617122DA100D2CFCA /* AFFString */ = {
+			isa = PBXGroup;
+			children = (
+				7691299717122DA100D2CFCA /* AFFString.h */,
+				7691299817122DA100D2CFCA /* AFFString.m */,
+			);
+			path = AFFString;
+			sourceTree = "<group>";
+		};
+		7691299917122DA100D2CFCA /* AFFVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				7691299A17122DA100D2CFCA /* AFFVideoPlayer.h */,
+				7691299B17122DA100D2CFCA /* AFFVideoPlayer.m */,
+			);
+			path = AFFVideoPlayer;
+			sourceTree = "<group>";
+		};
+		7691299C17122DA100D2CFCA /* AFFXMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				7691299D17122DA100D2CFCA /* AFFXMLParser.h */,
+				7691299E17122DA100D2CFCA /* AFFXMLParser.m */,
+			);
+			path = AFFXMLParser;
+			sourceTree = "<group>";
+		};
+		769129A817122E8500D2CFCA /* AFFImage */ = {
+			isa = PBXGroup;
+			children = (
+				769129A917122E8500D2CFCA /* AFFImage.h */,
+				769129AA17122E8500D2CFCA /* AFFImage.m */,
+			);
+			path = AFFImage;
+			sourceTree = "<group>";
+		};
+		76976C6D179AF32600786BD7 /* UIImage+UIView */ = {
+			isa = PBXGroup;
+			children = (
+				76976C6E179AF37200786BD7 /* UIImage+UIView.h */,
+				76976C6F179AF37200786BD7 /* UIImage+UIView.m */,
+			);
+			name = "UIImage+UIView";
+			sourceTree = "<group>";
+		};
+		76976C7B179B647400786BD7 /* ARCHelper */ = {
+			isa = PBXGroup;
+			children = (
+				76976C7C179B64AC00786BD7 /* ARCHelper.h */,
+			);
+			name = ARCHelper;
+			sourceTree = "<group>";
+		};
+		76A307D11719CFEE00A4A480 /* AFFView */ = {
+			isa = PBXGroup;
+			children = (
+				76A307D21719D01400A4A480 /* AFFView.h */,
+				76A307D31719D01400A4A480 /* AFFView.m */,
+			);
+			name = AFFView;
+			sourceTree = "<group>";
+		};
+		76A307D51719D01E00A4A480 /* AFFViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76A307D61719D03400A4A480 /* AFFViewController.h */,
+				76A307D71719D03400A4A480 /* AFFViewController.m */,
+			);
+			name = AFFViewController;
+			sourceTree = "<group>";
+		};
+		76A307D9171A5CFC00A4A480 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				76A307DA171A5D1C00A4A480 /* TestView.h */,
+				76A307DB171A5D1C00A4A480 /* TestView.m */,
+			);
+			name = TestView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76912865170FA40300D2CFCA /* AFFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76912874170FA40300D2CFCA /* Build configuration list for PBXNativeTarget "AFFramework" */;
+			buildPhases = (
+				76912862170FA40300D2CFCA /* Sources */,
+				76912863170FA40300D2CFCA /* Frameworks */,
+				76912864170FA40300D2CFCA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFFramework;
+			productName = AFFramework;
+			productReference = 76912866170FA40300D2CFCA /* libAFFramework.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7691295517121B3E00D2CFCA /* TestHarness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7691297717121B3E00D2CFCA /* Build configuration list for PBXNativeTarget "TestHarness" */;
+			buildPhases = (
+				7691295217121B3E00D2CFCA /* Sources */,
+				7691295317121B3E00D2CFCA /* Frameworks */,
+				7691295417121B3E00D2CFCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestHarness;
+			productName = TestHarness;
+			productReference = 7691295617121B3E00D2CFCA /* TestHarness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7691285E170FA40300D2CFCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = AFFramework;
+			};
+			buildConfigurationList = 76912861170FA40300D2CFCA /* Build configuration list for PBXProject "AFFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7691285D170FA40300D2CFCA;
+			productRefGroup = 76912867170FA40300D2CFCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76912865170FA40300D2CFCA /* AFFramework */,
+				7691295517121B3E00D2CFCA /* TestHarness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7691295417121B3E00D2CFCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7691296117121B3E00D2CFCA /* InfoPlist.strings in Resources */,
+				7691296917121B3E00D2CFCA /* Default.png in Resources */,
+				7691296B17121B3E00D2CFCA /* Default@2x.png in Resources */,
+				7691296D17121B3E00D2CFCA /* Default-568h@2x.png in Resources */,
+				0FBCF3D1179F6C9500ABA9FF /* test.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76912862170FA40300D2CFCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A307CF1719B15600A4A480 /* AFFEvent.m in Sources */,
+				768537D71716498400F1EF81 /* AFFEventHandler.m in Sources */,
+				76912871170FA40300D2CFCA /* AFFramework.m in Sources */,
+				7691299F17122DA100D2CFCA /* AFFImageCache.m in Sources */,
+				769129A117122DA100D2CFCA /* AFFSelectorQueue.m in Sources */,
+				769129A217122DA100D2CFCA /* AFFString.m in Sources */,
+				769129A317122DA100D2CFCA /* AFFVideoPlayer.m in Sources */,
+				769129A417122DA100D2CFCA /* AFFXMLParser.m in Sources */,
+				769129AB17122E8500D2CFCA /* AFFImage.m in Sources */,
+				0FD9898A171386550026BF95 /* AFFPDFUtil.m in Sources */,
+				0F583C6E1715C005008FDC13 /* AFFVector.m in Sources */,
+				768537C71716428100F1EF81 /* AFFEventAPI.m in Sources */,
+				768537CD1716428100F1EF81 /* AFFEventSystemHandler.m in Sources */,
+				0F583C761717158A008FDC13 /* UIView+AFFUIVew_pos_size.m in Sources */,
+				76A307D41719D01400A4A480 /* AFFView.m in Sources */,
+				76A307D81719D03400A4A480 /* AFFViewController.m in Sources */,
+				768A3F8F171C5E9F003ED566 /* AFFSwipeViewController.m in Sources */,
+				768A3F9B171C7E46003ED566 /* AFFGesturedViewController.m in Sources */,
+				76976C70179AF37200786BD7 /* UIImage+UIView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7691295217121B3E00D2CFCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7691296317121B3E00D2CFCA /* main.m in Sources */,
+				7691296717121B3E00D2CFCA /* AppDelegate.m in Sources */,
+				7691297017121B3E00D2CFCA /* ViewController.m in Sources */,
+				7691297D17121BC500D2CFCA /* TestButton.m in Sources */,
+				0F583C7917171DE6008FDC13 /* UIView+AFFUIVew_pos_size.m in Sources */,
+				76A307DC171A5D1C00A4A480 /* TestView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0FBCF2AE179F3CC300ABA9FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FBCF2AF179F3CC300ABA9FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0FBCF2B4179F3CC300ABA9FF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FBCF2B5179F3CC300ABA9FF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0FBCF2BA179F3CC300ABA9FF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FBCF2BB179F3CC300ABA9FF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		7691295F17121B3E00D2CFCA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7691296017121B3E00D2CFCA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76912872170FA40300D2CFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		76912873170FA40300D2CFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76912875170FA40300D2CFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AFFramework.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFFramework/AFFramework-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		76912876170FA40300D2CFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AFFramework.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFFramework/AFFramework-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7691297817121B3E00D2CFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestHarness/TestHarness-Prefix.pch";
+				INFOPLIST_FILE = "TestHarness/TestHarness-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7691297917121B3E00D2CFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestHarness/TestHarness-Prefix.pch";
+				INFOPLIST_FILE = "TestHarness/TestHarness-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76912861170FA40300D2CFCA /* Build configuration list for PBXProject "AFFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76912872170FA40300D2CFCA /* Debug */,
+				76912873170FA40300D2CFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76912874170FA40300D2CFCA /* Build configuration list for PBXNativeTarget "AFFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76912875170FA40300D2CFCA /* Debug */,
+				76912876170FA40300D2CFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7691297717121B3E00D2CFCA /* Build configuration list for PBXNativeTarget "TestHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7691297817121B3E00D2CFCA /* Debug */,
+				7691297917121B3E00D2CFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7691285E170FA40300D2CFCA /* Project object */;
+}

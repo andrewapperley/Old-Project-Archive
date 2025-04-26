@@ -1,0 +1,11 @@
+// this is a generated file - DO NOT EDIT
+
+ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphoneos5__=$(inherited)  -weak_framework Twitter
+ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphonesimulator5__=$(inherited) -weak_framework Twitter
+ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphoneos6__=$(inherited) -weak_framework Twitter -weak_framework Social
+ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphonesimulator6__=$(inherited) -weak_framework Twitter -weak_framework Social
+
+OTHER_LDFLAGS[sdk=iphonesimulator6*]=$(inherited) $(ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphonesimulator6__) 
+OTHER_LDFLAGS[sdk=iphoneos6*]=$(inherited) $(ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphoneos6__) 
+OTHER_LDFLAGS[sdk=iphoneos5*]=$(inherited) $(ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphoneos5__) 
+OTHER_LDFLAGS[sdk=iphonesimulator5*]=$(inherited) $(ES_APPIO_TWITTERBOOK_OTHER_LDFLAGS_sdk_iphonesimulator5__) 

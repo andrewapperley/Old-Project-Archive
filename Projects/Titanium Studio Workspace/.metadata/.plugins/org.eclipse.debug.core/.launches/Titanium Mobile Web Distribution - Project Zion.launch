@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.mobileweb.packager.launchConfigurationType">
+<stringAttribute key="ATTR_PROJECT_NAME" value="Project Zion"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Project Zion"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<stringAttribute key="target_project_location" value="/Users/andrewapperley/Projects/Project Zion/Packaged"/>
+<stringAttribute key="target_project_name" value=""/>
+<booleanAttribute key="use_existing_folder" value="true"/>
+<booleanAttribute key="use_existing_project" value="false"/>
+<booleanAttribute key="use_new_project" value="false"/>
+</launchConfiguration>

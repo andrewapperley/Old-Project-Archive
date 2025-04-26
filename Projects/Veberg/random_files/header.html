@@ -1,0 +1,129 @@
+
+<div class="header clearfix">
+<div class="logo">
+<a href="{$baseurl}"><img src="{$imageurl}/logo.png" style="border:none;"/></a>
+</div><!--logo-->
+<div id="SearchCon">
+<form action="{link name='search_result'}" method="get" name="search" id="search">
+ <input name="query" id="query" type="text" class="search_input S_Shadow full_round_4" value="{'query'|get_form_val:true}" />
+            <input type="hidden" name="type" id="searchType" value="{$smarty.get.type}" /> 
+<div class="searchbutton">
+<input name="submit" type="submit" class="button" value="" />
+</div>
+</form>          
+</div> <!--SearchCon--> 
+<div class="UploadLinks moveL clearfix">
+<ul>
+<li id="AlLMenu">
+<a href="#">Browse</a> 
+<span class="line_45" style=" color:#CCCCCC;">|</span>
+<ul>                
+<li id = 'cbVideosTab' class = ''>
+
+<li><a href="{link name='videos'}">Videos</a></li>
+<li><a href="{link name='channels'}">Channels</a></li>
+<li><a href="{link name='groups'}">Groups</a></li>
+<li><a href="{link name='collections'}">Collections</a></li>
+<li><a href="{link name='photos'}">Photos</a></li>
+</li>                
+</ul>                
+</li>     
+         
+<li id="upMenu"> 
+                
+<a href="#">Upload</a>                
+<ul>                
+<li><a href="{link name='upload'}">Upload Video</a></li>                 
+<li><a href="{link name='photo_upload'}">Upload Photo</a></li>                 
+</ul>                
+</li>                
+</ul>                
+</div>                
+                
+<div class="AccountLinks moveR">                 
+<ul>
+
+
+ {if !$userquery->login_check('',true)}
+ <div style="height:10px;"></div>
+<li><a href="{link name='signup'}">Create Account</a></li>
+<li class="Sign_In"><a href="{link name='signup'}">Sign In</a></li> 
+
+        {lang code='after_meny_guest_msg' assign='guestmsg'}
+        {link name=login assign='loginlink'}
+{else} 
+    
+
+        <div class="AccountCon full_round_5 moveR" onclick='beginToggle(this,"OpenUserCon");'>
+<div class="button_25">
+
+<a href="#">{$userquery->udetails.username}</a>
+
+ </div><!--button_25-->      
+        </div>
+       
+  
+{/if}
+
+
+
+
+
+
+
+</ul>
+
+</div><!--AccountLinks moveR-->
+
+
+
+
+
+
+
+</div><!--header-->
+
+<div style="position:relative">
+
+<div id="OpenUserCon" class="UserMenuBox clearfix">
+
+	<div class="Container clearfix">
+    	<div class="UserBeingWatch moveL">
+        <div class="break2"></div>
+        	<span class="UserMenuTitle"></span>
+
+            {get_videos assign=videos limit=15 order=" date_added DESC"}
+
+            <div class="BeingWatch clearfix">
+
+            	<ul id="mycarousel" class="jcarousel-skin-tango IndexNextPre">
+
+                {section name=v_list loop=$videos}
+                    {include file="$style_dir/blocks/video.html" video=$videos[v_list] display_type="Being_Watch"}
+                {sectionelse}
+
+                </ul>
+
+                    {lang code='No Video Found'}
+                {/section}
+            </div> <!-- BeingWatch -->
+            <!--Roms And Zoms-->
+        </div> <!-- UserBeingWatch -->
+        <div class="ShadowLeft ebebeb moveL"></div>
+        <div class="UserMenu moveL">
+        	
+        	<ul>
+            	<li><a href="{$userquery->profile_link($userquery->udetails)}">{lang code='Channel'}</a></li>
+                <li><a href="{link name='my_videos'}">{lang code='Videos'}</a></li>
+            	<li><a href="{link name='my_account'}">{lang code='com_my_account'}</a></li>
+                <li><a href="{link name='my_favorites'}">{lang code='Favorites'}</a></li>
+                <li><a href="{link name='my_contacts'}">{lang code='Inbox'}</a></li>
+				<li><a href="{link name='my_subscriptions'}">{lang code='subscriptions'}</a></li>   
+                <li><a href="{link name='logout'}">sign out</a></li>              
+            </ul>
+        </div> <!--UserMenu end-->	
+    </div> <!-- Container -->
+
+</div>
+
+</div>

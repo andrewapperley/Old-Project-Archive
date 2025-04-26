@@ -1,0 +1,514 @@
+
+Ti.include("arrays.js");
+
+Ti.include("textarea.js");
+
+var startup_poem = ['Today I wondered if the','What is that which','The sun and the moon both are','A mountain, stripped bare of','My desire for you overwhelms','You encircle bitter strains of','To think, as you do, is',
+'If the stars, concealing pain,','The flow of time buries melancholy;','The moments of life, the trials of','Alone, I gather, all the','A light enjoyed by the loving vines of','Unknown clouds tell us of','I sing your native and earth-born',
+'Is that the picture your fingers trace?','Rather today will we cross swords?','Without all I dream a common','Underneath my fingerprints of','May water rise over','Clean and unpure flower, free of','She of lucid eyes, she of perilous',
+'In a bullet I find a','In my heart there lay a']
+
+Ti.API.info (startup_poem.length)
+//Poems Database----------------------------------
+
+var poemsDB = Ti.Database.install('poemsDB.sqlite', 'version1');
+
+
+//get date----------------------------------
+var theDate= Date();
+
+//----------------------------------------
+
+Ti.include("info_nav_buttons.js");
+	
+// create load and save buttons and function---------------------- 
+
+	var save_Button = Ti.UI.createButton({
+		backgroundImage:'images/save.png',
+		backgroundSelectedImage:'images/save_click.png',
+		width:28,
+	height:28,
+	top:7,
+	left:288	
+});
+	
+	
+//get date----------------------------------
+
+
+
+var  poemarray = [];
+
+
+
+
+
+var poemData = poemsDB.execute('SELECT * FROM poems');
+
+
+
+
+while (poemData.isValidRow()) {
+
+    poemarray.push({
+
+      id: poemData.fieldByName('poem_id'),
+
+      title: poemData.fieldByName('poem_title'),
+
+      url: poemData.fieldByName('poem_url'),
+
+
+    });
+
+    poemData.next();
+
+};  
+
+var poemIDArray = poemsDB.execute('SELECT poem_id FROM poems');
+
+var theIndex = [];
+
+while (poemIDArray.isValidRow()) {
+
+    theIndex.push({
+
+      id: poemIDArray.fieldByName('poem_id'),
+
+    });
+
+    poemIDArray.next();
+
+};  
+	Ti.API.info(theIndex.length);
+
+
+//----------------------------------------
+	
+// create load and save buttons and function---------------------- 
+
+	
+save_Button.addEventListener('click', function(e){
+	Ti.API.info("Save Button Clicked.");
+	
+	// Save textarea content in file
+	var seed = new Date().getTime();
+	var random_number = Math.round((Math.random(seed*9356564656501+4956565656297) % 233285656560)*16556652);
+	//file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, random_number + "poem.txt");
+   // file.write(PoemTextArea.value);
+    
+    Ti.API.info ("saved");
+
+    var thetitle = theDate;
+   	
+   	var theurl = PoemTextArea.value;
+	var poemsDB = Ti.Database.open('version1');
+   
+   
+	poemsDB.execute('INSERT INTO poems (poem_title,poem_url) VALUES (?,?)',thetitle,theurl);
+	
+
+ 
+
+	
+	 
+
+	
+
+var poemData = poemsDB.execute('SELECT * FROM poems');
+
+ 
+poemarray = []
+while (poemData.isValidRow()) {
+
+    poemarray.push({
+
+      id: poemData.fieldByName('poem_id'),
+
+      title: poemData.fieldByName('poem_title'),
+
+      url: poemData.fieldByName('poem_url'),
+
+
+    });
+
+    poemData.next();
+
+}; 
+	
+	poemData.close();
+
+	loadlist.setData(poemarray)
+});
+
+	
+	
+	
+	var load_Button = Ti.UI.createButton({
+		backgroundImage:'images/cutout2.png',
+		backgroundSelectedImage:'images/cutout2_click.png',
+		title:'LOAD',
+		width:73,
+	height:25,
+	top:8,
+	left:212,
+	font:{fontSize:18,fontFamily:'American Purpose'}
+});
+	
+	
+//--------------------------------
+
+
+//------create info button------------------
+
+var info_Button = Ti.UI.createButton({
+			backgroundImage:'images/info.png',
+			backgroundSelectedImage:'images/info_click.png',
+			width:40,
+		height:40,
+		top:41,
+		left:161		
+});
+	
+	
+	info_Button.addEventListener('click', function(e){
+		
+	infoWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+	editorWin.close();
+})	
+
+
+
+// create post button and function ----- go to post page-------------------------------
+
+	var post_Button = Ti.UI.createButton({
+			backgroundImage:'images/cutup3.png',
+			backgroundSelectedImage:'images/cutup3_click.png',
+	width:105,
+	height:25,
+	top:37,
+	left:208,
+	title:'Post',
+	color:'white',
+	font:{fontSize:17,fontWeight:'bold',fontFamily:'American Purpose'}
+});
+	
+	
+	post_Button.addEventListener('click', function(e){
+		
+	postWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+	editorWin.close();
+})	
+
+	
+//--------------------------------------
+
+//----create post page----------------------------------------------------	
+	
+var postWin = Ti.UI.createWindow({backgroundImage:'images/cutups_skin.png',})
+
+//--------------------------------------
+
+//---------create info page-----------------------
+
+var infoWin = Ti.UI.createWindow({backgroundImage:'images/cutups_skin.png',})
+var infoWin2 = Ti.UI.createWindow({backgroundImage:'images/cutups_skin.png',})
+
+//---------------------------------------
+
+//-----create facebook functionality---------------------------------------
+
+Ti.include("facebook.js");
+
+//-------------------------------------------------------------------------       
+
+//------main menu buttons------------------------------------------------	
+	
+Ti.include("mainmenu_buttons.js");
+	
+//--------------------------------------------------------------------------
+
+//------------------create POS buttons-------------------------------------	
+
+Ti.include("pos_buttons.js");
+Ti.include("pos_definitions.js");
+
+//--------------------------------------------------------------------------
+
+//---------------text area functionality------------------------------------
+	
+var poem = new String;
+PoemTextArea.value = poem;
+
+//--------------------------------------------------------------------------
+
+Ti.include("info_page_definitions.js")
+
+//-------------home menu page (first thing that opens)----------------------
+
+Ti.include("home_menu_page.js")
+
+//---------------------------------------------------------------------------
+
+//loadlist----------------------------------------------------------
+
+var loadlist = Titanium.UI.createTableView({
+	top:100,
+	backgroundColor:'transparent', //Set BG transparent  
+    rowBackgroundColor:'transparent',
+    data:poemarray,
+	editable:true,
+	height:315,
+	
+});
+loadWin.add(loadlist);
+//////Back to home load button
+var load_home_Button = Ti.UI.createButton({
+	backgroundImage:'images/cut-up1.png',
+	backgroundSelectedImage:'images/cut-up1_click.png',
+	title:'RETURN TO POEM',
+	width:140,
+	height:25,
+	top:8,
+	left:173,
+	font:{fontSize:18,fontFamily:'American Purpose'}
+});
+	
+load_home_Button.addEventListener('click', function(e){
+	
+	editorWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN})
+	loadWin.close();
+	
+})
+loadWin.add(load_home_Button);
+//----------------------------------------------------------
+
+function tr (msg){
+	Ti.API.info(msg)
+}
+
+var openWin = Ti.UI.createWindow({
+		width:300,
+	height:250,
+	top:90,
+	backgroundImage:'images/notebook.png'
+});
+	
+		
+	
+	editorWin.add(openWin);
+	///////////
+	loadlist.addEventListener('click', function(data){
+		
+	
+		
+		
+	
+    var poemsDB = Ti.Database.open('version1');
+    var poemsDB = poemsDB.execute('SELECT * FROM poems');
+    
+function setData(){
+    for( i=0; i < poemsDB.rowCount; i++){  
+  
+        poemarray.push({url: poemsDB.fieldByName('poem_url')});  
+        
+        
+			poemsDB.next();
+        
+        loadlist.setData(poemarray);  
+    }
+ }
+    poemsDB.close();
+	editorWin.close();
+	editorWin.open();
+	Ti.API.info (PoemTextArea.value)
+ 	var thefile =  poemarray[data.index].url;
+ 	
+ 	
+ 	tr(thefile);
+ 	PoemTextArea.value = thefile;
+	})
+
+	
+	
+	
+loadlist.addEventListener('delete', function(data){
+       
+          var poemsDB = Ti.Database.open('version1');
+   // var poemsDB = poemsDB.execute('SELECT * FROM poems');
+          //  Ti.API.info ("index" + data.index)
+   var theID = data.index + 1;
+           
+       		tr(data.index + " is the index")
+       		tr(theID + " is the rowid")
+       
+        if(data.index == theID - 1){
+        	
+	//	 poemsDB.execute("SELECT FROM poems WHERE poem_id =  " + theID);
+       
+        
+	
+	poemsDB.execute("DELETE FROM poems WHERE rowid = " + theID);
+	poemsDB.execute("UPDATE poems SET rowid = rowid - 1 WHERE rowid > " + theID);
+	  Ti.API.info ("deleted")
+
+       	
+        }
+       
+            poemsDB.close();
+
+
+            // remove handling
+      
+    });
+
+	
+//////Delete all poems
+var delete_All_Button = Ti.UI.createButton({
+	backgroundImage:'images/cut-up1.png',
+	backgroundSelectedImage:'images/cut-up1_click.png',
+	title:'DELETE ALL POEMS',
+	width:140,
+	height:25,
+	bottom:10,
+	left:10,
+	font:{fontSize:17,fontFamily:'American Purpose'}
+});
+	
+delete_All_Button.addEventListener('click', function(e){
+	
+	 var poemsDB = Ti.Database.open('version1');
+   
+	poemsDB.execute("DELETE * FROM poems");
+	  Ti.API.info ("deleted all")
+
+       
+            poemsDB.close();
+	
+})
+loadWin.add(delete_All_Button);
+//----------------------------------------------------------
+Ti.include("add_to_stage.js")
+	
+//-------------------------------------------------------------------------	
+
+PoemTextArea.value=poem.text;
+
+	
+var clickCount_noun = 0;
+var clickCount_ad = 0;
+var clickCount_verb = 0;
+var clickCount_ar = 0;
+var clickCount_prep = 0;
+var clickCount_con = 0;
+var clickCount_pro = 0;					
+	
+	
+PoemTextArea.value="";			
+	
+	editorWin.add(noun_def_win);
+	noun_def_win.opacity=0;
+	editorWin.add(ad_def_win);
+	ad_def_win.opacity=0;
+	editorWin.add(ar_def_win);
+	ar_def_win.opacity=0;
+	editorWin.add(con_def_win);
+	con_def_win.opacity=0;
+	editorWin.add(verb_def_win);
+	verb_def_win.opacity=0;
+	editorWin.add(prep_def_win);
+	prep_def_win.opacity=0;
+	editorWin.add(pro_def_win);
+	pro_def_win.opacity=0;
+	
+	
+
+//--------------button functions---------------------------------------------
+
+Ti.include("pos_eventlisteners.js");
+
+//---------------------------------------------------------------------------
+
+
+
+/*info_next_Button.addEventListener('click', function(e){
+	
+	infoWin2.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP})
+	infoWin.close();
+	
+	Ti.API.info ("erased")
+})*/
+info_home_Button.addEventListener('click', function(e){
+	
+	editorWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN})
+	infoWin.close();
+	})
+
+info_home_Button2.addEventListener('click', function(e){
+	
+	editorWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN})
+	infoWin2.close();
+	
+})
+
+//-------post buttons----------------------------------------------
+
+Ti.include("posting.js");
+
+//-----------------------------------------------------------------
+/// create new buttons in load page
+
+var new_Button = Ti.UI.createButton({
+		backgroundImage:'images/cutout2.png',
+		backgroundSelectedImage:'images/cutout2_click.png',
+	width:105,
+	height:35,
+	top:437,
+	left:205,
+	title:'New Poem',
+	shadowColor:'black',
+	color:'white',
+	font:{fontSize:20, fontFamily:'American Purpose'}
+});
+	
+	
+new_Button.addEventListener('click', function(e){
+		
+	editorWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	loadWin.close();
+	
+	PoemTextArea.value = "";
+})
+
+//-------------info page------------------------
+
+infoWin.add(noun_def_view);
+noun_def_view.add(noun_def_label_view);
+infoWin.add(ad_def_views);
+ad_def_views.add(ad_def_labels);
+infoWin.add(verb_def_views);
+verb_def_views.add(verb_def_labels);
+infoWin.add(ar_def_views);
+ar_def_views.add(ar_def_labels);
+infoWin2.add(pro_def_views);
+pro_def_views.add(pro_def_labels);
+infoWin2.add(prep_def_views);
+prep_def_views.add(prep_def_labels);
+infoWin2.add(con_def_views);
+con_def_views.add(con_def_labels);
+
+
+infoWin.add(info_home_Button);
+infoWin.add(info_next_Button);
+infoWin2.add(info_home_Button2);
+infoWin2.add(info_back_Button);
+
+postWin.add(facebook_Button);
+//postWin.add(twitter_Button);
+postWin.add(email_Button);
+postWin.add(post_text);
+post_text.add(post_text_label);
+postWin.add(post_home_Button);
+
+
+//--------------------------	

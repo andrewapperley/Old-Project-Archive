@@ -1,0 +1,58 @@
+/**
+ * @author MATTON DAVID C. & Andrew Apperley
+ */
+
+//-----create facebook functionality---------------------------------------
+
+
+
+       var facebook_Button = Titanium.UI.createButton({
+	backgroundImage:'images/facebook_logo.png',
+backgroundSelectedImage:'images/facebook_logo_click.png',
+	width:100,
+	height:100,
+	top:320,
+	left:110
+});
+       postWin.add(Titanium.Facebook.createLoginButton({ bottom: 15, style: 'wide' }));
+Titanium.Facebook.appid = '247848495268941';
+        Titanium.Facebook.permissions = ['publish_stream']; // Permissions your app needs
+
+        Titanium.Facebook.authorize();
+			Titanium.Facebook.addEventListener('login', function(e) {
+	    if (e.success) {
+	        alert('Logged in');
+	    }
+	});		
+		Titanium.Facebook.addEventListener('logout', function(e) {
+		    alert('Logged out');
+		});
+		 
+		// add the button.  Note that it doesn't need a click event or anything.
+		
+		
+        facebook_Button.addEventListener('click', function(e) {
+ 
+        Ti.API.info ("clicked post button")
+        // First make sure this permission exists
+        Titanium.Facebook.permissions = ['publish_stream'];
+        Titanium.Facebook.authorize();
+
+        // ...
+        // ...
+
+        // Now create the status message after you've confirmed that authorize() succeeded
+        Titanium.Facebook.requestWithGraphPath('me/feed', {message: PoemTextArea.value}, "POST", function(e) {
+        if (e.success) {
+        alert("Success! Your poem has been posted to your status!");
+        } else {
+        if (e.error) {
+        alert(e.error);
+        } else {
+        alert("Unkown result");
+        }
+        }
+        });
+
+        });
+

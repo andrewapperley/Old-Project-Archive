@@ -1,0 +1,74 @@
+var poemsDB = Ti.Database.install('poemDB.sqlite', 'version1');
+poemsDB.close();
+poemsDB.file.setRemoteBackup(false);
+var poemarray;
+var poemData;
+var poemIDArray;
+var theIndex;
+
+
+//save button function
+exports.savingF = function(){
+
+   	var content = PoemTextArea.value;
+   	var theTitle = saving.title.text;
+	poemDB = Ti.Database.open('version1');
+   
+	poemDB.execute('INSERT INTO poems (poem_title,poem_content) VALUES (?,?)', theTitle , content);
+	
+	poemDB.close();
+};
+
+//load button function
+exports.loadingF = function(){
+poemsDB = Ti.Database.open('version1');
+poemData = poemsDB.execute('SELECT * FROM poems');
+poemIDArray = poemsDB.execute('SELECT poem_id FROM poems');
+
+
+
+if( poemIDArray ){
+theIndex = [];
+while (poemIDArray.isValidRow()) {
+
+    theIndex.push({
+
+      id: poemIDArray.fieldByName('poem_id')
+
+    });
+
+    poemIDArray.next();
+
+};  
+};
+
+if( poemData ){
+poemarray = [];
+while (poemData.isValidRow()) {
+
+    poemarray.push({
+
+      id: poemData.fieldByName('poem_id'),
+
+      title: poemData.fieldByName('poem_title'),
+
+      content: poemData.fieldByName('poem_content')
+
+
+    });
+
+    poemData.next();
+
+}; 
+poemsDB.close();
+
+};
+if(writing.loading.loadlist){
+	
+	writing.loading.loadlist.setData(poemarray);	
+};
+logger.info(poemarray[0].content);
+};
+
+exports.poemarray = poemarray;
+exports.poemsDB = poemsDB;

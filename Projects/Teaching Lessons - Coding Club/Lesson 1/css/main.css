@@ -1,0 +1,53 @@
+body, html {
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial;
+    color: #4C4646;
+    padding: 20px
+}
+
+.clear-fix {
+    clear: both;
+}
+
+#container {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#container div#basic-information img.profile-image {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    max-height: 300px;
+}
+
+#container div#basic-information h3 {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+#container div#basic-information h2,  #container div#basic-information p, #container div#basic-information h3 {
+    text-align: center;
+}
+
+#container div#basic-information ul {
+    list-style: none;
+}
+
+#container div#basic-information ul li {
+    width: 390px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#container div#basic-information ul li img {
+    float: left;
+    margin-top: 5px;
+}
+
+#container div#basic-information ul li p {
+    float: left;
+    margin-left: 20px;
+}

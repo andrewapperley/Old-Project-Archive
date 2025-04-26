@@ -1,0 +1,48 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+
+var facebook = require('facebook');
+var twitter = require('twitter');
+var email = require('email');
+
+var screen = Titanium.UI.createWindow({
+            height:480 - tabbedBar.buttonArray[0].width - 2,
+            width:320,
+            top:0,
+            backgroundImage:assets.assetsArray[0].Black1pixel,
+            touchEnabled:true,
+            opacity: 0,
+            index:1,
+            backgroundRepeat: true
+});
+
+var content = Ti.UI.createView({
+	
+	
+	backgroundImage: assets.assetsArray[0].SharingScreenBg,
+	height: assets.assetsArray[0].SharingScreenBg_height,
+	width:assets.assetsArray[0].SharingScreenBg_width,
+	top:43
+});
+
+exports.change = function(){
+    content.updateLayout({
+        backgroundImage: assets.assetsArray[0].SharingScreenBg,
+        height: assets.assetsArray[0].SharingScreenBg_height,
+        width:assets.assetsArray[0].SharingScreenBg_width
+    });
+}
+
+exports.addChildren = function(){
+	
+screen.add(content);
+content.add(email.email_Button);
+content.add(facebook.facebook_Button);
+content.add(twitter.twitter_Button);
+content.add(close.button);	
+}
+
+
+exports.screen = screen;

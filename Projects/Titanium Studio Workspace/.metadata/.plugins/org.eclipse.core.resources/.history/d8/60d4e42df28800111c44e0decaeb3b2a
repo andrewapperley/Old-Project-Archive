@@ -1,0 +1,288 @@
+//animations for left and right slides
+
+var slideRight = Titanium.UI.createAnimation();
+slideRight.Left = 0;
+slideRight.top = 0;
+slideRight.curve = Ti.UI.iOS.ANIMATION_CURVE_EASE_IN_OUT;
+slideRight.duration = 700;
+
+
+var slideLeft = Titanium.UI.createAnimation();
+slideLeft.left = 1024;
+slideLeft.top = 0;
+slideLeft.curve = Ti.UI.iOS.ANIMATION_CURVE_EASE_IN_OUT;
+slideLeft.duration = 900;
+
+
+
+/*profile variables to hold the temp values*/
+var tempFirstLetter;
+var tempLastLetter;
+var	tempFirst;
+var	tempLast;
+var	tempDescription;
+var	tempBio;
+var	tempProfileImage;
+var	tempLink;
+var	tempPortfolioImage;
+var	tempID;
+
+
+/* sets linen texture background */
+var win = Ti.UI.createWindow({
+   backgroundImage:'/assets/bg.jpg',
+   fullscreen:true,
+   left:0,
+    width:1024,
+   height:768,
+   top:0
+})
+Ti.include('profileSlideOut.js');
+
+/* keeps the ipad orientation to landscape. we won't be doing portrait mode */
+win.orientationModes = [
+	Ti.UI.LANDSCAPE_LEFT,
+	Ti.UI.LANDSCAPE_RIGHT
+]; 
+
+/* creates image space for left bar */
+var leftBar = Ti.UI.createImageView({
+	image:'/assets/leftbar.png',
+	width:'auto',
+	height:768,
+	top:0,
+	left:0
+})
+
+
+/* we want to add the leftbar but only after the scroll views */
+
+/* adds row 1 of portfolio scrollviews */
+var scrollRow1 = Ti.UI.createScrollView({
+	top:0,
+	// steve : added left 124 and changed width to 900. this is so all the thumbnails can actually be visible in the view port without being cut off
+	left:124,
+	//had to make height the height of the content
+	height:192,
+	//had to make the width the screen width
+    width:900,
+    contentHeight:192,
+    contentWidth:'auto'
+	
+});
+
+/* adds row 2 of portfolio scrollviews */
+var scrollRow2 = Ti.UI.createScrollView({
+	top:192,
+	left:124,
+	height:192,
+	width:900,
+	contentHeight:192,
+	contentWidth:'auto'
+})
+
+/* adds row 3 of portfolio scrollviews */
+var scrollRow3 = Ti.UI.createScrollView({
+	top:384,
+	left:124,
+	height:192,
+	width:900,
+	contentHeight:192,
+	contentWidth:'auto'
+})
+
+/* adds row 4 of portfolio scrollviews */
+var scrollRow4 = Ti.UI.createScrollView({
+	top:576,
+	left:124,
+	height:192,
+	width:900,
+	contentHeight:192,
+	contentWidth:'auto'
+})
+/* adds scrollview */
+win.add(scrollRow1);
+win.add(scrollRow2);
+win.add(scrollRow3);
+win.add(scrollRow4);
+/*starts the db call and gets back an arrays of everything*/
+studentsReq = Titanium.Network.createHTTPClient(); 
+studentsReq.open('GET', "http://www.humberinteractive.com/2012/databaseConnection.php");
+studentsReq.send();
+
+
+
+//the file that handles all the arrays and sources of images and information
+Ti.include('portfolio_feed.js');
+
+
+
+
+
+// loop that places row 1 of portfolio images
+for (var i=0; i < tileArray.length; i++) {
+
+	// create each button and sets the proper background image from the row1ImageArray
+    var row1PortfolioPiece = Ti.UI.createImageView({  	
+        height:192,
+        width:192,
+        /* adds image next to each other */
+        left: i*192,
+		image:tileArray[i],
+		id:i
+    });
+    //click handler for the tile icons
+row1PortfolioPiece.addEventListener('click', function(e){
+	
+	
+	var row1tileID = e.source.id;
+	
+
+//profile page temp variables
+	tempFirstLetter = FirstLetterArray[row1tileID];
+	tempLastLetter = LastLetterArray[row1tileID];
+	tempFirst = firstArray[row1tileID];
+	tempLast = lastArray[row1tileID];
+	tempDescription = descriptionArray[row1tileID];
+	tempBio = bioArray[row1tileID];
+	tempProfileImage = profileArray[row1tileID];
+	tempLink = linkArray[row1tileID];
+	tempPortfolioImage = portfolioArray[row1tileID];
+	tempID = idArray[row1tileID];
+
+	win.animate(slideLeft);
+	profileView.animate(slideLeft);
+	getProfileData();
+	
+});
+    
+
+// adds the image to scrollview
+scrollRow1.add(row1PortfolioPiece);
+};
+
+// loop that places row 2 of portfolio images
+for (var i=22; i < tileArray.length+22; i++) {
+
+	// create each button and sets the proper background image from the row2ImageArray
+    var row2PortfolioPiece = Ti.UI.createImageView({  	
+        height:192,
+        width:256,
+        /* adds image next to each other */
+        left: i*256,
+		image:tileArray[i],
+		id:i
+    })
+//click handler for the tile icons
+row2PortfolioPiece.addEventListener('click', function(e){
+	
+	
+	var row2tileID = e.source.id;
+
+//profile page temp variables
+	tempFirstLetter = FirstLetterArray[row2tileID];
+	tempLastLetter = LastLetterArray[row2tileID];
+	tempFirst = firstArray[row2tileID];
+	tempLast = lastArray[row2tileID];
+	tempDescription = descriptionArray[row2tileID];
+	tempBio = bioArray[row2tileID];
+	tempProfileImage = profileArray[row2tileID];
+	tempLink = linkArray[row2tileID];
+	tempPortfolioImage = portfolioArray[row2tileID];
+	tempID = idArray[row2tileID];
+
+	win.animate(slideLeft);
+	profileView.animate(slideLeft);
+	getProfileData();
+	
+});
+// adds the image to scrollview
+scrollRow2.add(row2PortfolioPiece);
+};
+
+// loop that places row 3 of portfolio images
+for (var i=33; i < tileArray.length+33; i++) {
+
+	// create each button and sets the proper background image from the row3ImageArray
+    var row3PortfolioPiece = Ti.UI.createImageView({  	
+        height:192,
+        width:256,
+        /* adds image next to each other */
+        left: i*256,
+		image:tileArray[i],
+		id:i
+    })
+//click handler for the tile icons
+row3PortfolioPiece.addEventListener('click', function(e){
+	
+	
+	var row3tileID = e.source.id;
+
+//profile page temp variables
+	tempFirstLetter = FirstLetterArray[row3tileID];
+	tempLastLetter = LastLetterArray[row3tileID];
+	tempFirst = firstArray[row3tileID];
+	tempLast = lastArray[row3tileID];
+	tempDescription = descriptionArray[row3tileID];
+	tempBio = bioArray[row3tileID];
+	tempProfileImage = profileArray[row3tileID];
+	tempLink = linkArray[row3tileID];
+	tempPortfolioImage = portfolioArray[row3tileID];
+	tempID = idArray[row3tileID];
+
+	win.animate(slideLeft);
+	profileView.animate(slideLeft);
+	getProfileData();
+	
+});
+// adds the image to scrollview
+scrollRow3.add(row3PortfolioPiece);
+};
+
+// loop that places row 1 of portfolio images
+for (var i=44; i < tileArray.length+44; i++) {
+
+	// create each button and sets the proper background image from the row4ImageArray
+    var row4PortfolioPiece = Ti.UI.createImageView({  	
+        height:192,
+        width:256,
+        /* adds image next to each other */
+        left: i*256,
+		image:tileArray[i],
+		id:i
+    })
+//click handler for the tile icons
+row4PortfolioPiece.addEventListener('click', function(e){
+	
+	
+	var row4tileID = e.source.id;
+	
+	
+	//profile page temp variables
+	tempFirstLetter = FirstLetterArray[row4tileID];
+	tempLastLetter = LastLetterArray[row4tileID];
+	tempFirst = firstArray[row4tileID];
+	tempLast = lastArray[row4tileID];
+	tempDescription = descriptionArray[row4tileID];
+	tempBio = bioArray[row4tileID];
+	tempProfileImage = profileArray[row4tileID];
+	tempLink = linkArray[row4tileID];
+	tempPortfolioImage = portfolioArray[row4tileID];
+	tempID = idArray[row4tileID];
+
+	win.animate(slideLeft);
+	profileView.animate(slideLeft);
+	getProfileData();
+});
+// adds the image to scrollview
+scrollRow4.add(row4PortfolioPiece);
+};
+
+
+/* adds the leftbar to main window */
+win.add(leftBar);
+
+
+
+/* opens main window */
+win.open();

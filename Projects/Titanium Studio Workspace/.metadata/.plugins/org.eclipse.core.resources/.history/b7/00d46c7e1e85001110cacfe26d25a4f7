@@ -1,0 +1,67 @@
+/* sets linen texture background */
+var win = Ti.UI.createWindow({
+   backgroundImage:'/assets/bg.jpg',
+   fullscreen:true,
+})
+
+/* keeps the ipad orientation to landscape. we won't be doing portrait mode */
+win.orientationModes = [
+	Ti.UI.LANDSCAPE_LEFT,
+	Ti.UI.LANDSCAPE_RIGHT
+]; 
+
+/* creates image space for left bar */
+var leftBar = Ti.UI.createImageView({
+	image:'/assets/leftbar.png',
+	width:'auto',
+	height:768,
+	top:0,
+	left:0
+})
+
+/* adds the leftbar to main window */
+win.add(leftBar);
+
+/* adds row 1 of portfolio scrollviews */
+var scrollRow1 = Ti.UI.createScrollView({
+	top:50,
+	//had to make height the height of the content
+	height:192,
+	//had to make the width the screen width
+    width:1024,
+    contentHeight:192,
+    contentWidth:'auto'
+	
+});
+
+
+
+/* adds first row scrollview */
+win.add(scrollRow1);
+
+/* creates an array that stores portfolio image urls for the first row */
+var row1ImageArray = ['assets/portfolio_images/1.jpg', 'assets/portfolio_images/2.jpg', 'assets/portfolio_images/3.jpg', 'assets/portfolio_images/4.jpg','assets/portfolio_images/5.jpg', 'assets/portfolio_images/6.jpg'];
+
+// loop that places row 1 of portfolio images
+for (var i=0; i < row1ImageArray.length; i++) {
+	// temporary image views to automatically grab the width and height of each nav image, as the width of each are different
+
+
+	// create each button and sets the proper background image from the mainNavImages array
+    var row1PortfolioPiece = Ti.UI.createImageView({  	
+        height:192,
+        width:256,
+        /* adds image next to each other */
+        left: i*256,
+		image:row1ImageArray[i],
+    })
+
+// adds the image to scrollview
+scrollRow1.add(row1PortfolioPiece);
+
+
+};
+
+
+/* opens main window */
+win.open();

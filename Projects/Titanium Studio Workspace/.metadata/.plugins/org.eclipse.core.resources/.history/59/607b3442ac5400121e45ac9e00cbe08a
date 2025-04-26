@@ -1,0 +1,47 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+		var facebook_Button = Titanium.UI.createButton({
+		backgroundImage:assets.assetsArray[0].FacebookButton,
+			width:90,
+			height:90,
+			top:101,
+			left:39
+		});
+       var data;
+
+         
+         facebook_Button.addEventListener('click', function(e) {    
+                
+         Titanium.Facebook.appid = '318082941615627';
+         Titanium.Facebook.permissions = ['publish_stream']; 
+         Titanium.Facebook.authorize();
+                
+         data = {
+            link : "http://www.facebook.com/PoetrySlamCommunity/",
+            name : "Poetry Slam App",
+            message :  writing.PoemTextArea.value + "\n\n- created with Poetry Slam",
+            caption : "Poetry Slam",
+            picture : "http://silverspoon-media.ca/img/logo_image.jpg",
+            description : "Poetry Slam is the iPhone app that allows you to create poems and then post them to your social network sharing your creations with friends. App Link: http://itunes.apple.com/us/app/poetry-slam/id540918767?ls=1&mt=8"
+         };
+         
+         
+         Ti.Facebook.requestWithGraphPath('me/feed', data, 
+         "POST", function(e) {
+    if (e.success) {
+        Ti.UI.createAlertDialog({title:'Poem Posted Successfully',message:'Your Poem has been posted successfully'}).show();
+    } else {
+        if (e.error) {
+            Ti.UI.createAlertDialog({title:'There was an error',message:e.error}).show();
+        } else {
+            Ti.UI.createAlertDialog({title:'There was an error',message:'unknown Result'}).show();
+        }
+    }
+});
+
+      });
+     
+     
+exports.facebook_Button = facebook_Button;

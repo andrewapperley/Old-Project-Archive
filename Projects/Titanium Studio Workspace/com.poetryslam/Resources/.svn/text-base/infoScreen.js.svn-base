@@ -1,0 +1,95 @@
+var arrayOfScreens = [assets.assetsArray[0].InfoScreenBG1,assets.assetsArray[0].InfoScreenBG2,assets.assetsArray[0].InfoScreenBG3,assets.assetsArray[0].InfoScreenBG4];
+var pageNumber = 0;
+
+var screen = Titanium.UI.createWindow({
+            height:480 - tabbedBar.buttonArray[0].width - 3,
+            width:320,
+            top:0,
+            backgroundImage:assets.assetsArray[0].Black1pixel,
+            touchEnabled:true,
+            opacity: 0,
+            index:8,
+            backgroundRepeat: true
+});
+
+
+var content = Ti.UI.createView({
+	
+	backgroundImage: assets.assetsArray[0].InfoScreenBG1,
+	height: assets.assetsArray[0].InfoScreenBG_height,
+	width: assets.assetsArray[0].InfoScreenBG_width,
+	top:assets.assetsArray[0].InfoScreenBG_top
+	
+	
+});
+
+
+
+
+var backButton = Ti.UI.createButton({
+	
+	width:assets.assetsArray[0].InfoScreenBackButton_width,
+	height:assets.assetsArray[0].InfoScreenBackButton_height,
+	left:assets.assetsArray[0].InfoScreenBackButton_left,
+	bottom:assets.assetsArray[0].InfoScreenBackButton_bottom,
+	backgroundImage:assets.assetsArray[0].InfoScreenBackButton,
+	backgroundSelectedImage:assets.assetsArray[0].InfoScreenBackButton
+	
+});
+
+
+
+var nextButton = Ti.UI.createButton({
+	
+	width:assets.assetsArray[0].InfoScreenNextButton_width,
+	height:assets.assetsArray[0].InfoScreenNextButton_height,
+	right:assets.assetsArray[0].InfoScreenNextButton_right,
+	bottom:assets.assetsArray[0].InfoScreenNextButton_bottom,
+	backgroundImage:assets.assetsArray[0].InfoScreenNextButton,
+	backgroundSelectedImage:assets.assetsArray[0].InfoScreenNextButton
+	
+});
+
+//functions
+
+nextButton.addEventListener('singletap', function(){
+
+	pageNumber++
+	
+	content.backgroundImage = arrayOfScreens[pageNumber];
+	if(pageNumber >= arrayOfScreens.length)
+	{
+		
+		content.backgroundImage = arrayOfScreens[0];
+		pageNumber = 0;
+	}
+	
+
+	
+
+
+});
+
+backButton.addEventListener('singletap', function(){
+	
+	pageNumber--
+
+	content.backgroundImage = arrayOfScreens[pageNumber];
+	if(pageNumber < 0)
+	{
+		content.backgroundImage = arrayOfScreens[arrayOfScreens.length-1];
+		pageNumber = arrayOfScreens.length;
+	}
+
+
+});
+
+exports.addChildren = function(){
+
+screen.add(content);
+content.add(backButton);
+content.add(nextButton);
+content.add(close.button);
+
+}
+exports.screen = screen;

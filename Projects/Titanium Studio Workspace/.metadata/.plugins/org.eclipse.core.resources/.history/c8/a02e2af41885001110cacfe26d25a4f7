@@ -1,0 +1,41 @@
+/**
+ * @author Andrew Apperley
+ */
+	
+	
+	
+	studentsReq.onload = function(){
+		
+		
+		var json = JSON.parse(this.responseText);
+		
+		var json = json.students;
+
+	    var pos;
+	    
+	    
+	    /////
+	    /////////////
+	    ///////students
+	    /////////////
+	    /////
+	   
+	   for( pos=0; pos < json.length; pos++){
+			
+			
+			student = json[pos];
+			
+			
+			adminEventText = event.event_title + "\n" + event.event_description + "\n" + event.start + " to " + event.end + "\n" + event.private_public + "\n" + "____________________" + "\n" + "\n" ; 
+			
+		
+		theEvents.value += adminEventText;
+	    };
+		
+			
+			
+			
+		
+	eventReq.open('GET', "http://client.andrewapperley.ca/app_events.php");
+eventReq.send();
+	};

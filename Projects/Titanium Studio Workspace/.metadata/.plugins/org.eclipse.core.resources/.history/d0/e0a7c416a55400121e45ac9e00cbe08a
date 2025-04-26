@@ -1,0 +1,35 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+		var facebook_Button = Titanium.UI.createButton({
+		backgroundImage:assets.assetsArray[0].FacebookButton,
+			width:90,
+			height:90,
+			top:101,
+			left:39
+		});
+       var 
+		 Titanium.Facebook.appid = '318082941615627';
+         Titanium.Facebook.permissions = ['publish_stream']; 
+         facebook_Button.addEventListener('click', function(e) {       
+    
+         Titanium.Facebook.permissions = ['publish_stream'];
+         Titanium.Facebook.authorize();
+         
+          Titanium.Facebook.dialog("feed", data, function(e) {
+            if(e.success && e.result) {
+                alert("Success! New Post ID: " + e.result);
+            } else {
+                if(e.error) {
+                    alert(e.error);
+                } else {
+                    alert("User canceled dialog.");
+                }
+            }
+        });
+
+      });
+     
+     
+exports.facebook_Button = facebook_Button;

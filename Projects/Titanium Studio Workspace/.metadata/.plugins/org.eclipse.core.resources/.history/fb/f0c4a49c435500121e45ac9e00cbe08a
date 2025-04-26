@@ -1,0 +1,134 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+var poemarray = [];
+var deleteAllConfirm = require('deleteAllConfirm');
+var screen = Titanium.UI.createWindow({
+	height : 480 - tabbedBar.buttonArray[0].width - 2,
+	width : 320,
+	top : 0,
+	backgroundImage : assets.assetsArray[0].Black1pixel,
+	touchEnabled : true,
+	opacity : 0,
+	index : 5,
+	backgroundRepeat : true
+});
+
+var content = Ti.UI.createView({
+
+	backgroundImage : assets.assetsArray[0].LoadingScreenBG,
+	height : assets.assetsArray[0].LoadingScreenBG_height,
+	width : assets.assetsArray[0].LoadingScreenBG_width,
+	top : assets.assetsArray[0].LoadingScreenBG_top,
+
+});
+
+var deleteAll = Ti.UI.createButton({
+	width : assets.assetsArray[0].LoadingScreenDeleteAllButton_width,
+	height : assets.assetsArray[0].LoadingScreenDeleteAllButton_height,
+	bottom : assets.assetsArray[0].LoadingScreenDeleteAllButton_bottom,
+	left : assets.assetsArray[0].LoadingScreenDeleteAllButton_left,
+	backgroundImage : assets.assetsArray[0].LoadingScreenDeleteAllButton
+});
+
+var newPoem = Ti.UI.createButton({
+	width : assets.assetsArray[0].LoadingScreenNewPoemButton_width,
+	height : assets.assetsArray[0].LoadingScreenNewPoemButton_height,
+	bottom : assets.assetsArray[0].LoadingScreenNewPoemButton_bottom,
+	right : assets.assetsArray[0].LoadingScreenNewPoemButton_right,
+	backgroundImage : assets.assetsArray[0].LoadingScreenNewPoemButton
+});
+
+var loadlist = Titanium.UI.createTableView({
+	top : 65,
+	width : 290,
+	height : 242,
+	backgroundColor : 'transparent',
+	rowBackgroundColor : 'transparent',
+	data : poemarray,
+	editable : true,
+	
+});
+
+deleteAll.addEventListener('singletap', function() {
+
+	deleteAllConfirm.content.open();
+	deleteAllConfirm.addChildren();
+});
+
+loadlist.addEventListener('delete', function(data) {
+
+	dbModel.delete1f(data);
+	dbModel.loadingF();
+});
+
+newPoem.addEventListener('singletap', function() {
+
+	writing.PoemTextArea.value = "";
+	tabbedBar.removeFunction();
+
+	e = tabbedBar.buttonArray[2];
+
+	tabbedBar.tabHighlight(e);
+
+	tabbedBar.activeTab = 2;
+	tabbedBar.previousTab = 2;
+
+});
+
+loadlist.addEventListener('click', function(data) {
+
+	if (poemarray) {
+		writing.PoemTextArea.value = exports.poemarray[data.index].content;
+	};
+
+	tabbedBar.removeFunction();
+	e = tabbedBar.buttonArray[2];
+
+	tabbedBar.tabHighlight(e);
+
+	tabbedBar.activeTab = 2;
+	tabbedBar.previousTab = 2;
+
+});
+
+change = function(){
+    //content
+    content.updateLayout({
+        backgroundImage : assets.assetsArray[0].LoadingScreenBG,
+        height : assets.assetsArray[0].LoadingScreenBG_height,
+        width : assets.assetsArray[0].LoadingScreenBG_width,
+        top : assets.assetsArray[0].LoadingScreenBG_top
+    });
+    deleteAll.updateLayout({
+        width : assets.assetsArray[0].LoadingScreenDeleteAllButton_width,
+        height : assets.assetsArray[0].LoadingScreenDeleteAllButton_height,
+        bottom : assets.assetsArray[0].LoadingScreenDeleteAllButton_bottom,
+        left : assets.assetsArray[0].LoadingScreenDeleteAllButton_left,
+        backgroundImage : assets.assetsArray[0].LoadingScreenDeleteAllButton
+    });
+    newPoem.updateLayout({
+        width : assets.assetsArray[0].LoadingScreenNewPoemButton_width,
+        height : assets.assetsArray[0].LoadingScreenNewPoemButton_height,
+        bottom : assets.assetsArray[0].LoadingScreenNewPoemButton_bottom,
+        right : assets.assetsArray[0].LoadingScreenNewPoemButton_right,
+        backgroundImage : assets.assetsArray[0].LoadingScreenNewPoemButton
+    });
+    
+   
+}
+exports.change = change;
+exports.addChildren = function() {
+
+	screen.add(content);
+	content.add(loadlist);
+	content.add(deleteAll);
+	content.add(newPoem);
+	//content.add(close.button);
+
+}
+exports.deleteAllConfirm = deleteAllConfirm;
+exports.poemarray = poemarray;
+exports.loadlist = loadlist;
+exports.screen = screen; 

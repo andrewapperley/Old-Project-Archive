@@ -1,0 +1,72 @@
+/**
+ * @author Andrew Apperley
+ */
+	//declare the student parts ie. name, link ect
+	 
+	 
+	 var student_first;
+	 
+	 var student_last;
+	 
+	 var student_full_name = student_first+" "+student_last;
+	 
+	 var student_link;
+	 
+	 var student_portfolio_image;
+	 
+	 var student_bio;
+	 
+	 var student_piece_description;
+	 
+	 var student_type_title;
+	 
+	 var student_piece_image;
+	
+	 var student_id;
+	 
+	 
+	 //run json through loop to retrieve response from php file that gets the info from the database
+	studentsReq.onload = function(){
+		
+		
+		var json = JSON.parse(this.responseText);
+		
+		var json = json.students;
+
+	    var pos;
+	    
+	   
+	    
+	    
+	    
+	    /////
+	    /////////////
+	    ///////students
+	    /////////////
+	    /////
+	   
+	   for( pos=0; pos < json.length; pos++){
+			
+			
+			student = json[pos];
+			
+	 student_first = student.student_first;
+	 
+	 student_last = student.student_last;
+	 
+	 student_link = student.website_link;
+	 
+	 student_portfolio_image = student.portfolio_image;
+	 
+	 student_bio = student.student_bios;
+	 
+	 student_piece_description;
+	 
+	 student_type_title;
+	 
+	 student_piece_image;
+	
+			
+	    };
+		
+	};

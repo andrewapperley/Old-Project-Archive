@@ -1,0 +1,19 @@
+var logger = require('logger');
+var animations = require('animations');
+var dbModel = require('dbModel');
+var activeWindow = [];
+
+
+var tabbedBar = require('tabbedBar');
+var writing = require('writingScreen');
+
+
+
+for(var i = 0; i < tabbedBar.buttonArray.length; i++)
+{
+	
+	writing.window.add(tabbedBar.buttonArray[i]);
+	
+}
+
+writing.window.open();

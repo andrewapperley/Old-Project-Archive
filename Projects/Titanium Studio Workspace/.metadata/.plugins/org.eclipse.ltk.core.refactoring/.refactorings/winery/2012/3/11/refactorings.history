@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Info.plist&apos; to &apos;winery&apos;" description="Move &apos;Info.plist&apos; to &apos;winery&apos;" destination="/winery" element1="/test/Info.plist" element2="/test/tiapp.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1331518177448" updateReferences="true"/>
+</session>

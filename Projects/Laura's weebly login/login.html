@@ -1,0 +1,55 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="Laura_auth.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			layoutSubviews();
+
+		});
+		function layoutSubviews () {
+				$("#login-form").css({left: ($(document).width() - $("#login-form").width())/2+"px", 
+					top: ($(document).height() - $("#login-form").height())/2+"px"});
+				$("#username").css({width: $("#login-form").width() - 20+"px",
+				 left: 10+"px",
+				 height: 40+"px",
+				 top: 35+"px"});
+				$("#password").css({width: $("#login-form").width() - 20+"px",
+				 left: 10+"px",
+				 height: 40+"px",
+				 top: 50+"px"});
+				$("#submitButton").css({
+					top: $("#password").height() + 40+"px"
+				});
+			};
+	</script>
+	<style type='text/css'> 
+	#login-form { 
+		background-color: black;
+	 	width: 300px;
+	 	height: 200px; 
+	 	left: 20px; 
+	 	top: 20px; 
+	 	position: relative; 
+	} 
+	#username, #password {
+		position: relative; 
+	}
+	#submitButton {
+		position: relative; 
+		width: 200px;
+		height: 30px;
+		left: 50px;
+	}
+	</style>
+	<title>Login</title>
+</head>
+<body>
+	<div id="login-form">
+			<input name='username' id='username' type='text' placeholder='Type in your username' /><br>
+			<input name='password' id='password' type='password' placeholder='Type in your password' /><br>
+			<button id="submitButton" onclick="login(document.getElementById('username').value, document.getElementById('password').value);">Submit</button>
+	</div>
+</body>
+</html>

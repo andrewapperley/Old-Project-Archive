@@ -1,0 +1,53 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+		var facebook_Button = Titanium.UI.createButton({
+		backgroundImage:assets.assetsArray[0].FacebookButton,
+			width:90,
+			height:90,
+			top:101,
+			left:39
+		});
+       
+		// Titanium.Facebook.appid = '318082941615627';
+        // Titanium.Facebook.permissions = ['publish_stream'];
+// 
+         facebook_Button.addEventListener('click', function(e) {
+//        
+twitterbook.post({
+        type : 'facebook', //(required)
+        message : 'Appio Rocks ;)', // (optional)
+        success : function() {
+            alert("Post successfully");
+        },
+        cancel : function() {
+            alert("The user has canceled the post");
+        },
+        error : function(e) {
+            alert("There is an error: ");
+            alert(e);
+        }
+    });
+        // Titanium.Facebook.permissions = ['publish_stream'];
+        // Titanium.Facebook.authorize();
+// 
+        // Titanium.Facebook.requestWithGraphPath('me/feed', {message: writing.PoemTextArea.value + "\n\n- created with Poetry Slam"}, "POST", function(e) {
+        // if (e.success) {
+        		 // Ti.UI.createAlertDialog({title:'Status Update',message:'Success! Your poem has been posted to your status!'}).show();
+// 
+        // } else {
+        // if (e.error) {
+         // Ti.UI.createAlertDialog({title:'General Error',message:'An error has occured, please check you that you are signed into Facebook and that you have a poem written'}).show();
+        		// } 
+        // else if(Titanium.Facebook.loggedIn)
+        // {
+        	 // Ti.UI.createAlertDialog({title:'Facebook Server Error',message:'An error occurred communicating with the Facebook servers, try again later'}).show();
+        // }		
+       	    // }
+       // });
+// 
+      });
+     
+     
+exports.facebook_Button = facebook_Button;

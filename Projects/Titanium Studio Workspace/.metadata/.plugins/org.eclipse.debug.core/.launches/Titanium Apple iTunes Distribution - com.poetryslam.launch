@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.packager.launchConfigurationType">
+<stringAttribute key="ATTR_PROJECT_NAME" value="com.poetryslam"/>
+<stringAttribute key="appid" value="com.poetryslam"/>
+<stringAttribute key="certificate" value="Andrew Apperley"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.poetryslam"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<stringAttribute key="sdk_version" value="6.0"/>
+<stringAttribute key="uuid" value="31124F3C-5099-49F6-A842-C9E2B2CC9475"/>
+</launchConfiguration>

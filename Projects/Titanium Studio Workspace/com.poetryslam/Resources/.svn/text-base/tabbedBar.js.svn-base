@@ -1,0 +1,144 @@
+var activeTab = 2;
+var previousTab = 2;
+
+
+
+var buttonArray = [];
+
+for(var i = 0; i < assets.buttonImageArray.length; i++)
+{
+
+var button = Ti.UI.createButton({
+	
+	backgroundImage:assets.buttonImageArray[i].image,
+	backgroundSelectedImage:assets.buttonActiveImageArray[i].image,
+	bottom: 0,
+	left:64*i,
+	width: assets.buttonImageArray[i].width,
+	height:45,
+	index: i
+	
+});
+
+
+
+button.addEventListener('click', function(e) {
+	
+switch (e.source.index)
+{
+case 0:
+	exports.tabHighlight(e);
+ 	 if( activeTab != previousTab)
+	{	
+	exports.removeFunction();
+	
+	writing.sharing.screen.open();
+	writing.sharing.addChildren();
+	writing.sharing.screen.animate(animations.fadeInOnePX);
+	activeWindow.push(writing.sharing.screen);
+	}
+  break;
+case 1:
+ 	exports.tabHighlight(e);
+ 	if( activeTab != previousTab)
+	{
+ 	exports.removeFunction();
+ 	
+ 	writing.saving.screen.open();
+ 	writing.saving.addChildren();
+ 	writing.saving.nameCheck();
+ 	writing.saving.nameField.focus();
+ 	writing.saving.screen.animate(animations.fadeInOnePX);
+ 	activeWindow.push(writing.saving.screen);
+    }
+  break;
+case 2:
+	exports.tabHighlight(e);
+	
+ 	exports.removeFunction();
+  break;
+case 3:
+	exports.tabHighlight(e);
+	if( activeTab != previousTab)
+	{
+	exports.removeFunction();
+	writing.loading.screen.open();
+	writing.loading.addChildren();
+	dbModel.loadingF();
+	
+	writing.loading.screen.animate(animations.fadeInOnePX);
+	activeWindow.push(writing.loading.screen);
+	}
+  break;
+case 4:
+ 	exports.tabHighlight(e);
+ 	 if( activeTab != previousTab)
+	{
+	exports.removeFunction();
+	writing.deleting.screen.open();
+	writing.deleting.addChildren();
+	writing.deleting.screen.animate(animations.fadeInOnePX);
+	activeWindow.push(writing.deleting.screen);
+	}
+  break;
+}
+
+
+	
+});
+
+buttonArray.push(button);
+
+
+
+
+}
+
+
+//Remove Function
+
+exports.removeFunction = function()
+{
+	if(activeWindow.length == 1)
+	{
+		if (activeWindow[0].children) {
+        for (var i = activeWindow[0].children.length; i > 0; i--){
+            activeWindow[0].remove(activeWindow[0].children[i-1]);
+        }
+    }
+		activeWindow[0].animate(animations.fadeOut);
+		activeWindow[0].close();
+		activeWindow[0] = null;
+		activeWindow = null;
+		activeWindow = [];
+	}
+	
+	
+}
+
+//Active Tab Function
+exports.tabHighlight = function(e)
+{
+	previousTab = activeTab;
+	
+	
+	if(e.index){activeTab = e.index;}
+	else{activeTab = e.source.index;}
+	
+		
+	if(activeTab == previousTab)
+	{
+		buttonArray[activeTab].backgroundImage = assets.buttonActiveImageArray[activeTab].image;
+	}
+	else if( activeTab != previousTab)
+	{
+		buttonArray[activeTab].backgroundImage = assets.buttonActiveImageArray[activeTab].image;
+		
+		buttonArray[previousTab].backgroundImage = assets.buttonImageArray[previousTab].image;
+	}
+	
+	
+}
+exports.previousTab = previousTab;
+exports.activeTab = activeTab;
+exports.buttonArray = buttonArray;

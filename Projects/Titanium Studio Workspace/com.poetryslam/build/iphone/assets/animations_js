@@ -1,0 +1,1 @@
+var fadeIn=Ti.UI.createAnimation({duration:400,opacity:1});var fadeInOnePX=Ti.UI.createAnimation({duration:400,opacity:1});var fadeOut=Ti.UI.createAnimation({duration:400,opacity:0});var fadeOutInfo=Ti.UI.createAnimation({duration:400,opacity:0});exports.fadeInOnePX=fadeInOnePX;exports.fadeIn=fadeIn;exports.fadeOut=fadeOut;exports.fadeOutInfo=fadeOutInfo;

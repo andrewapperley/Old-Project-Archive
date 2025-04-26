@@ -1,0 +1,199 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+var assetsArray = Array({
+	//black background
+	Black1pixel:'Themes/Vintage/onepxblank.png',
+	//delete screen
+	DeletingScreenBG:'Themes/Vintage/Deleting/vintage_delete_confirmation_back-01.png',
+	DeleteAllConfirm:'Themes/Vintage/Deleting/vintage_delete_archives_confirmation_back-01.png',
+	Deleting_height: 162,
+	Deleting_width: 276,
+	Deleting_top:76,
+	Deleting_left:21,
+	DeletingScreenYesButton:'Themes/Vintage/Deleting/vintage_delete_poem_confirmation_yes_button-01.png',
+	DeletingScreenYesButton_width:83,
+	DeletingScreenYesButton_height:28,
+	DeletingScreenYesButton_bottom:30,
+	DeletingScreenYesButton_left:40,
+	DeletingScreenYesPressedButton:'Themes/Vintage/Deleting/vintage_delete_poem_confirmation_yes_button_pressed-01.png',
+	DeletingScreenNoButton:'Themes/Vintage/Deleting/vintage_delete_poem_confirmation_no_button-01.png',
+	DeletingScreenNoButton_width:83,
+	DeletingScreenNoButton_height:28,
+	DeletingScreenNoButton_bottom:30,
+	DeletingScreenNoButton_right:40,
+	DeletingScreenNoPressedButton:'Themes/Vintage/Deleting/vintage_delete_poem_confirmation_no_button_pressed-01.png',
+	//email screen
+	EmailButton:'Themes/Vintage/Sharing/vintage_email_icon-01.png',
+	EmailButton_width:90,
+	EmailButton_height:90,
+	EmailButton_top:206,
+	EmailButton_left:95,
+	//facebook screen
+	FacebookButton:'Themes/Vintage/Sharing/vintage_facebook_icon.png',
+	//info screen
+	InfoScreenBG1:'Themes/Vintage/Info/vintage_info_win_1_back-01.png',
+	InfoScreenBG2:'Themes/Vintage/Info/vintage_info_win_2_back-01.png',
+	InfoScreenBG3:'Themes/Vintage/Info/vintage_info_win_3_back-01.png',
+	InfoScreenBG4:'Themes/Vintage/Info/vintage_info_win_4_back-01.png',
+	InfoScreenBG5:'Themes/Vintage/Info/vintage_info_win_5_back-01.png',
+	InfoScreenBG6:'Themes/Vintage/Info/vintage_info_win_6_back-01.png',
+	InfoScreenBG_height: 367,
+	InfoScreenBG_width: 311,
+	InfoScreenBG_top:30,
+	InfoScreenBackButton:'Themes/Vintage/Info/vintage_back_button-01.png',
+	InfoScreenBackButton_width:38,
+	InfoScreenBackButton_height:16,
+	InfoScreenBackButton_left:20,
+	InfoScreenBackButton_bottom:15,
+	InfoScreenNextButton:'Themes/Vintage/Info/vintage_next_button-01.png',
+	InfoScreenNextButton_width:36,
+	InfoScreenNextButton_height:15,
+	InfoScreenNextButton_right:20,
+	InfoScreenNextButton_bottom:15,
+	//loading screen
+	LoadingScreenBG:'Themes/Vintage/Loading/vintage_archives_back-01.png',
+	LoadingScreenBG_height: 367,
+	LoadingScreenBG_width:311,
+	LoadingScreenBG_top:23,
+	LoadingScreenDeleteAllButton:'Themes/Vintage/Loading/vintage_archive_delete_all_button-01.png',
+	LoadingScreenDeleteAllButton_width:93,
+	LoadingScreenDeleteAllButton_height:18,
+	LoadingScreenDeleteAllButton_bottom: 20,
+	LoadingScreenDeleteAllButton_left:30,
+	LoadingScreenNewPoemButton:'Themes/Vintage/Loading/vintage_archive_new_button-01.png',
+	LoadingScreenNewPoemButton_width:36,
+	LoadingScreenNewPoemButton_height:18,
+	LoadingScreenNewPoemButton_bottom: 20,
+	LoadingScreenNewPoemButton_right:30,
+	//Saving Screen
+	SavingScreenBG:'Themes/Vintage/Saving/vintage_name_poem_back-01.png',
+	SavingScreenBG_height: 162,
+	SavingScreenBG_width:276,
+	SavingScreenBG_top: 76,
+	SavingScreenBG_left:21,
+	SavingScreenNameFieldBG:'Themes/Vintage/Saving/vintage_name_poem_textfield_back-01.png',
+	SavingScreenNameFieldBG_top:68,
+	SavingScreenNameFieldBG_left:28,
+	SavingScreenOverwriteButton:'Themes/Vintage/Saving/vintage_overwrite_rest-01.png',//change
+	SavingScreenSaveButton:'Themes/Vintage/Saving/vintage_name_poem_save_button-01.png',
+	SavingScreenSaveButton_width:83,
+	SavingScreenSaveButton_height:28,
+	SavingScreenSaveButton_bottom:21,
+	SavingScreenSaveButton_left:30,
+	SavingScreenOverwritePressedButton:'Themes/Vintage/Saving/vintage_overwrite_pressed-01.png',//change
+	SavingScreenSavePressedButton:'Themes/Vintage/Saving/vintage_name_poem_save_button_pressed-01.png',
+	SavingScreenCancelButton:'Themes/Vintage/Saving/vintage_name_poem_cancel_button-01.png',
+	SavingScreenCancelButton_width:83,
+	SavingScreenCancelButton_height:28,
+	SavingScreenCancelButton_bottom:21,
+	SavingScreenCancelButton_right:30,
+	SavingScreenCancelPressedButton:'Themes/Vintage/Saving/vintage_name_poem_cancel_button_pressed-01.png',
+	SavingScreenConfirmScreen:'Themes/Vintage/Saving/vintage_poem_save_confirmation.png',
+	SavingScreenConfirmScreen_height: 162,
+	SavingScreenConfirmScreen_width:276,
+	SavingScreenConfirmScreen_top: 76,
+	SavingScreenConfirmScreen_left:21,
+	//Sharing Screen
+	SharingScreenBg:'Themes/Vintage/Sharing/vintage_post_window_back-01.png',
+	SharingScreenBg_height: 332,
+	SharingScreenBg_width:279,
+	//Twitter
+	TwitterButtonBG:'Themes/Vintage/Sharing/vintage_twitter_icon.png',
+	TwitterButtonBG_top: 101,
+	TwitterButtonBG_left: 150,
+	TwitterButtonBG_height: 90,
+	TwitterButtonBG_width:90,
+	//Starting Screen
+	StartingScreenBG:'Themes/Vintage/Starting/vintage_start_screen_back-01.png',
+	StartingScreenPoemButton:'Themes/Vintage/Starting/vintage_start_write_rest-01.png',
+	StartingScreenBG_width:205,
+	StartingScreenBG_height:36,
+	StartingScreenBG_top:250,
+	StartingScreenPoemPressedButton:'Themes/Vintage/Starting/vintage_start_write_pressed-01.png',
+	StartingScreenLoadButton:'Themes/Vintage/Starting/vintage_start_load_rest-01.png',
+	StartingScreenLoadButton_width:205,
+	StartingScreenLoadButton_height:36,
+	StartingScreenLoadButton_top:300,
+	StartingScreenLoadPressedButton:'Themes/Vintage/Starting/vintage_start_load_pressed-01.png',
+	StartingScreenSwitchThemeButton:'Themes/Vintage/Starting/switch_theme_rest-01.png',
+	StartingScreenSwitchThemeButton_width:146,
+	StartingScreenSwitchThemeButton_height:25,
+	StartingScreenSwitchThemeButton_top:400,
+	StartingScreenSwitchThemePressedButton:'Themes/Vintage/Starting/switch_theme_pressed-01.png',
+	//Writing Screen
+	WritingScreenBG:'Themes/Vintage/Writing/vintage_back-01.png',
+	WritingScreenTextArea:'Themes/Vintage/Writing/notebook.png',
+	//close button
+	CloseButton:'Themes/Vintage/vintage_close_x_button-01.png',
+	GeneralFont:CUSTOM_FONT,
+	ThemeSwitchButton:'Themes/Vintage/Writing/vintage_switchtheme_corner_button',
+	ThemeSwitchButtonWidth:68,
+	ThemeSwitchButtonHeight:67,
+	ThemeSwitchButtonPos:0
+
+	});
+	
+	/////////////
+	///////Separate arrays because it makes it easier to organize so I can still loop through them
+	//////////////////
+	//tabbed bar
+var buttonImageArray = [
+	
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_post_rest.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_save_rest.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_write_rest.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_archive_rest.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_clear_rest.png', width:64}
+	
+	];
+	
+var buttonActiveImageArray = [
+	
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_post_active.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_save_active.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_write_active.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_archive_active.png', width:63},
+	{image:'Themes/Vintage/Writing/icon_buttons/vintage_clear_active.png', width:64}
+	
+	];
+	//Writing Screen Assets
+var buttonPropertyArray = [
+	//POS Buttons
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_noun_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_noun_pressed.png',x:8,y:246,width:148,height:24, cEvent: "addition = ' '+arrays.noun[ Math.floor (Math.random()*arrays.noun.length )]; addFunction(addition);"},
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_pronoun_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_pronoun_pressed.png',x:8,y:274,width:148,height:24,cEvent: "addition = ' '+arrays.pronoun[ Math.floor (Math.random()*arrays.pronoun.length )]; addFunction(addition);"},
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_article_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_article_pressed.png',x:8,y:302,width:148,height:24,cEvent:'addition = " "+arrays.article[ Math.floor (Math.random()*arrays.article.length )]; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_conjunction_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_conjunction_pressed.png',x:8,y:330,width:148,height:24,cEvent:'addition = " "+arrays.conjunction[ Math.floor (Math.random()*arrays.conjunction.length )]; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_adjective_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_adjective_pressed.png',x:163,y:246,width:148,height:24,cEvent:'addition = " "+arrays.adjective[ Math.floor (Math.random()*arrays.adjective.length )]; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_verb_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_verb_pressed.png',x:163,y:274,width:148,height:24,cEvent:'addition = " "+arrays.verb[ Math.floor (Math.random()*arrays.verb.length )]; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_preposition_rest.png',active:'Themes/Vintage/Writing/vintage_parts_of_speech/vintage_preposition_pressed.png',x:163,y:302,width:148,height:24,cEvent:'addition = " "+arrays.preposition[ Math.floor (Math.random()*arrays.preposition.length )]; addFunction(addition);'},
+	
+	//function Buttons ie. delete, backspace, return
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_period_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_period_pressed.png',x:163,y:330,width:34,height:25,cEvent:'addition = "."; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_colon_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_colon_pressed.png',x:200,y:330,width:34,height:25,cEvent:'addition = ":"; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_semi-colon_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_semi-colon_pressed.png',x:240,y:330,width:34,height:25,cEvent:'addition = ";"; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_comma_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_comma_pressed.png',x:276,y:330,width:34,height:25,cEvent:'addition = ","; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_question_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_question_pressed.png',x:163,y:358,width:71,height:24,cEvent:'addition = "?"; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_exclamation_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_exclamation_pressed.png',x:84,y:358,width:71,height:24,cEvent:'addition = "!"; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_space_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_space_pressed.png',x:84,y:385,width:71,height:24,cEvent:'addition = " "; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_return_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_return_pressed.png',x:163,y:385,width:71,height:24,cEvent:'addition = "\\n"; addFunction(addition);'},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_erase_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_erase_pressed.png',x:240,y:366,width:74,height:41,cEvent:"eraseFunction();"},
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_keyboard.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_keyboard_pressed.png',x:8,y:358,width:71,height:52,cEvent:'PoemTextArea.focus();'},
+	
+	//info button
+	{rest:'Themes/Vintage/Writing/vintage_info_button.png',active:'Themes/Vintage/Writing/vintage_info_button.png',x:288,y:34,width:30,height:30,cEvent:'tabbedBar.removeFunction(); info.screen.open(); info.addChildren(); info.screen.animate(animations.fadeInOnePX); activeWindow.push(info.screen);'},
+		
+	
+	//start me off button
+	{rest:'Themes/Vintage/Writing/vintage_punctuation/vintage_start_me_rest.png',active:'Themes/Vintage/Writing/vintage_punctuation/vintage_start_me_pressed.png',x:7,y:62,width:86,height:15,cEvent:'addition = arrays.startup_poem[ Math.floor (Math.random()*arrays.startup_poem.length )]; addFunction(addition);'}
+
+	];
+		
+
+
+
+exports.assetsArray = assetsArray;
+exports.buttonPropertyArray = buttonPropertyArray;
+exports.buttonActiveImageArray = buttonActiveImageArray;
+exports.buttonImageArray = buttonImageArray;

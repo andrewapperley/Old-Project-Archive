@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench version="2.0">
+<workbenchAdvisor/>
+<window height="1009" maximized="true" width="1440" x="-6" y="22">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="106" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.appcelerator.titanium.ui.ide.tiappEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.markdown" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.php" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.text" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.python.pydev.debug.actionSet" itemType="typeToolBarContribution" x="54" y="22"/>
+<coolItem id="com.python.pydev.navigate.actionSet" itemType="typeToolBarContribution" x="32" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="144" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="68" y="22"/>
+<coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="150" y="22"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.python.pydev.editor.PythonEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.xml" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1334789113668" focus="true" label="Workspace - Studio (extended)">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.aptana.editor.js" name="twitter.js" partName="twitter.js" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/twitter.js" title="twitter.js" tooltip="com.poetryslam/Resources/twitter.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/twitter.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="141" selectionOffset="566" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="facebook.js" partName="facebook.js" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/facebook.js" title="facebook.js" tooltip="com.poetryslam/Resources/facebook.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/facebook.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="129" selectionOffset="673" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="sharingScreen.js" partName="sharingScreen.js" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/sharingScreen.js" title="sharingScreen.js" tooltip="com.poetryslam/Resources/sharingScreen.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/sharingScreen.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="79" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/app.js" title="app.js" tooltip="com.poetryslam/Resources/app.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/app.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2999" selectionTopPixel="360"/>
+</editor>
+<editor id="com.aptana.editor.js" name="assetConstants.js" partName="assetConstants.js | Vintage" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/Themes/Vintage/assetConstants.js" title="assetConstants.js | Vintage" tooltip="com.poetryslam/Resources/Themes/Vintage/assetConstants.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/Themes/Vintage/assetConstants.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1300" selectionTopPixel="102"/>
+</editor>
+<editor id="com.aptana.editor.js" name="assetConstants.js" partName="assetConstants.js | Core" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/Themes/Core/assetConstants.js" title="assetConstants.js | Core" tooltip="com.poetryslam/Resources/Themes/Core/assetConstants.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/Themes/Core/assetConstants.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1114" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="infoScreen.js" partName="infoScreen.js" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/infoScreen.js" title="infoScreen.js" tooltip="com.poetryslam/Resources/infoScreen.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/infoScreen.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="73" selectionOffset="2342" selectionTopPixel="912"/>
+</editor>
+<editor id="com.aptana.editor.js" name="themeLoad.js" partName="themeLoad.js" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Resources/themeLoad.js" title="themeLoad.js" tooltip="com.poetryslam/Resources/themeLoad.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Resources/themeLoad.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="47" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="Info.plist" partName="Info.plist" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/Info.plist" title="Info.plist" tooltip="com.poetryslam/Info.plist" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/Info.plist"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="161" selectionTopPixel="122"/>
+</editor>
+<editor activePart="true" focus="true" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" partName="TiApp Editor" path="/Users/andrewapperley/Documents/Titanium Studio Workspace/com.poetryslam/tiapp.xml" title="TiApp Editor" tooltip="com.poetryslam/tiapp.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.poetryslam/tiapp.xml"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="com.aptana.terminal.views.terminal" partName="Terminal">
+<viewState>
+<title>Terminal</title>
+<workingDirectory>/Users/andrewapperley</workingDirectory>
+</viewState>
+</view>
+<view id="com.aptana.samples.ui.SamplesView" partName="Samples">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="com.aptana.explorer.view" partName="App Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="com.poetryslam">
+<project name="CustomFonts">
+<expanded>
+<element path="/CustomFonts/Resources"/>
+</expanded>
+<selection>
+<element path="/CustomFonts/Resources/app.js"/>
+</selection>
+</project>
+<project name="CutUpsiPhone(GOLD)">
+<expanded>
+<element path="/CutUpsiPhone(GOLD)/Resources"/>
+</expanded>
+<selection>
+<element path="/CutUpsiPhone(GOLD)/Info.plist"/>
+</selection>
+</project>
+<project name="GRADSHOWAPP">
+<selection>
+<element path="/GRADSHOWAPP/Resources"/>
+</selection>
+</project>
+<project name="Hack Fighter">
+<expanded>
+<element path="/Hack Fighter/Resources"/>
+</expanded>
+<selection>
+<element path="/Hack Fighter/Resources/app.js"/>
+</selection>
+</project>
+<project name="Project Zion">
+<expanded>
+<element path="/Project Zion/Resources"/>
+</expanded>
+<selection>
+<element path="/Project Zion/Resources/app.js"/>
+</selection>
+</project>
+<project name="Testing">
+<expanded>
+<element path="/Testing/Resources"/>
+</expanded>
+<selection>
+<element path="/Testing/Resources"/>
+</selection>
+</project>
+<project name="com.poetryslam">
+<expanded>
+<element path="/com.poetryslam/Resources"/>
+<element path="/com.poetryslam/Resources/Themes"/>
+<element path="/com.poetryslam/Resources/Themes/Core"/>
+</expanded>
+<selection>
+<element path="/com.poetryslam/tiapp.xml"/>
+</selection>
+</project>
+<project name="rendering test">
+<expanded>
+<element path="/rendering test/Resources"/>
+<element path="/rendering test/Resources/images"/>
+</expanded>
+<selection>
+<element path="/rendering test/tiapp.xml"/>
+</selection>
+</project>
+<project name="test">
+<expanded>
+<element path="/test/app"/>
+<element path="/test/plugins"/>
+<element path="/test/plugins/ti.alloy"/>
+</expanded>
+<selection>
+<element path="/test/tiapp.xml"/>
+</selection>
+</project>
+<project name="twitter-test">
+<expanded>
+<element path="/twitter-test/Resources"/>
+</expanded>
+<selection>
+<element path="/twitter-test/Resources/app.js"/>
+</selection>
+</project>
+<project name="winery">
+<expanded>
+<element path="/winery/Resources"/>
+</expanded>
+<selection>
+<element path="/winery/Resources/loginScreen.js"/>
+</selection>
+</project>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="com.aptana.snippets.ui.views.SnippetsView" partName="Snippets">
+<viewState/>
+</view>
+<view id="com.aptana.js.debug.ui.scriptsView" partName="Loaded Scripts">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors (1 item)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="com.appcelerator.titanium.ui.ide.tiappEditor" activePerspective="com.aptana.ui.WebPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Studio (extended)"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.aptana.browser.actionSet"/>
+<alwaysOnActionSet id="com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
+<alwaysOnActionSet id="com.aptana.editor.common.presentation"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.aptana.js.debug.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<alwaysOnActionSet id="com.aptana.ui.globalActionSet"/>
+<alwaysOnActionSet id="com.aptana.terminal.actionSet"/>
+<show_view_action id="com.aptana.browser.views.webbrowser"/>
+<show_view_action id="com.aptana.explorer.view"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="com.aptana.ui.io.remoteview"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="com.aptana.samples.ui.SamplesView"/>
+<show_view_action id="com.aptana.snippets.ui.views.SnippetsView"/>
+<show_view_action id="com.aptana.terminal.views.terminal"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.aptana.webserver.ui.view"/>
+<new_wizard_action id="com.appcelerator.titanium.mobile.project_wizard"/>
+<new_wizard_action id="com.appcelerator.titanium.mobile.module.wizard"/>
+<new_wizard_action id="com.aptana.editor.php.NewPHPProjectWizard"/>
+<new_wizard_action id="com.aptana.ui.wizards.NewWebProject"/>
+<new_wizard_action id="com.aptana.ruby.core.ui.rubyProjectWizard"/>
+<new_wizard_action id="com.aptana.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.radrails.rails.ui.projectWizard"/>
+<perspective_action id="com.appcelerator.titanium.ui.StudioPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.aptana.explorer.view"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="com.aptana.samples.ui.SamplesView"/>
+<view id="com.aptana.snippets.ui.views.SnippetsView"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="terminalArea" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViews>
+<view id="com.aptana.terminal.views.terminal" ratio="0.29986614"/>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ProgressView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29986614"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
+<page content="com.aptana.explorer.view" label="App Explorer"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.23582925" ratioLeft="337" ratioRight="1092" relationship="2" relative="left"/>
+<info folder="true" part="terminalArea" ratio="0.7494145" ratioLeft="640" ratioRight="214" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@838573" ratio="0.5" ratioLeft="606" ratioRight="606" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal:titanium.installer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e0612c" ratio="0.7494145" ratioLeft="640" ratioRight="214" relationship="4" relative="left">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="com.aptana.samples.ui.SamplesView" label="Samples"/>
+<page content="com.aptana.snippets.ui.views.SnippetsView" label="Snippets"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.aptana.browser.actionSet"/>
+<alwaysOnActionSet id="com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="com.aptana.js.debug.ui.actionSet"/>
+<alwaysOnActionSet id="com.aptana.terminal.actionSet"/>
+<alwaysOnActionSet id="com.python.pydev.navigate.actionSet"/>
+<alwaysOnActionSet id="com.python.pydev.debug.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.python.pydev.exceptionBreakpoints"/>
+<alwaysOnActionSet id="org.python.pydev.pyPropertyTrace"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.aptana.explorer.view"/>
+<show_view_action id="com.aptana.js.debug.ui.scriptsView"/>
+<show_view_action id="com.aptana.js.debug.ui.AJAXMonitorView"/>
+<show_view_action id="com.aptana.ruby.debug.ui.DisplayView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<perspective_action id="com.aptana.ui.WebPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="com.aptana.explorer.view"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="com.aptana.js.debug.ui.scriptsView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="com.aptana.explorer.view" label="App Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.80376345" ratioLeft="598" ratioRight="146" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="com.aptana.ruby.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="com.aptana.js.debug.ui.AJAXMonitorView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44971263" ratioLeft="313" ratioRight="383" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="com.aptana.js.debug.ui.scriptsView" label="Loaded Scripts"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/twitter.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/facebook.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/Themes/Vintage/assetConstants.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/Themes/Core/assetConstants.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/infoScreen.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/com.poetryslam/Resources/themeLoad.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/com.poetryslam/Info.plist"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" path="/com.poetryslam/tiapp.xml"/>
+</editors>
+<item historyLabel="twitter.js" index="0">
+<position info="not_deleted" x="43" y="51"/>
+</item>
+<item historyLabel="facebook.js" index="1">
+<position info="not_deleted" x="205" y="0"/>
+</item>
+<item historyLabel="assetConstants.js | Vintage" index="3">
+<position info="not_deleted" x="1300" y="0"/>
+</item>
+<item historyLabel="assetConstants.js | Core" index="4">
+<position info="not_deleted" x="1114" y="0"/>
+</item>
+<item historyLabel="assetConstants.js | Vintage" index="3">
+<position info="not_deleted" x="1300" y="0"/>
+</item>
+<item historyLabel="twitter.js" index="0">
+<position info="not_deleted" x="94" y="307"/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position info="not_deleted" x="1075" y="0"/>
+</item>
+<item historyLabel="facebook.js" index="1">
+<position info="not_deleted" x="45" y="160"/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position info="not_deleted" x="1075" y="0"/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position info="not_deleted" x="2412" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2857" y="0"/>
+</item>
+<item historyLabel="facebook.js" index="1">
+<position info="not_deleted" x="673" y="129"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2857" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1891" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2084" y="0"/>
+</item>
+<item historyLabel="infoScreen.js" index="5">
+<position info="not_deleted" x="2342" y="73"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2730" y="0"/>
+</item>
+<item historyLabel="twitter.js" index="0">
+<position info="not_deleted" x="566" y="141"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2730" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2133" y="0"/>
+</item>
+<item historyLabel="themeLoad.js" index="6">
+<position info="not_deleted" x="47" y="10"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2133" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1411" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1485" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1519" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1837" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1895" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2001" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2064" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2784" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2839" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1411" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1485" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1519" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1837" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="1895" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2001" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2064" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2764" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2784" y="0"/>
+</item>
+<item historyLabel="app.js" index="2">
+<position info="not_deleted" x="2728" y="0"/>
+</item>
+<item historyLabel="Info.plist" index="7">
+<position info="not_deleted" x="161" y="0"/>
+</item>
+<item historyLabel="TiApp Editor" index="8"/>
+<item active="true" historyLabel="TiApp Editor" index="8"/>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="com.appcelerator.ui.trim"/>
+<trimItem IMemento.internal.id="terminalArea"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="com.poetryslam/tiapp.xml">
+<persistable path="/com.poetryslam/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Info.plist" tooltip="com.poetryslam/Info.plist">
+<persistable path="/com.poetryslam/Info.plist"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="themeLoad.js" tooltip="com.poetryslam/Resources/themeLoad.js">
+<persistable path="/com.poetryslam/Resources/themeLoad.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="infoScreen.js" tooltip="com.poetryslam/Resources/infoScreen.js">
+<persistable path="/com.poetryslam/Resources/infoScreen.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="assetConstants.js" tooltip="com.poetryslam/Resources/Themes/Core/assetConstants.js">
+<persistable path="/com.poetryslam/Resources/Themes/Core/assetConstants.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="assetConstants.js" tooltip="com.poetryslam/Resources/Themes/Vintage/assetConstants.js">
+<persistable path="/com.poetryslam/Resources/Themes/Vintage/assetConstants.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="com.poetryslam/Resources/app.js">
+<persistable path="/com.poetryslam/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="sharingScreen.js" tooltip="com.poetryslam/Resources/sharingScreen.js">
+<persistable path="/com.poetryslam/Resources/sharingScreen.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="facebook.js" tooltip="com.poetryslam/Resources/facebook.js">
+<persistable path="/com.poetryslam/Resources/facebook.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="twitter.js" tooltip="com.poetryslam/Resources/twitter.js">
+<persistable path="/com.poetryslam/Resources/twitter.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/andrewapperley/Downloads/modules 9/iphone/es.appio.twitterbook/1.0/example/app.js">
+<persistable uri="file:/Users/andrewapperley/Downloads/modules%209/iphone/es.appio.twitterbook/1.0/example/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Project Zion/Resources/app.js">
+<persistable path="/Project Zion/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="database.php" tooltip="/Users/andrewapperley/Projects/Backend CMS 2012/root/app/Config/database.php">
+<persistable uri="file:/Users/andrewapperley/Projects/Backend%20CMS%202012/root/app/Config/database.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.php" name="dbConnect.php" tooltip="Project Zion/Resources/dbConnect.php">
+<persistable path="/Project Zion/Resources/dbConnect.php"/>
+</file>
+</mruList>
+</workbench>

@@ -1,0 +1,72 @@
+/**
+ * @author MATTON DAVID C.
+ */
+
+
+
+var email_Button = Ti.UI.createButton({
+	backgroundImage:'images/eMail_Logo.png',
+	backgroundSelectedImage:'images/eMail_Logo_click.png',
+	width:100,
+	height:100,
+	top:210,
+	left:110
+});
+		
+
+		
+//var twitter_Button = Ti.UI.createButton({
+//	backgroundImage:'images/twitter_icon.png',
+	//width:200,
+//	height:200,
+//	top:765,
+//	left:290,
+//})	
+		
+var post_text = Ti.UI.createView({
+	backgroundColor:'#0076c1',
+	modal:true,
+	opacity:0.9,
+	height: 30,
+	width:320,
+	top:100
+});
+
+var post_text_label = Ti.UI.createLabel({
+	color:'white',
+	text:'Post poem to:',
+	textAlign:'left',
+	opacity:1,
+	left:8,
+	right:8,
+	font:{fontSize:22, fontFamily:'Special Elite'}
+});
+
+var post_home_Button = Ti.UI.createButton({
+	backgroundImage:'images/cut-up1.png',
+	backgroundSelectedImage:'images/cut-up1_click.png',
+	title:'RETURN TO POEM',
+	width:140,
+	height:25,
+	top:8,
+	left:173,
+	font:{fontSize:18,fontFamily:'American Purpose'}
+});
+	
+post_home_Button.addEventListener('click', function(e){
+	
+	editorWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN})
+	postWin.close();
+	
+})
+
+
+email_Button.addEventListener('click', function(e){
+	var emailDialog = Titanium.UI.createEmailDialog({html:true})
+emailDialog.subject = "Hey check out this great poem I made";
+
+emailDialog.messageBody = '"' + PoemTextArea.value + ' "' +'<br /><br />' + "<center><b>© Cut-ups Poetry Generator</b></center>";
+var f = Ti.Filesystem.getFile('images/email-attach.png');
+emailDialog.addAttachment(f);
+emailDialog.open()
+})

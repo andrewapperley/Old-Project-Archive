@@ -1,0 +1,51 @@
+var screen = Ti.UI.createView({
+	
+	backgroundColor: 'red',
+	height: '90%',
+	top:0,
+	index:4
+	
+	
+});
+
+var loadlist = Titanium.UI.createTableView({
+	top:100,
+	backgroundColor:'transparent', //Set BG transparent  
+    rowBackgroundColor:'transparent',
+    data:dbModel.poemarray,
+	editable:true,
+	height:315,
+	
+});
+
+
+
+loadlist.addEventListener('click', function(data){
+
+    dbModel.poemsDB.open('version1');
+    dbModel.poemsDB =  dbModel.poemsDB.execute('SELECT * FROM poems');
+    
+function setData(){
+    for( i=0; i < poemsDB.rowCount; i++){  
+  
+        poemarray.push({content: poemsDB.fieldByName('poem_content')});  
+        
+        
+			poemsDB.next();
+        
+        loadlist.setData(poemarray);  
+    }
+ }
+    dbModel.poemsDB.close();
+ 	
+ 	PoemTextArea.value = dbModel.poemarray[data.index].url;
+});
+
+
+
+
+
+
+
+screen.add(loadlist);
+exports.screen = screen;

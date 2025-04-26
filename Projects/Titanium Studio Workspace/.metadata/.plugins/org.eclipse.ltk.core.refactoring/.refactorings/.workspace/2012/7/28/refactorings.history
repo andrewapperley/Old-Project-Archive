@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;com.poetryslam&apos;" deleteContents="false" description="Delete resource &apos;com.poetryslam&apos;" element1="/com.poetryslam" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1341902352657"/>&#x0A;<refactoring comment="Delete resource &apos;com.poetryslam/Resources/savingConfirmation.js&apos;" deleteContents="false" description="Delete resource &apos;com.poetryslam/Resources/savingConfirmation.js&apos;" element1="/com.poetryslam/Resources/savingConfirmation.js" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1342284808390"/>
+</session>

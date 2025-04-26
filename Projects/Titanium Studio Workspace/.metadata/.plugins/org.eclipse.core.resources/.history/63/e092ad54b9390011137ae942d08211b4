@@ -1,0 +1,54 @@
+/**
+ * @author MATTON DAVID C.
+ */
+
+var win = Ti.UI.createWindow({
+	backgroundImage:'images/cutups_skin_first.png',
+	fullscreen:true
+})
+
+win.open()
+
+win.add(startButton)
+
+startButton.addEventListener('click', function(e){
+	editorWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+})
+
+win.add(loadButton)
+
+loadButton.addEventListener('click', function(e){
+	
+	loadWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+	loadWin.add(new_Button);
+	
+	
+})
+
+load_Button.addEventListener('click', function(e){
+	loadWin.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP});
+	loadWin.add(new_Button);
+	editorWin.close();
+	
+ 
+	})
+	
+//create edit and load page -------------------------------------------------
+
+var loadWin = Ti.UI.createWindow({backgroundImage:'images/cutups_skin.png'})
+var editorWin = Ti.UI.createWindow({backgroundImage:'images/cutups_skin.png'})
+var infoWin2 = Ti.UI.createWindow({backgroundImage:'images/cutups_skin.png'})
+
+//----------------------------------------------------------
+
+var start_me_button = Ti.UI.createButton({
+			 backgroundImage:'images/cutup3.png',
+			backgroundSelectedImage:'images/cutup3_click.png',
+	width:120,
+			height:25,
+			top:88,
+			left:5,
+			title:'Start me off',
+			color:'white',
+			font:{fontSize:18,fontWeight:'bold',fontFamily:'American Purpose'},
+	})

@@ -1,0 +1,62 @@
+var Box2D = require('ti.box2d');
+
+
+var mainWindow = Ti.UI.createWindow();
+var mainView = Ti.UI.createView();
+mainWindow.add(mainView);
+mainWindow.open();
+var spaceShip = require('ship');
+var world = Box2D.createWorld(mainView);
+var shooting = require('shooting');
+//
+/////
+////////
+//CREATE GROUND/WALL BOUNDS
+var ground = Ti.UI.createView({
+	bottom:0,
+	height:50,
+	width: Titanium.Platform.displayCaps.platformWidth
+});
+
+var groundRef = world.addBody(ground, {
+	density: 4,
+	restitution: 0.4,
+	type: "static"
+});
+var leftWall = Ti.UI.createView({
+	left:0,
+	width:1,
+	height: 30,
+	bottom:ground.height
+});
+
+var leftRef = world.addBody(leftWall, {
+	density: 4,
+	restitution: 0.4,
+	type: "static"
+});
+var rightWall = Ti.UI.createView({
+	right:0,
+	width:1,
+	height: 30,
+	bottom:ground.height
+});
+
+var rightRef = world.addBody(rightWall, {
+	density: 4,
+	restitution: 0.4,
+	type: "static"
+});
+///////////
+/////////////////
+/////////////////////
+var shipRef = world.addBody(spaceShip.ship, {
+	density: 4,
+	restitution: 0.4,
+	type: "dynamic"
+});
+
+
+
+world.start();
+

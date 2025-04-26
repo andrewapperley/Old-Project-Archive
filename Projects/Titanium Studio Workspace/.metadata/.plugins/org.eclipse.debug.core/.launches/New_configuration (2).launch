@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.mobileweb.emulator.launchConfigurationType">
+<booleanAttribute key="ATTR_CLEAN_BEFORE_LAUNCH" value="false"/>
+<stringAttribute key="ATTR_LOG_LEVEL" value="Info"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value=""/>
+<stringAttribute key="screen_type" value="HVGA"/>
+<stringAttribute key="sdk_version" value="Android 2.2"/>
+</launchConfiguration>

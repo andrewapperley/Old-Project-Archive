@@ -1,0 +1,13 @@
+<?php
+$connect = mysql_connect( 
+	'mysql.parafx.com', 
+	'humberinter', 
+	'charlie2011') or die( mysql_error() );
+	
+mysql_select_db( 'humberinter', $connect )
+	or die( mysql_error() );
+	
+	
+	
+	
+?>

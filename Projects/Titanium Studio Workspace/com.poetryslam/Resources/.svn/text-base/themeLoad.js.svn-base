@@ -1,0 +1,13 @@
+var themeArray = [];
+var themeList = Ti.UI.createTableView({
+	top:65,
+	width:290,
+	height:242,
+	backgroundColor:'transparent',
+    rowBackgroundColor:'transparent',
+    data:themeArray,
+	editable:false
+});
+
+exports.themeArray = themeArray;
+exports.themeList = themeList;

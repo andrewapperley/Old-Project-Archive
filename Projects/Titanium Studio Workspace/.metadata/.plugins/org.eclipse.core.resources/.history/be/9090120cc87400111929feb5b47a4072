@@ -1,0 +1,90 @@
+/**
+ * @author Andrew Apperley
+ */
+	
+	
+	
+	adminEventReq.onload = function(){
+		
+		theEvents.value = "";
+		var json = JSON.parse(this.responseText);
+		
+		
+		var json = json.events;
+
+	    var pos;
+	    
+	    
+	    /////
+	    /////////////
+	    ///////admin events
+	    /////////////
+	    /////
+	   adminEventTitle = "Vintage Conservatory Created Events" + "\n" + "\n";
+	   
+	   theEvents.value += adminEventTitle;
+	   for( pos=0; pos < json.length; pos++){
+			
+			
+			events = json[pos];
+			
+			
+			adminEventText = events.event_title + "\n" + events.event_description + "\n" + events.start + " to " + events.end + "\n" + events.private_public + "\n" + "____________________" + "\n" + "\n" ; 
+			
+		
+		theEvents.value += adminEventText;
+	    };
+		
+			
+			
+			
+		
+	eventReq.open('GET', "http://client.andrewapperley.ca/app_events.php");
+eventReq.send();
+	};
+	
+	
+	
+	eventReq.onload = function(){
+	   
+	    var json = JSON.parse(this.responseText);
+		
+		
+		
+	    var json = json.events;
+		
+		
+
+	    var pos;
+	    
+	    /////
+	    /////////////
+	    ///////member events
+	    /////////////
+	    /////
+	 	memberEventTitle = "Member Created Events" + "\n" + "\n";
+	   theEvents.value += memberEventTitle;
+	    for( pos=0; pos < json.length; pos++){
+			
+			
+			event = json[pos];
+			
+			if(event.catering == "0")
+		{
+			event.catering = "Catering: No";
+		}
+		else 
+		{
+			event.catering = "Catering: Yes";	
+		}
+			
+			eventText = event.first_name +" "+ event.last_name + "\n" + event.start + " to " + event.end + "\n" + event.catering + "\n" + "Number of people: " + event.num_people + "\n" + event.private_public + "\n" + "____________________" + "\n" + "\n" ; 
+			
+		
+		theEvents.value += eventText;
+	    };
+		
+		
+		
+	};
+

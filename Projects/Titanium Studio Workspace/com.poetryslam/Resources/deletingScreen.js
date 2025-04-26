@@ -1,0 +1,102 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+var screen = Titanium.UI.createWindow({
+	height : 480 - tabbedBar.buttonArray[0].width - 2,
+	width : 320,
+	top : 0,
+	backgroundImage : assets.assetsArray[0].Black1pixel,
+	touchEnabled : true,
+	opacity : 0,
+	index : 6,
+	backgroundRepeat : true
+});
+
+var content = Ti.UI.createView({
+
+	backgroundImage : assets.assetsArray[0].DeletingScreenBG,
+	height : assets.assetsArray[0].Deleting_height,
+	width : assets.assetsArray[0].Deleting_width,
+	top : assets.assetsArray[0].Deleting_top,
+	left : assets.assetsArray[0].Deleting_left
+
+});
+
+var deleteButton = Ti.UI.createButton({
+	width : assets.assetsArray[0].DeletingScreenYesButton_width,
+	height : assets.assetsArray[0].DeletingScreenYesButton_height,
+	bottom : assets.assetsArray[0].DeletingScreenYesButton_bottom,
+	left : assets.assetsArray[0].DeletingScreenYesButton_left,
+	backgroundImage : assets.assetsArray[0].DeletingScreenYesButton,
+	backgroundSelectedImage : assets.assetsArray[0].DeletingScreenYesPressedButton
+});
+
+var cancelButton = Ti.UI.createButton({
+	width : assets.assetsArray[0].DeletingScreenNoButton_width,
+	height : assets.assetsArray[0].DeletingScreenNoButton_height,
+	bottom : assets.assetsArray[0].DeletingScreenNoButton_bottom,
+	right : assets.assetsArray[0].DeletingScreenNoButton_right,
+	backgroundImage : assets.assetsArray[0].DeletingScreenNoButton,
+	backgroundSelectedImage : assets.assetsArray[0].DeletingScreenNoPressedButton
+});
+
+deleteButton.addEventListener('singletap', function() {
+
+	writing.PoemTextArea.value = "";
+	tabbedBar.removeFunction();
+	e = tabbedBar.buttonArray[2];
+	tabbedBar.tabHighlight(e);
+	tabbedBar.activeTab = 2;
+	tabbedBar.previousTab = 2;
+
+});
+
+cancelButton.addEventListener('singletap', function() {
+
+	tabbedBar.removeFunction();
+	e = tabbedBar.buttonArray[2];
+	tabbedBar.tabHighlight(e);
+	tabbedBar.activeTab = 2;
+	tabbedBar.previousTab = 2;
+});
+
+exports.addChildren = function() {
+
+	screen.add(content);
+
+	content.add(deleteButton);
+	content.add(cancelButton);
+
+}
+
+change = function(){
+    //content
+    content.updateLayout({
+        backgroundImage : assets.assetsArray[0].DeletingScreenBG,
+        height : assets.assetsArray[0].Deleting_height,
+        width : assets.assetsArray[0].Deleting_width,
+        top : assets.assetsArray[0].Deleting_top,
+        left : assets.assetsArray[0].Deleting_left
+    });
+    //delete button
+    cancelButton.updateLayout({
+        width : assets.assetsArray[0].DeletingScreenNoButton_width,
+        height : assets.assetsArray[0].DeletingScreenNoButton_height,
+        bottom : assets.assetsArray[0].DeletingScreenNoButton_bottom,
+        right : assets.assetsArray[0].DeletingScreenNoButton_right,
+        backgroundImage : assets.assetsArray[0].DeletingScreenNoButton,
+        backgroundSelectedImage : assets.assetsArray[0].DeletingScreenNoPressedButton
+    });
+    //cancel button
+    deleteButton.updateLayout({
+        width : assets.assetsArray[0].DeletingScreenYesButton_width,
+        height : assets.assetsArray[0].DeletingScreenYesButton_height,
+        bottom : assets.assetsArray[0].DeletingScreenYesButton_bottom,
+        left : assets.assetsArray[0].DeletingScreenYesButton_left,
+        backgroundImage : assets.assetsArray[0].DeletingScreenYesButton,
+        backgroundSelectedImage : assets.assetsArray[0].DeletingScreenYesPressedButton
+    });
+}
+exports.change = change;
+exports.screen = screen;

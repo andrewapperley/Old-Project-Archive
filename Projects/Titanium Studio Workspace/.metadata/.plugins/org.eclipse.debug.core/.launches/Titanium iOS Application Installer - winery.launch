@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.installer.launchConfigurationType">
+<stringAttribute key="ATTR_PROJECT_NAME" value="winery"/>
+<stringAttribute key="appid" value="com.vintageconservatory"/>
+<stringAttribute key="certificate" value="Andrew Apperley (98UL8MBG2F)"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/winery"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<stringAttribute key="sdk_version" value="5.1"/>
+<stringAttribute key="uuid" value="82207361-2B7F-478C-A35B-591261B8A3CC"/>
+</launchConfiguration>

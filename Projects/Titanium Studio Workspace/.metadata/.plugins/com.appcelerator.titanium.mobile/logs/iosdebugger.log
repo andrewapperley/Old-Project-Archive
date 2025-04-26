@@ -1,0 +1,135 @@
+Logger started at: Thursday, November 29, 2012 10:31:30 PM EST
+Component: com.appcelerator.titanium.mobile
+Version: 1.0.0.1353462355
+[31:30.778] Sent: >21*1354246290779*version<
+[31:30.779] Recv: >1354246290779*2*2.1.4.GA<
+[31:30.795] Sent: >36*1354246290780*option*monitorXHR*true<
+[31:30.795] Recv: >1354246290780<
+[31:30.795] Sent: >45*1354246290781*option*suspendOnFirstLine*false<
+[31:30.796] Recv: >1354246290781<
+[31:30.796] Sent: >46*1354246290782*option*suspendOnExceptions*false<
+[31:30.796] Recv: >1354246290782<
+[31:30.796] Sent: >41*1354246290783*option*suspendOnErrors*true<
+[31:30.796] Recv: >1354246290783<
+[31:30.797] Sent: >43*1354246290784*option*suspendOnKeywords*true<
+[31:30.797] Recv: >1354246290784<
+[31:30.797] Sent: >45*1354246290785*option*bypassConstructors*false<
+[31:30.797] Recv: >1354246290785<
+[31:30.797] Sent: >45*1354246290786*option*stepFiltersEnabled*false<
+[31:30.798] Recv: >1354246290786<
+[31:30.798] Sent: >30*1354246290787*detailFormatters<
+[31:30.798] Recv: >1354246290787<
+[31:30.798] Sent: >53*1354246290788*breakpoint*create*app:/app.js*36*1*0**1<
+[31:30.799] Recv: >1354246290788*created<
+[31:30.799] Sent: >20*1354246290789*enable<
+[31:30.799] Recv: >1354246290789<
+[31:31.155] Recv: >threads*created*0*kroll$1<
+[31:31.165] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/app.js, Resource: app_js<
+[31:31.187] Recv: >scripts*created*312838688|app:/app.js||1|71<
+[31:31.188] Recv: >resumed*0*started<
+[31:31.188] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/themeLoad.js, Resource: themeLoad_js<
+[31:31.201] Recv: >scripts*created*312838592|app:/themeLoad.js||1|40<
+[31:31.202] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/dbModel.js, Resource: dbModel_js<
+[31:31.215] Recv: >scripts*created*312838496|app:/dbModel.js||1|152<
+[31:31.239] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/Themes/Core/assetConstants.js, Resource: Themes/Core/assetConstants_js<
+[31:31.257] Recv: >scripts*created*312839360|app:/Themes/Core/assetConstants.js||1|198<
+[31:31.258] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/logger.js, Resource: logger_js<
+[31:31.281] Recv: >scripts*created*312839200|app:/logger.js||1|11<
+[31:31.282] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/animations.js, Resource: animations_js<
+[31:31.292] Recv: >scripts*created*313336768|app:/animations.js||1|20<
+[31:31.307] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/tabbedBar.js, Resource: tabbedBar_js<
+[31:31.331] Recv: >scripts*created*313336608|app:/tabbedBar.js||1|166<
+[31:31.333] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/writingScreen.js, Resource: writingScreen_js<
+[31:31.340] Recv: >scripts*created*313336544|app:/writingScreen.js||1|260<
+[31:31.341] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/Arrays.js, Resource: Arrays_js<
+[31:31.360] Recv: >scripts*created*313337664|app:/Arrays.js||1|219<
+[31:31.363] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/sharingScreen.js, Resource: sharingScreen_js<
+[31:31.371] Recv: >scripts*created*313337568|app:/sharingScreen.js||1|47<
+[31:31.372] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/facebook.js, Resource: facebook_js<
+[31:31.387] Recv: >scripts*created*313805632|app:/facebook.js||1|38<
+[31:31.388] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/twitter.js, Resource: twitter_js<
+[31:31.407] Recv: >scripts*created*313805568|app:/twitter.js||1|35<
+[31:31.407] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/es.appio.twitterbook.js, Resource: es_appio_twitterbook_js<
+[31:31.408] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/email.js, Resource: email_js<
+[31:31.422] Recv: >scripts*created*313805376|app:/email.js||1|30<
+[31:31.425] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/savingScreen.js, Resource: savingScreen_js<
+[31:31.435] Recv: >scripts*created*313805664|app:/savingScreen.js||1|270<
+[31:31.436] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/loadingScreen.js, Resource: loadingScreen_js<
+[31:31.457] Recv: >scripts*created*313805312|app:/loadingScreen.js||1|134<
+[31:31.458] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/deleteAllConfirm.js, Resource: deleteAllConfirm_js<
+[31:31.485] Recv: >scripts*created*313337600|app:/deleteAllConfirm.js||1|91<
+[31:31.488] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/deletingScreen.js, Resource: deletingScreen_js<
+[31:31.506] Recv: >scripts*created*313804800|app:/deletingScreen.js||1|103<
+[31:31.507] Recv: >log*out*[DEBUG] Loading: /Users/andrewapperley/Library/Application Support/iPhone Simulator/6.0/Applications/F4B2574B-8E67-44E6-9BCF-C68E7FB30301/PoetrySlam.app/infoScreen.js, Resource: infoScreen_js<
+[31:31.526] Recv: >scripts*created*313806560|app:/infoScreen.js||1|187<
+[31:31.529] Recv: >log*out*[WARN] Invalid dimension value (nan) requested. Making the dimension undefined instead.<
+[31:31.535] Recv: >suspended*0*breakpoint*app:/app.js*36<
+[31:31.535] Sent: >22*1354246290790*frames*0<
+[31:31.536] Recv: >1354246290790*0|||app:/app.js|36|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:31.890] Sent: >34*1354246290791*variables*0*frame[0]<
+[31:31.891] Recv: >1354246290791*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]<
+[31:35.527] Sent: >11**stepOver*0<
+[31:35.529] Recv: >resumed*0*stepOver<
+[31:36.951] Recv: >suspended*0*breakpoint*app:/app.js*37<
+[31:36.952] Sent: >22*1354246290792*frames*0<
+[31:36.952] Recv: >1354246290792*0|||app:/app.js|37|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:37.247] Sent: >34*1354246290793*variables*0*frame[0]<
+[31:37.249] Recv: >1354246290793*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]<
+[31:37.951] Sent: >11**stepOver*0<
+[31:37.952] Recv: >resumed*0*stepOver<
+[31:37.953] Recv: >suspended*0*breakpoint*app:/app.js*38<
+[31:37.953] Sent: >22*1354246290794*frames*0<
+[31:37.954] Recv: >1354246290794*0|||app:/app.js|38|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:38.372] Sent: >34*1354246290795*variables*0*frame[0]<
+[31:38.373] Recv: >1354246290795*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]<
+[31:38.797] Sent: >11**stepOver*0<
+[31:38.798] Recv: >resumed*0*stepOver<
+[31:38.798] Recv: >suspended*0*breakpoint*app:/app.js*39<
+[31:38.799] Sent: >22*1354246290796*frames*0<
+[31:38.799] Recv: >1354246290796*0|||app:/app.js|39|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:39.150] Sent: >34*1354246290797*variables*0*frame[0]<
+[31:39.151] Recv: >1354246290797*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:39.720] Sent: >11**stepOver*0<
+[31:39.722] Recv: >resumed*0*stepOver<
+[31:39.722] Recv: >suspended*0*breakpoint*app:/app.js*40<
+[31:39.722] Sent: >22*1354246290798*frames*0<
+[31:39.723] Recv: >1354246290798*0|||app:/app.js|40|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:40.69] Sent: >34*1354246290799*variables*0*frame[0]<
+[31:40.70] Recv: >1354246290799*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:40.699] Sent: >11**stepOver*0<
+[31:40.701] Recv: >resumed*0*stepOver<
+[31:40.702] Recv: >suspended*0*breakpoint*app:/app.js*41<
+[31:40.702] Sent: >22*1354246290800*frames*0<
+[31:40.703] Recv: >1354246290800*0|||app:/app.js|41|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:41.21] Sent: >34*1354246290801*variables*0*frame[0]<
+[31:41.24] Recv: >1354246290801*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:41.477] Sent: >11**stepOver*0<
+[31:41.478] Recv: >resumed*0*stepOver<
+[31:41.478] Recv: >suspended*0*breakpoint*app:/app.js*42<
+[31:41.479] Sent: >22*1354246290802*frames*0<
+[31:41.481] Recv: >1354246290802*0|||app:/app.js|42|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:41.886] Sent: >34*1354246290803*variables*0*frame[0]<
+[31:41.887] Recv: >1354246290803*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|undefined|wl|undefined*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:42.834] Sent: >11**stepOver*0<
+[31:42.836] Recv: >resumed*0*stepOver<
+[31:42.837] Recv: >suspended*0*breakpoint*app:/app.js*44<
+[31:42.837] Sent: >22*1354246290804*frames*0<
+[31:42.837] Recv: >1354246290804*0|||app:/app.js|44|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:43.166] Sent: >34*1354246290805*variables*0*frame[0]<
+[31:43.167] Recv: >1354246290805*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|string|wl|"111111111111111"*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:44.186] Sent: >11**stepOver*0<
+[31:44.187] Recv: >resumed*0*stepOver<
+[31:44.188] Recv: >suspended*0*breakpoint*app:/app.js*55<
+[31:44.188] Sent: >22*1354246290806*frames*0<
+[31:44.189] Recv: >1354246290806*0|||app:/app.js|55|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:44.634] Sent: >34*1354246290807*variables*0*frame[0]<
+[31:44.635] Recv: >1354246290807*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|string|wl|"111111111111111"*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:45.311] Sent: >11**stepOver*0<
+[31:45.312] Recv: >resumed*0*stepOver<
+[31:45.312] Recv: >suspended*0*breakpoint*app:/app.js*56<
+[31:45.313] Sent: >22*1354246290808*frames*0<
+[31:45.313] Recv: >1354246290808*0|||app:/app.js|56|false|0|0*1|||app:/app.js|70|false|0|0<
+[31:45.590] Sent: >34*1354246290809*variables*0*frame[0]<
+[31:45.591] Recv: >1354246290809*ratingD|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*boots|number|wl|111111111111112*tabbedBar|object|ov|[object Object]*themeChoiceString|string|wv|"Core"*dbModel|object|ov|[object Object]*refresh|object|v|[object Function]*assets|object|ov|[object Object]*themes|object|ov|[object Object]*animations|object|ov|[object Object]*writing|object|ov|[object Object]*logger|object|ov|[object Object]*CUSTOM_FONT|string|wv|"Cantata One"*i|number|wv|5*activeWindow|object|wnov|[object Array]*console|object|nov|[object TiConsole]*change|object|v|[object Function]*addFunction|object|v|[object Function]*eraseFunction|object|v|[object Function]*update|object|v|[object Function]*init|object|v|[object Function]*e|object|nov|[object TiUIButton]<
+[31:48.110] Sent: >10**terminate<
+----------End of file----------

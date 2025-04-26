@@ -1,0 +1,40 @@
+/**
+ * @author Andrew Apperley
+ */
+//connection file for the database connection
+
+<?php
+$mysqli = new mysqli("mysql.parafx.com","humberinter","charlie2011","humberinter");
+	if (mysqli_connect_errno()) {
+	    printf("Can't connect to SQL Server. Error Code %s\n", mysqli_connect_error($mysqli));
+	    exit;
+	}
+	$json   = array();
+	if($result = $mysqli->query("SELECT * FROM hi2012_students ORDER BY student_first")) {
+	    while ($row=$result->fetch_assoc()) {
+	    	
+	        $json[]=array(
+	        	'student_id' => $row['id'],
+	       		'student_first' => $row['student_first'],
+				'student_last' => $row['student_last'],
+				'student_link' => $row['website_link'],
+				'student_bio' => $row['student_bio'],
+				'student_piece_description' => $row['student_piece_description'],
+				'student_type_title' => $row['student_type_title'],
+				'portfolio_image' => $row['portfolio_image'],
+				'profile_image' => $row['profile_image']
+	        );
+	    
+		
+		}
+		
+		
+	}
+	$result->close();
+
+	header("Content-Type: text/json");
+	echo json_encode(array( 'students'  =>   $json )); 
+
+	$mysqli->close();
+	
+?>

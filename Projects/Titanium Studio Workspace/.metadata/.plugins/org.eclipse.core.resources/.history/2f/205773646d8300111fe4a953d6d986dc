@@ -1,0 +1,94 @@
+/**
+ * @author Andrew Apperley
+ */
+var login = Titanium.UI.createWindow({
+	
+   
+});
+
+
+var banner_signin = Titanium.UI.createView({
+	
+	backgroundImage:'images/sign-in.jpg',
+	width:320,
+	height:100,
+	top:167
+	
+});
+
+var memberID = Titanium.UI.createTextField({
+    color:'#969495',
+    height:35,
+    top:285,
+    setTextAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+    hintText:"Member ID",
+    autocapitalization: Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE,
+    autocorrect: Titanium.UI.TEXT_AUTOCORRECT_NONE,
+    left:60,
+    width:200,
+    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
+});
+
+var password = Titanium.UI.createTextField({
+    color:'#969495',
+    height:35,
+    top:340,
+    setTextAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+    hintText:"Password",
+    autocapitalization: Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE,
+    autocorrect: Titanium.UI.TEXT_AUTOCORRECT_NONE,
+    passwordMask:true,
+    left:60,
+    width:200,
+    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
+});
+var signIn = Titanium.UI.createButton({
+   top: 385,
+   width: 132,
+   height: 21,
+   backgroundImage:'images/sign-in-Button.png',
+   backgroundSelectedImage:'images/sign-in-Button-dark.png',
+});
+
+
+
+signIn.addEventListener('click',function(e)
+{
+  if (memberID.value != '' && password.value != '')
+	{
+		loginReq.open("POST","http://client.andrewapperley.ca/app_login.php");
+		var params = {
+			memberID: memberID.value,
+			password: password.value
+		};
+		loginReq.send(params);
+		
+	}
+	else
+	{
+		alert("Username/Password are required");
+	}
+});
+
+loginReq.onload = function()
+{
+	var json = this.responseText;
+	var response = JSON.parse(json);
+	if (response.logged == true)
+	{
+		alert("Welcome " + response.first + " " + response.last + ". Your email is: " + response.email);
+		SESSION_FIRST = response.first;
+		SESSION_LAST = response.last;
+		SESSION_MEMBERID = response.member;
+		SESSION_EMAIL = response.email;
+		email_fullName = response.first+" "+response.last;
+		email_emailAddress = response.email;
+		login.close();
+		booking.open();
+	}
+	else
+	{
+		alert(email_fullName+" "+email_fullName);
+	}
+	
+};

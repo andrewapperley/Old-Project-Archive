@@ -1,0 +1,20 @@
+/**
+* Created By Andrew Apperley
+* 2012
+*/
+//fade-in animation
+
+var fadeIn = Ti.UI.createAnimation({duration:400, opacity:1});
+
+var fadeInOnePX = Ti.UI.createAnimation({duration:400, opacity:1});
+
+//fade-out animation
+
+var fadeOut = Ti.UI.createAnimation({duration:400, opacity:0});
+
+var fadeOutInfo = Ti.UI.createAnimation({duration:400, opacity:0});
+
+exports.fadeInOnePX = fadeInOnePX;
+exports.fadeIn = fadeIn;
+exports.fadeOut = fadeOut;
+exports.fadeOutInfo = fadeOutInfo;

@@ -1,0 +1,35 @@
+/**
+ * @author Andrew Apperley
+ */
+	//declare the student parts ie. name, link ect
+	 var student_name;
+	
+	studentsReq.onload = function(){
+		
+		
+		var json = JSON.parse(this.responseText);
+		
+		var json = json.students;
+
+	    var pos;
+	    
+	   
+	    
+	    
+	    
+	    /////
+	    /////////////
+	    ///////students
+	    /////////////
+	    /////
+	   
+	   for( pos=0; pos < json.length; pos++){
+			
+			
+			student = json[pos];
+			
+			
+			
+	    };
+		
+	};

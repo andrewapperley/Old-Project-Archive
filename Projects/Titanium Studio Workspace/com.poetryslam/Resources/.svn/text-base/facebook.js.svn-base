@@ -1,0 +1,34 @@
+		var facebook_Button = Titanium.UI.createButton({
+		backgroundImage:assets.assetsArray[0].FacebookButton,
+			width:90,
+			height:90,
+			top:101,
+			left:32
+		});
+       
+		Titanium.Facebook.appid = '318082941615627';
+        Titanium.Facebook.permissions = ['publish_stream'];
+
+        facebook_Button.addEventListener('click', function(e) {
+       
+        Titanium.Facebook.permissions = ['publish_stream'];
+        Titanium.Facebook.authorize();
+
+        Titanium.Facebook.requestWithGraphPath('me/feed', {message: writing.PoemTextArea.value + " Created with "}, "POST", function(e) {
+        if (e.success) {
+        		 Ti.UI.createAlertDialog({title:'Status Update',message:'Success! Your poem has been posted to your status!'}).show();
+
+        } else {
+        if (e.error) {
+         Ti.UI.createAlertDialog({title:'No Poem Error',message:'An error has occured, please check you have a poem written'}).show();
+        		} 
+        else if(Titanium.Facebook.loggedIn)
+        {
+        	 Ti.UI.createAlertDialog({title:'Facebook Server Error',message:'An error occurred communicating with the Facebook servers, try again later'}).show();
+        }		
+       	    }
+       });
+
+     });
+     
+exports.facebook_Button = facebook_Button;

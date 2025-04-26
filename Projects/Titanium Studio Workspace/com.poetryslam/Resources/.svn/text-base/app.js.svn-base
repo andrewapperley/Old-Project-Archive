@@ -1,0 +1,25 @@
+var CUSTOM_FONT = '';
+var themeChoiceString = '';
+if(!Titanium.App.Properties.hasProperty('activeTheme') && !Titanium.App.Properties.hasProperty('font')){themeChoiceString = 'Core'; CUSTOM_FONT = 'Cantata One'; }
+else{themeChoiceString = Titanium.App.Properties.getString('activeTheme'); CUSTOM_FONT = Titanium.App.Properties.getString('font');}
+var assets = require('Themes/'+themeChoiceString+'/assetConstants');
+var themes = require('themeLoad');
+var dbModel = require('dbModel');
+var logger = require('logger');
+var module	= require('de.marcelpociot.twitter');
+var animations = require('animations');
+var activeWindow = [];
+var hack = Ti.include('twitter.js');
+var tabbedBar = require('tabbedBar');
+var writing = require('writingScreen');
+var close = require('closeButton');
+var starting = require('startingScreen');
+
+
+for(var i = 0; i < tabbedBar.buttonArray.length; i++)
+{
+	
+	writing.window.add(tabbedBar.buttonArray[i]);
+	
+}
+logger.info(CUSTOM_FONT);

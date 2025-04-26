@@ -1,0 +1,18 @@
+var screen = Ti.UI.createView({
+	
+	backgroundColor: 'red',
+	height: '90%',
+	top:0,
+	index:4
+	
+	
+});
+var text = Ti.UI.createLabel({
+	
+	text: 'Label 4',
+  	height: 'auto',
+  	width: 'auto'
+	
+});
+screen.add(text);
+exports.screen = screen;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">7fwSUD9gJCCOBAOcAwz9vqE9qWPJJcXu</property>
+    <property name="acs-oauth-key-production" type="string">KOsyKg5I0LJiUjMlOsvm1Hw1TvQJTiq9</property>
+    <property name="acs-api-key-production" type="string">9z6SGd7DcnaIX3RcVNWopndBVAatGFZI</property>
+    <property name="acs-oauth-secret-development" type="string">VE2iKTPBQ9KEaaHGAgtIrGLCSgHN670p</property>
+    <property name="acs-oauth-key-development" type="string">ESyERVCCibf8lSvK4JGmDkZPL10MT4UA</property>
+    <property name="acs-api-key-development" type="string">y8CL7qL75F4JyrGuuJsscJAjCIZ9Cqfy</property>
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">true</target>
+        <target device="ipad">false</target>
+        <target device="android">false</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.1.0.GA</sdk-version>
+    <id>com.poetryslam</id>
+    <name>Poetry Slam</name>
+    <version>1.0</version>
+    <publisher>Silver Spoon-Media</publisher>
+    <url>http://www.silverspoon-media.ca</url>
+    <description>not specified</description>
+    <copyright>2012 by Silver Spoon-Media</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>true</navbar-hidden>
+    <analytics>false</analytics>
+    <guid>9c1aa8cc-1f66-4625-8ec8-93c920c2c11d</guid>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+    </iphone>
+    <modules>
+        <module version="1.2">de.marcelpociot.twitter</module>
+    </modules>
+</ti:app>

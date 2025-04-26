@@ -1,0 +1,61 @@
+
+	
+	var theEvents = Titanium.UI.createTextArea({editable:false,top:200, height:300, width:300,backgroundColor:'none', font:{fontSize:12}});
+	var words = Array();
+	eventReq.onload = function(){
+	    var json = JSON.parse(this.responseText);
+
+	    var json = json.events;
+
+		var dataArray = [];
+
+	    var pos;
+	    var eventText;
+	    
+	    var textArea;
+	   /*
+	    var memberName;
+	    
+	    var memberNameText;*/
+	    for( pos=0; pos < json.length; pos++){
+
+			//dataArray.push({Name: json[pos].first_name +" "+ json[pos].last_name , Start: json[pos].start, End: json[pos].end ,Type: json[pos].private_public});
+			event = json[1];
+			
+			eventText = event.first_name +" "+ event.last_name + "\n" + event.start + " to " + event.end + "\n" + event.private_public; 
+			
+			textArea = Ti.UI.createLabel({
+				
+				text:eventText,
+				top: 80,
+				textAlign:"center",
+				font:{fontFamily:'Day Roman', fontSize:12,}
+			});
+			
+			/*memberNameText = Ti.UI.createLabel({
+				
+				text:memberName.first_name,
+				top: 210
+			})*/
+			//theEvents.value = dataArray;
+			//alert(dataArray);
+			
+			events.add(textArea);
+		//events.add(memberNameText);
+	    };
+
+	};
+
+	
+events.add(theEvents);
+
+//new way
+/*
+var table = Ti.UI.createTableView();
+var tableData = [];
+var json, events, name, i, row, nameLabel;
+
+eventReq.onload = function(){
+	json
+};
+*/
